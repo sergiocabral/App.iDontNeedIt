@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I Don't Need It – Desperdício consciente, status garantido</title>
+  <meta name="description" content="Mostre que você pode. Pague por nada. Porque você é rico. i dont need it.">
+  <meta name="keywords" content="i dont need it, idontneedit, ego, status, flex, pagar por nada, provação, site de desperdício, gastar dinheiro, sou rico, R$10">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (para redes sociais) -->
+  <meta property="og:title" content="i dont need it">
+  <meta property="og:description" content="Você paga por nada. Só porque pode.">
+  <meta property="og:image" content="https://idontneedit.org/logo.png">
+  <meta property="og:url" content="https://idontneedit.org">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="i dont need it">
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      animation: pulse 3s infinite;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px #ff00ff);
+      }
+      50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 20px #ff00ff);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="idontneedit logo">
+  <h1 id="headline"></h1>
+
+  <script>
+    const phrases = {
+      'pt': 'Algo insano está chegando...',
+      'en': 'Something insane is coming...',
+      'es': 'Algo insano está por llegar...',
+      'fr': 'Quelque chose de fou arrive...',
+      'de': 'Etwas Verrücktes kommt bald...',
+      'default': 'Coming soon...'
+    };
+
+    const lang = navigator.language.slice(0, 2);
+    const headline = document.getElementById('headline');
+    headline.textContent = phrases[lang] || phrases['default'];
+  </script>
+</body>
+</html>
