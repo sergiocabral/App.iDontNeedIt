@@ -1,44 +1,36 @@
-<p align="center">
-  <img src="logo.png" alt="i dont need it logo" width="200" />
-</p>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# i dont need it
+## Getting Started
 
-**You pay for nothing. Just because you can.**
+First, run the development server:
 
-👉 [Visit the site](https://idontneedit.org)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## What is this?
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-**i dont need it** is a satirical web platform where you prove your financial dominance by paying for absolutely nothing.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-No login.  
-No product.  
-No reward.  
-Just ego.
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## How does it work?
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. Open the website  
-2. Pick a provocative phrase  
-3. Pay for nothing  
-4. Leave satisfied (or not)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## Why?
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Because the answer is:  
-**_i don't need it._**
-
----
-
-## Disclaimer
-
-This is a social/artistic experiment.  
-No product or service is delivered.  
-You have been warned.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
