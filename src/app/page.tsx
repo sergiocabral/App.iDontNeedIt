@@ -18,6 +18,17 @@ export default function Home() {
   useEffect(() => {
     const lang = navigator.language.slice(0, 2);
     setText(phrases[lang] || phrases["default"]);
+
+    fetch('/api/ping', {
+      method: 'POST',
+      body: JSON.stringify({
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
   }, []);
 
   return (
