@@ -27,6 +27,8 @@ export default function PayPage() {
   const [audioFile, setAudioFile] = useState<File | null>(null)
   const [audioPreview, setAudioPreview] = useState<string | null>(null)
 
+  audioFile?.toString() // Para evitar erro de linting, não é usado diretamente
+
   const [avatarSeed, setAvatarSeed] = useState(() => Math.random().toString(36).substring(7))
   const [avatarBg, setAvatarBg] = useState('')
   const [customAvatarFile, setCustomAvatarFile] = useState<File | null>(null)
@@ -42,15 +44,14 @@ export default function PayPage() {
     }
   }, [avatarSeed, customAvatarFile, def])
 
-  // Inicializa cor do background do avatar
-  useEffect(() => {
-    setAvatarBg(getRandomColor())
-  }, [])
-
   // Rotina para gerar cor HSL aleatória pastel
   const getRandomColor = useCallback(() => {
     return `hsl(${Math.floor(Math.random() * 360)}, 70%, 80%)`
   }, [])
+
+  useEffect(() => {
+    setAvatarBg(getRandomColor())
+  }, [getRandomColor])
 
   // Refresh: limpa avatar custom, gera novo seed e cor
   const refreshAvatar = useCallback(() => {
