@@ -178,7 +178,9 @@ export default function PayPage() {
         {/* Preview do áudio */}
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
-        <Button className="w-full mt-4">{t('payButton', { ammount: '$1' })}</Button>
+        <Button className="w-full mt-4 bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300">
+          {t('payButton', { ammount: '$1' })}
+        </Button>
       </div>
     </div>
   )
