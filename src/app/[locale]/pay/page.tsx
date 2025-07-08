@@ -8,16 +8,20 @@ import { FileUpload } from '@/components/app/FileUpload'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { RefreshCwIcon, SparklesIcon, MessageSquareQuoteIcon, UploadIcon } from 'lucide-react'
 import { getDefinitions } from '@/lib/definitions'
+import { useRotatingValues } from '@/hooks/useRotatingValues'
+import { useParams } from 'next/navigation'
 
 export default function PayPage() {
   const def = getDefinitions()
+  const { locale } = useParams<{ locale: string }>()
+
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [audioFile, setAudioFile] = useState<File | null>(null)
   const [audioPreview, setAudioPreview] = useState<string | null>(null)
 
   const [avatarSeed, setAvatarSeed] = useState(Math.random().toString(36).substring(7))
-  const [avatarBg, setAvatarBg] = useState<string | null>(null)
+  const [avatarBg, setAvatarBg] = useState<string>('')
 
   const avatarUrl = (
     process.env.NEXT_PUBLIC_AVATAR_GENERATOR_URL || def('dicerbearAvatarGeneratorUrl')
@@ -36,24 +40,31 @@ export default function PayPage() {
     setAvatarBg(getRandomColor())
   }
 
-  async function generateName() {
-    const res = await fetch('/api/generate-name', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ locale: navigator.language || def('defaultLocale') }),
-    })
-    const data = await res.json()
-    setName(data.name || '')
+  const {
+    fetchValues: fetchNames,
+    getNextValue: getNextName,
+    values: names,
+  } = useRotatingValues('/api/generate-name')
+
+  const {
+    fetchValues: fetchMessages,
+    getNextValue: getNextMessage,
+    values: messages,
+  } = useRotatingValues('/api/generate-message')
+
+  useEffect(() => {
+    fetchNames(locale)
+    fetchMessages(locale)
+  }, [locale])
+
+  function handleGenerateName() {
+    if (names.length === 0) return
+    setName(getNextName())
   }
 
-  async function generateMessage() {
-    const res = await fetch('/api/generate-message', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ locale: navigator.language || def('defaultLocale') }),
-    })
-    const data = await res.json()
-    setMessage(data.message || '')
+  function handleGenerateMessage() {
+    if (messages.length === 0) return
+    setMessage(getNextMessage())
   }
 
   return (
@@ -101,7 +112,7 @@ export default function PayPage() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <Button type="button" size="icon" variant="ghost" onClick={generateName}>
+          <Button type="button" size="icon" variant="ghost" onClick={handleGenerateName}>
             <SparklesIcon className="w-4 h-4" />
           </Button>
         </div>
@@ -113,7 +124,7 @@ export default function PayPage() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Button type="button" size="icon" variant="ghost" onClick={generateMessage}>
+          <Button type="button" size="icon" variant="ghost" onClick={handleGenerateMessage}>
             <MessageSquareQuoteIcon className="w-4 h-4" />
           </Button>
         </div>
