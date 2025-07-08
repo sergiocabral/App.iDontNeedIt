@@ -12,6 +12,7 @@ import { useParams } from 'next/navigation'
 import { AvatarUpload } from '@/components/app/AvatarUpload'
 
 import dynamic from 'next/dynamic'
+import { useTranslations } from 'next-intl'
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
   { ssr: false }
@@ -19,6 +20,7 @@ const AudioRecorder = dynamic(
 
 export default function PayPage() {
   const def = getDefinitions()
+  const t = useTranslations('PayPage')
   const { locale } = useParams<{ locale: string }>()
 
   const [name, setName] = useState('')
@@ -96,17 +98,18 @@ export default function PayPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
       <div className="w-full max-w-md p-6 space-y-4">
-        <h1 className="text-2xl font-bold text-center">Pague $1 e se torne o primeiro King</h1>
+        <h1 className="text-2xl font-bold text-center">{t('title', { ammount: '$1' })}</h1>
 
         {/* Avatar com botões sobrepostos */}
         <div className="relative w-28 h-28 mx-auto">
           <Avatar className="w-28 h-28" style={{ backgroundColor: avatarBg }}>
-            <AvatarImage src={avatarUrl} alt="avatar" />
+            <AvatarImage src={avatarUrl} alt={t('avatarAlt')} />
             <AvatarFallback>?</AvatarFallback>
           </Avatar>
 
           {/* Upload de avatar (esquerda) */}
           <AvatarUpload
+            title={t('generateAvatarButton')}
             onImageSelected={(file, preview) => {
               setCustomAvatarFile(file)
               setAvatarUrl(preview)
@@ -121,6 +124,7 @@ export default function PayPage() {
             size="icon"
             variant="secondary"
             className="absolute bottom-0 right-0 w-7 h-7"
+            title={t('uploadAvatarButton')}
             onClick={refreshAvatar}
           >
             <RefreshCwIcon className="w-3 h-3" />
@@ -130,11 +134,17 @@ export default function PayPage() {
         {/* Nome com botão de geração */}
         <div className="flex items-center gap-2">
           <Input
-            placeholder="Seu nome ou nickname (opcional)"
+            placeholder={t('namePlaceholder')}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <Button type="button" size="icon" variant="ghost" onClick={handleGenerateName}>
+          <Button
+            type="button"
+            size="icon"
+            variant="ghost"
+            title={t('generateNameButton')}
+            onClick={handleGenerateName}
+          >
             <SparklesIcon className="w-4 h-4" />
           </Button>
         </div>
@@ -142,11 +152,17 @@ export default function PayPage() {
         {/* Frase com botão de geração */}
         <div className="flex items-center gap-2">
           <Textarea
-            placeholder="Deixe uma frase provocadora (opcional)"
+            placeholder={t('messagePlaceholder')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Button type="button" size="icon" variant="ghost" onClick={handleGenerateMessage}>
+          <Button
+            type="button"
+            size="icon"
+            variant="ghost"
+            title={t('generateMessageButton')}
+            onClick={handleGenerateMessage}
+          >
             <MessageSquareQuoteIcon className="w-4 h-4" />
           </Button>
         </div>
@@ -162,7 +178,7 @@ export default function PayPage() {
         {/* Preview do áudio */}
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
-        <Button className="w-full mt-4">Pagar $1</Button>
+        <Button className="w-full mt-4">{t('payButton', { ammount: '$1' })}</Button>
       </div>
     </div>
   )

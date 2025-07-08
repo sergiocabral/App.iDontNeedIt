@@ -6,10 +6,11 @@ import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
 
 interface AvatarUploadProps {
+  title?: string
   onImageSelected: (file: File, previewUrl: string) => void
 }
 
-export function AvatarUpload({ onImageSelected }: AvatarUploadProps) {
+export function AvatarUpload({ title, onImageSelected }: AvatarUploadProps) {
   const t = useTranslations('AvatarUploadComponent')
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -41,6 +42,7 @@ export function AvatarUpload({ onImageSelected }: AvatarUploadProps) {
         size="icon"
         variant="secondary"
         className="absolute bottom-0 left-0 w-7 h-7"
+        title={title}
         onClick={() => inputRef.current?.click()}
       >
         <UploadIcon className="w-3 h-3" />
