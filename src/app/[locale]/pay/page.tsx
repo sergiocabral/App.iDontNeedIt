@@ -4,13 +4,18 @@ import { useEffect, useState, useCallback } from 'react'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { FileUpload } from '@/components/app/FileUpload'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { RefreshCwIcon, SparklesIcon, MessageSquareQuoteIcon } from 'lucide-react'
 import { getDefinitions } from '@/lib/definitions'
 import { useRotatingValues } from '@/hooks/useRotatingValues'
 import { useParams } from 'next/navigation'
 import { AvatarUpload } from '@/components/app/AvatarUpload'
+
+import dynamic from 'next/dynamic'
+const AudioRecorder = dynamic(
+  () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
+  { ssr: false }
+)
 
 export default function PayPage() {
   const def = getDefinitions()
@@ -67,10 +72,13 @@ export default function PayPage() {
     values: messages,
   } = useRotatingValues('/api/generate-message')
 
+  const fetchNamesMemo = useCallback(() => fetchNames(locale), [fetchNames, locale])
+  const fetchMessagesMemo = useCallback(() => fetchMessages(locale), [fetchMessages, locale])
+
   useEffect(() => {
-    fetchNames(locale)
-    fetchMessages(locale)
-  }, [locale, fetchNames, fetchMessages])
+    fetchNamesMemo()
+    fetchMessagesMemo()
+  }, [fetchNamesMemo, fetchMessagesMemo])
 
   // Gerar nome aleatório se disponível
   const handleGenerateName = useCallback(() => {
@@ -143,11 +151,10 @@ export default function PayPage() {
         </div>
 
         {/* Upload de áudio */}
-        <FileUpload
-          accept="audio/*"
-          onUploadComplete={(file, preview) => {
+        <AudioRecorder
+          onRecordingComplete={(file, url) => {
             setAudioFile(file)
-            setAudioPreview(preview)
+            setAudioPreview(url)
           }}
         />
 
