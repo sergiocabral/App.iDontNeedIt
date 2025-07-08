@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "Estado",
+    "startRecording": "Grabar audio",
+    "stopRecording": "Detener grabación",
+    "discardRecording": "Descartar grabación"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Solo se permiten archivos de imagen"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Solo se permiten archivos de imagen o audio",
+    "dropFileHere": "Suelta el archivo aquí...",
+    "dragAndDropOrClick": "Arrastra y suelta o haz clic para subir imagen o audio",
+    "imagePreview": "Vista previa de imagen",
+    "notSupportedAudio": "Tu navegador no admite audio."
+  },
   "LocaleLayout": {
     "description": "¿Eres más rico que yo? Demuéstralo."
   },

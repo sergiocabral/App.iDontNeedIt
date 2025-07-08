@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "Статус",
+    "startRecording": "Начать запись",
+    "stopRecording": "Остановить запись",
+    "discardRecording": "Удалить запись"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Разрешены только изображения"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Разрешены только изображения или аудио",
+    "dropFileHere": "Перетащите файл сюда...",
+    "dragAndDropOrClick": "Перетащите или нажмите, чтобы загрузить изображение или аудио",
+    "imagePreview": "Предпросмотр изображения",
+    "notSupportedAudio": "Ваш браузер не поддерживает воспроизведение аудио."
+  },
   "LocaleLayout": {
     "description": "Ты богаче меня? Докажи это."
   },

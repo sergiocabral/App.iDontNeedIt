@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "상태",
+    "startRecording": "오디오 녹음",
+    "stopRecording": "녹음 중지",
+    "discardRecording": "녹음 삭제"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "이미지 파일만 허용됩니다"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "이미지 또는 오디오 파일만 허용됩니다",
+    "dropFileHere": "파일을 여기에 드롭하세요...",
+    "dragAndDropOrClick": "이미지 또는 오디오를 드래그 앤 드롭하거나 클릭하여 업로드",
+    "imagePreview": "이미지 미리보기",
+    "notSupportedAudio": "브라우저에서 오디오를 지원하지 않습니다."
+  },
   "LocaleLayout": {
     "description": "나보다 부자라고? 증명해봐."
   },

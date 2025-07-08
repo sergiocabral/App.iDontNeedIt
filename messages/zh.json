@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "状态",
+    "startRecording": "开始录音",
+    "stopRecording": "停止录音",
+    "discardRecording": "丢弃录音"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "只允许上传图片文件"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "只允许上传图片或音频文件",
+    "dropFileHere": "将文件拖到此处...",
+    "dragAndDropOrClick": "拖放或点击上传图片或音频",
+    "imagePreview": "图片预览",
+    "notSupportedAudio": "您的浏览器不支持音频播放。"
+  },
   "LocaleLayout": {
     "description": "你比我有钱？那就证明给我看。"
   },

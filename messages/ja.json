@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "ステータス",
+    "startRecording": "録音開始",
+    "stopRecording": "録音停止",
+    "discardRecording": "録音を破棄"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "画像ファイルのみ使用できます"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "画像または音声ファイルのみ使用できます",
+    "dropFileHere": "ここにファイルをドロップ...",
+    "dragAndDropOrClick": "画像または音声をドラッグ＆ドロップまたはクリックしてアップロード",
+    "imagePreview": "画像プレビュー",
+    "notSupportedAudio": "お使いのブラウザは音声をサポートしていません。"
+  },
   "LocaleLayout": {
     "description": "あなたは私より裕福ですか？証明してみて。"
   },

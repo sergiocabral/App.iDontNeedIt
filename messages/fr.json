@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "Statut",
+    "startRecording": "Enregistrer l'audio",
+    "stopRecording": "Arrêter l'enregistrement",
+    "discardRecording": "Annuler l'enregistrement"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Seuls les fichiers image sont autorisés"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Seuls les fichiers image ou audio sont autorisés",
+    "dropFileHere": "Déposez le fichier ici...",
+    "dragAndDropOrClick": "Glissez-déposez ou cliquez pour téléverser une image ou un audio",
+    "imagePreview": "Aperçu de l'image",
+    "notSupportedAudio": "Votre navigateur ne prend pas en charge l'audio."
+  },
   "LocaleLayout": {
     "description": "Es-tu plus riche que moi ? Prouve-le."
   },

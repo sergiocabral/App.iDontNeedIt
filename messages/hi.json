@@ -1,4 +1,20 @@
 {
+  "AudioRecorderComponent": {
+    "status": "स्थिति",
+    "startRecording": "ऑडियो रिकॉर्ड करें",
+    "stopRecording": "रिकॉर्डिंग बंद करें",
+    "discardRecording": "रिकॉर्डिंग हटाएं"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "केवल छवि फ़ाइलों की अनुमति है"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "केवल छवि या ऑडियो फ़ाइलों की अनुमति है",
+    "dropFileHere": "फ़ाइल यहाँ छोड़ें...",
+    "dragAndDropOrClick": "छवि या ऑडियो अपलोड करने के लिए खींचें और छोड़ें या क्लिक करें",
+    "imagePreview": "छवि पूर्वावलोकन",
+    "notSupportedAudio": "आपका ब्राउज़र ऑडियो का समर्थन नहीं करता।"
+  },
   "LocaleLayout": {
     "description": "क्या आप मुझसे अमीर हैं? तो साबित करें।"
   },
