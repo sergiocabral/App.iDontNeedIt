@@ -11,7 +11,7 @@ interface FileUploadProps {
   onUploadComplete: (file: File, previewUrl: string, type: FileType) => void
 }
 
-export async function FileUpload({ onUploadComplete }: FileUploadProps) {
+export function FileUpload({ onUploadComplete }: FileUploadProps) {
   const t = useTranslations('AudioRecorderComponent')
   const [previewUrl, setPreviewUrl] = useState<string | null>(null)
   const [fileType, setFileType] = useState<FileType | null>(null)
@@ -34,7 +34,7 @@ export async function FileUpload({ onUploadComplete }: FileUploadProps) {
       setFileType(type)
       onUploadComplete(file, url, type)
     },
-    [onUploadComplete]
+    [onUploadComplete, t]
   )
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
