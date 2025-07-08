@@ -35,3 +35,13 @@ model AiSuggestion {
   reservedUntil DateTime?
   createdAt     DateTime       @default(now())
 }
+
+model King {
+  id         String   @id @default(cuid())
+  name       String?
+  message    String?
+  imageUrl   String?
+  audioUrl   String?
+  amount     Int
+  createdAt  DateTime @default(now())
+}
