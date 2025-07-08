@@ -55,7 +55,9 @@ interface Props {
   params: { locale: string }
 }
 
-export default async function LocaleLayout({ children, params: { locale } }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params
+
   const defaultMessages = (await import('@/../messages/en.json')).default
 
   let localeMessages = {}
