@@ -32,7 +32,7 @@ export async function generateMetadata({
       siteName: t('title'),
       locale: locale.replace('-', '_'),
       type: 'website',
-      images: ['/opengraph-image.png'],
+      images: ['/img/opengraph-image.png'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -40,7 +40,7 @@ export async function generateMetadata({
       description: t('twitter'),
       site: '@qynea',
       creator: '@qynea',
-      images: ['/opengraph-image.png'],
+      images: ['/img/opengraph-image.png'],
     },
   }
 }
