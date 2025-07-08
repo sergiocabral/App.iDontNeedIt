@@ -17,7 +17,7 @@ async function generateList(
   suggestionType: SuggestionType
 ) {
   locale = getLocale(locale)
-  prompt = `Responda no idioma '${locale}'. Gere um total de ${count} resultados, 1 por linha:\n\n${prompt}`
+  prompt = `Não responda em pt-br; Responda no idioma '${locale}'. Gere um total de ${count} resultados, 1 por linha:\n\n${prompt}`
   locale = locale.slice(0, 2)
 
   const generated: string[] = []
