@@ -7,8 +7,10 @@ import { Button } from '@/components/ui/button'
 import { FileUpload } from '@/components/app/FileUpload'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { RefreshCwIcon, SparklesIcon, MessageSquareQuoteIcon, UploadIcon } from 'lucide-react'
+import { getDefinitions } from '@/lib/definitions'
 
 export default function PayPage() {
+  const def = getDefinitions()
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [audioFile, setAudioFile] = useState<File | null>(null)
@@ -17,7 +19,9 @@ export default function PayPage() {
   const [avatarSeed, setAvatarSeed] = useState(Math.random().toString(36).substring(7))
   const [avatarBg, setAvatarBg] = useState<string | null>(null)
 
-  const avatarUrl = `https://api.dicebear.com/8.x/lorelei/svg?seed=${avatarSeed}`
+  const avatarUrl = (
+    process.env.NEXT_PUBLIC_AVATAR_GENERATOR_URL || def('dicerbearAvatarGeneratorUrl')
+  ).replace('{seed}', avatarSeed)
 
   useEffect(() => {
     setAvatarBg(getRandomColor())
@@ -32,12 +36,24 @@ export default function PayPage() {
     setAvatarBg(getRandomColor())
   }
 
-  function generateName() {
-    setName(`Anon-${Math.floor(1000 + Math.random() * 9000)}`)
+  async function generateName() {
+    const res = await fetch('/api/generate-name', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ locale: navigator.language || def('defaultLocale') }),
+    })
+    const data = await res.json()
+    setName(data.name || '')
   }
 
-  function generateMessage() {
-    setMessage('Desafio você a ser mais louco que eu.')
+  async function generateMessage() {
+    const res = await fetch('/api/generate-message', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ locale: navigator.language || def('defaultLocale') }),
+    })
+    const data = await res.json()
+    setMessage(data.message || '')
   }
 
   return (
