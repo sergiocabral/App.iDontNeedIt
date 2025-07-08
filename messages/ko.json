@@ -28,12 +28,12 @@
     "comingSoon": "무언가 미친 일이 다가오고 있어요..."
   },
   "PayPage": {
-    "title": "{ammount}만 내면 마지막 부자를 몰아낼 수 있어요!",
+    "title": "당신은 단 한 번의 클릭으로 가장 부유함을 보여줄 수 있습니다!",
     "namePlaceholder": "이름 또는 닉네임 (선택사항)",
-    "messagePlaceholder": "도발적인 문장을 남겨보세요 (선택사항)",
+    "messagePlaceholder": "텍스트 또는 오디오로 도발적인 문구를 남겨주세요 (선택 사항)",
     "generateNameButton": "이름 생성",
     "generateMessageButton": "문장 생성",
-    "payButton": "{ammount} 결제하기",
+    "payButton": "{ammount}만 내면 마지막 부자를 몰아낼 수 있어요",
     "avatarAlt": "당신의 아바타",
     "uploadAvatarButton": "이미지를 업로드하여 아바타로 사용",
     "generateAvatarButton": "무작위 이미지로 아바타 생성"

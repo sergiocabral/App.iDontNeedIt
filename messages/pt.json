@@ -28,12 +28,12 @@
     "comingSoon": "Algo insano está chegando..."
   },
   "PayPage": {
-    "title": "Desbanque o último rico por apenas {ammount}!",
+    "title": "Você está a um clique de mostrar que é o mais rico!",
     "namePlaceholder": "Seu nome ou nickname (opcional)",
-    "messagePlaceholder": "Deixe uma frase provocadora (opcional)",
+    "messagePlaceholder": "Deixe uma frase provocadora em texto ou áudio (opcional)",
     "generateNameButton": "Gerar nome",
     "generateMessageButton": "Gerar frase",
-    "payButton": "Pagar {ammount}",
+    "payButton": "Desbanque o último rico por apenas {ammount}",
     "avatarAlt": "Seu avatar",
     "uploadAvatarButton": "Carregar uma imagem como seu avatar",
     "generateAvatarButton": "Gerar imagem aleatória como seu avatar"

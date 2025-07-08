@@ -28,12 +28,12 @@
     "comingSoon": "とんでもないことがやってくる……"
   },
   "PayPage": {
-    "title": "{ammount} 円で前の金持ちを王座から引きずり下ろせ！",
+    "title": "あなたは一クリックで一番裕福だと示せます！",
     "namePlaceholder": "名前またはニックネーム（任意）",
-    "messagePlaceholder": "挑発的なフレーズを入力（任意）",
+    "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
     "generateNameButton": "名前を生成",
     "generateMessageButton": "フレーズを生成",
-    "payButton": "{ammount} を支払う",
+    "payButton": "{ammount} 円で前の金持ちを王座から引きずり下ろせ",
     "avatarAlt": "あなたのアバター",
     "uploadAvatarButton": "画像をアップロードしてアバターにする",
     "generateAvatarButton": "ランダム画像をアバターとして生成する"

@@ -28,12 +28,12 @@
     "comingSoon": "कुछ पागलपन भरा आने वाला है..."
   },
   "PayPage": {
-    "title": "सिर्फ {ammount} में अमीर को हटाकर राजा बनें!",
+    "title": "आप एक क्लिक दूर हैं यह दिखाने के लिए कि आप सबसे अमीर हैं!",
     "namePlaceholder": "आपका नाम या उपनाम (वैकल्पिक)",
-    "messagePlaceholder": "एक挑उत्तेजक वाक्य छोड़ें (वैकल्पिक)",
+    "messagePlaceholder": "टेक्स्ट या ऑडियो में एक उत्तेजक वाक्य छोड़ें (वैकल्पिक)",
     "generateNameButton": "नाम बनाएं",
     "generateMessageButton": "वाक्य बनाएं",
-    "payButton": "{ammount} का भुगतान करें",
+    "payButton": "सिर्फ {ammount} में अमीर को हटाकर राजा बनें",
     "avatarAlt": "आपका अवतार",
     "uploadAvatarButton": "अपनी छवि को अवतार के रूप में अपलोड करें",
     "generateAvatarButton": "एक यादृच्छिक छवि को अपने अवतार के रूप में जनरेट करें"
