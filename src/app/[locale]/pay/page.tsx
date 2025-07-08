@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
@@ -15,9 +15,13 @@ export default function PayPage() {
   const [audioPreview, setAudioPreview] = useState<string | null>(null)
 
   const [avatarSeed, setAvatarSeed] = useState(Math.random().toString(36).substring(7))
-  const [avatarBg, setAvatarBg] = useState(getRandomColor())
+  const [avatarBg, setAvatarBg] = useState<string | null>(null)
 
   const avatarUrl = `https://api.dicebear.com/8.x/lorelei/svg?seed=${avatarSeed}`
+
+  useEffect(() => {
+    setAvatarBg(getRandomColor())
+  }, [])
 
   function getRandomColor() {
     return `hsl(${Math.floor(Math.random() * 360)}, 70%, 80%)`
