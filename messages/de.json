@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "Etwas Verrücktes kommt bald..."
+  },
+  "PayPage": {
+    "title": "Stürze den letzten Reichen für nur {ammount}!",
+    "namePlaceholder": "Dein Name oder Spitzname (optional)",
+    "messagePlaceholder": "Hinterlasse eine provokante Nachricht (optional)",
+    "generateNameButton": "Name generieren",
+    "generateMessageButton": "Nachricht generieren",
+    "payButton": "{ammount} bezahlen",
+    "avatarAlt": "Dein Avatar",
+    "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
+    "generateAvatarButton": "Zufälliges Bild als Avatar generieren"
   }
 }

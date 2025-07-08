@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "とんでもないことがやってくる……"
+  },
+  "PayPage": {
+    "title": "{ammount} 円で前の金持ちを王座から引きずり下ろせ！",
+    "namePlaceholder": "名前またはニックネーム（任意）",
+    "messagePlaceholder": "挑発的なフレーズを入力（任意）",
+    "generateNameButton": "名前を生成",
+    "generateMessageButton": "フレーズを生成",
+    "payButton": "{ammount} を支払う",
+    "avatarAlt": "あなたのアバター",
+    "uploadAvatarButton": "画像をアップロードしてアバターにする",
+    "generateAvatarButton": "ランダム画像をアバターとして生成する"
   }
 }

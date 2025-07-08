@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "Грядёт нечто безумное..."
+  },
+  "PayPage": {
+    "title": "Смени последнего богача всего за {ammount}!",
+    "namePlaceholder": "Ваше имя или ник (необязательно)",
+    "messagePlaceholder": "Оставьте дерзкую фразу (необязательно)",
+    "generateNameButton": "Сгенерировать имя",
+    "generateMessageButton": "Сгенерировать фразу",
+    "payButton": "Оплатить {ammount}",
+    "avatarAlt": "Ваш аватар",
+    "uploadAvatarButton": "Загрузите изображение в качестве аватара",
+    "generateAvatarButton": "Сгенерируйте случайное изображение как аватар"
   }
 }

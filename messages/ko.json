@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "무언가 미친 일이 다가오고 있어요..."
+  },
+  "PayPage": {
+    "title": "{ammount}만 내면 마지막 부자를 몰아낼 수 있어요!",
+    "namePlaceholder": "이름 또는 닉네임 (선택사항)",
+    "messagePlaceholder": "도발적인 문장을 남겨보세요 (선택사항)",
+    "generateNameButton": "이름 생성",
+    "generateMessageButton": "문장 생성",
+    "payButton": "{ammount} 결제하기",
+    "avatarAlt": "당신의 아바타",
+    "uploadAvatarButton": "이미지를 업로드하여 아바타로 사용",
+    "generateAvatarButton": "무작위 이미지로 아바타 생성"
   }
 }

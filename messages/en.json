@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "Something insane is coming..."
+  },
+  "PayPage": {
+    "title": "Dethrone the last rich one for just {ammount}!",
+    "namePlaceholder": "Your name or nickname (optional)",
+    "messagePlaceholder": "Leave a provocative quote (optional)",
+    "generateNameButton": "Generate name",
+    "generateMessageButton": "Generate message",
+    "payButton": "Pay {ammount}",
+    "avatarAlt": "Your avatar",
+    "uploadAvatarButton": "Upload an image as your avatar",
+    "generateAvatarButton": "Generate a random image as your avatar"
   }
 }

@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "有疯狂的事情即将发生……"
+  },
+  "PayPage": {
+    "title": "只需 {ammount} 元，赶下上一个富豪！",
+    "namePlaceholder": "你的名字或昵称（可选）",
+    "messagePlaceholder": "写下一句挑衅的话（可选）",
+    "generateNameButton": "生成名字",
+    "generateMessageButton": "生成句子",
+    "payButton": "支付 {ammount}",
+    "avatarAlt": "你的头像",
+    "uploadAvatarButton": "上传一张图片作为你的头像",
+    "generateAvatarButton": "随机生成一张头像图片"
   }
 }

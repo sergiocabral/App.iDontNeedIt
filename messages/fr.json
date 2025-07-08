@@ -20,5 +20,16 @@
   },
   "HomePage": {
     "comingSoon": "Quelque chose de fou arrive..."
+  },
+  "PayPage": {
+    "title": "Déboulonnez le dernier riche pour seulement {ammount} !",
+    "namePlaceholder": "Votre nom ou surnom (optionnel)",
+    "messagePlaceholder": "Laissez une phrase provocante (optionnel)",
+    "generateNameButton": "Générer un nom",
+    "generateMessageButton": "Générer une phrase",
+    "payButton": "Payer {ammount}",
+    "avatarAlt": "Votre avatar",
+    "uploadAvatarButton": "Téléversez une image comme avatar",
+    "generateAvatarButton": "Générez une image aléatoire comme avatar"
   }
 }
