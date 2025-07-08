@@ -3,12 +3,14 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useReactMediaRecorder } from 'react-media-recorder'
 import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 export interface AudioRecorderProps {
   onRecordingComplete: (file: File | null, url: string) => void
 }
 
 export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProps) {
+  const t = useTranslations('AudioRecorderComponent')
   const { status, startRecording, stopRecording, mediaBlobUrl, clearBlobUrl } =
     useReactMediaRecorder({ audio: true })
 
@@ -64,18 +66,20 @@ export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProp
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <p>Status: {status}</p>
+      <p>
+        {t('status')}: {status}
+      </p>
 
       <div className="flex gap-2">
         <Button onClick={startRecording} disabled={status === 'recording'}>
-          Gravar
+          {t('startRecording')}
         </Button>
         <Button onClick={stopRecording} disabled={status !== 'recording'}>
-          Parar
+          {t('stopRecording')}
         </Button>
         {previewUrl && (
           <Button variant="destructive" onClick={handleDiscard}>
-            Descartar
+            {t('discardRecording')}
           </Button>
         )}
       </div>

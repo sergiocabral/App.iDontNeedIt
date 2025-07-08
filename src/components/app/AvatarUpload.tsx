@@ -3,12 +3,14 @@
 import { UploadIcon } from 'lucide-react'
 import { useRef } from 'react'
 import { Button } from '../ui/button'
+import { useTranslations } from 'next-intl'
 
 interface AvatarUploadProps {
   onImageSelected: (file: File, previewUrl: string) => void
 }
 
 export function AvatarUpload({ onImageSelected }: AvatarUploadProps) {
+  const t = useTranslations('AvatarUploadComponent')
   const inputRef = useRef<HTMLInputElement>(null)
 
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -17,7 +19,7 @@ export function AvatarUpload({ onImageSelected }: AvatarUploadProps) {
 
     const file = files[0]
     if (!file.type.startsWith('image/')) {
-      alert('Apenas imagens são permitidas para avatar.')
+      alert(t('invalidFileType'))
       return
     }
 

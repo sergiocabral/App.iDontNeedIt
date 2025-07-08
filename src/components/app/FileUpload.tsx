@@ -1,16 +1,20 @@
 'use client'
 
-import { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
-type Props = {
-  onUploadComplete: (file: File, previewUrl: string, type: 'image' | 'audio') => void
+type FileType = 'image' | 'audio'
+
+interface FileUploadProps {
+  onUploadComplete: (file: File, previewUrl: string, type: FileType) => void
 }
 
-export function FileUpload({ onUploadComplete }: Props) {
-  const [preview, setPreview] = useState<string | null>(null)
-  const [type, setType] = useState<'image' | 'audio' | null>(null)
+export async function FileUpload({ onUploadComplete }: FileUploadProps) {
+  const t = useTranslations('AudioRecorderComponent')
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null)
+  const [fileType, setFileType] = useState<FileType | null>(null)
 
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
@@ -19,16 +23,16 @@ export function FileUpload({ onUploadComplete }: Props) {
 
       const isAudio = file.type.startsWith('audio/')
       const isImage = file.type.startsWith('image/')
-
       if (!isAudio && !isImage) {
-        alert('Apenas imagem ou áudio são permitidos.')
+        alert(t('invalidFileType'))
         return
       }
 
       const url = URL.createObjectURL(file)
-      setPreview(url)
-      setType(isImage ? 'image' : 'audio')
-      onUploadComplete(file, url, isImage ? 'image' : 'audio')
+      setPreviewUrl(url)
+      const type = isImage ? 'image' : 'audio'
+      setFileType(type)
+      onUploadComplete(file, url, type)
     },
     [onUploadComplete]
   )
@@ -39,25 +43,41 @@ export function FileUpload({ onUploadComplete }: Props) {
       'image/*': [],
       'audio/*': [],
     },
+    multiple: false,
   })
 
+  // cleanup old blob URLs
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl)
+      }
+    }
+  }, [previewUrl])
+
   return (
-    <div className="flex flex-col gap-2 items-center w-full">
+    <div className="flex flex-col items-center gap-2 w-full">
       <div
         {...getRootProps()}
-        className="w-full p-4 border border-dashed rounded-lg text-center cursor-pointer hover:bg-zinc-100 transition"
+        className="w-full p-4 border border-dashed rounded-lg text-center cursor-pointer hover:bg-gray-100 transition"
       >
         <input {...getInputProps()} />
-        {isDragActive ? 'Solte o arquivo aqui...' : 'Arraste ou clique para enviar imagem ou áudio'}
+        {isDragActive ? t('dropFileHere') : t('dragAndDropOrClick')}
       </div>
 
-      {preview && type === 'image' && (
-        <Image src={preview} alt="Preview" width={120} height={120} className="rounded-md" />
+      {previewUrl && fileType === 'image' && (
+        <Image
+          src={previewUrl}
+          alt={t('imagePreview')}
+          width={120}
+          height={120}
+          className="rounded-md"
+        />
       )}
 
-      {preview && type === 'audio' && (
-        <audio controls src={preview} className="w-full">
-          Seu navegador não suporta áudio.
+      {previewUrl && fileType === 'audio' && (
+        <audio controls src={previewUrl} className="w-full">
+          {t('notSupportedAudio')}
         </audio>
       )}
     </div>

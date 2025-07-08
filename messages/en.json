@@ -2,6 +2,22 @@
   "Metadata": {
     "description": "Are you richer than me? Prove it."
   },
+  "AudioRecorderComponent": {
+    "status": "Status",
+    "startRecording": "Record Audio",
+    "stopRecording": "Stop Recording",
+    "discardRecording": "Discard Recording"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Only image files are allowed"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Only image or audio files are allowed",
+    "dropFileHere": "Drop file here...",
+    "dragAndDropOrClick": "Drag & drop or click to upload image or audio",
+    "imagePreview": "Image Preview",
+    "notSupportedAudio": "Your browser does not support audio."
+  },
   "HomePage": {
     "comingSoon": "Something insane is coming..."
   }
