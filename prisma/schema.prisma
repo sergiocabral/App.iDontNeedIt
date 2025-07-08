@@ -28,10 +28,10 @@ enum SuggestionType {
 }
 
 model AiSuggestion {
-  id        String         @id @default(uuid())
-  type      SuggestionType
-  value     String
-  locale    String
-  used      Boolean        @default(false)
-  createdAt DateTime       @default(now())
+  id            String         @id @default(uuid())
+  type          SuggestionType
+  value         String
+  locale        String
+  reservedUntil DateTime?
+  createdAt     DateTime       @default(now())
 }
