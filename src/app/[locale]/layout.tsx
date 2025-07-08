@@ -37,7 +37,7 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
-      description: t('twitter'),
+      description: t('description'),
       site: '@qynea',
       creator: '@qynea',
       images: ['/img/opengraph-image.png'],
