@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/nextjs'
 import { SuggestionType } from '@/generated/prisma'
 import { prisma } from '@/lib/prisma'
 import { getDefinitions } from './definitions'
@@ -54,10 +55,18 @@ async function generateList(
     }
 
     // Se nenhum item novo foi encontrado, sai para evitar loop infinito
-    if (newItems.length === 0) break
+    if (newItems.length === 0) {
+      console.warn(
+        `[generateList] No new items generated for type=${suggestionType}, locale=${locale}, count=${count}. Prompt: ${prompt}`
+      )
+      Sentry.captureMessage(
+        `No new items generated for type=${suggestionType}, locale=${locale}, count=${count}. Prompt: ${prompt}`
+      )
+
+      break
+    }
   }
 
-  // Salvar novos itens no banco
   if (generated.length > 0) {
     await prisma.aiSuggestion.createMany({
       data: generated.map((value) => ({
@@ -68,6 +77,13 @@ async function generateList(
       })),
       skipDuplicates: true,
     })
+  } else {
+    console.error(
+      `[generateList] Failed to generate new items for type=${suggestionType}, locale=${locale}`
+    )
+    Sentry.captureException(
+      new Error(`Failed to generate new items for type=${suggestionType}, locale=${locale}`)
+    )
   }
 
   return generated
