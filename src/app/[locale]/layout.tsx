@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Copse } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { notFound } from 'next/navigation'
+import { routing } from '@/i18n/routing'
 
 const copse = Copse({
   weight: '400',
@@ -36,11 +39,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
   return (
     <html lang="en">
       <body className={`${copse.variable} antialiased`}>
@@ -50,7 +61,7 @@ export default function RootLayout({
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
           strategy="afterInteractive"
         />
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   )
