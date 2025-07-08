@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Copse } from "next/font/google"
 import "./globals.css"
 
@@ -43,6 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${copse.variable} antialiased`}>
+        <Script
+          async
+          src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>
