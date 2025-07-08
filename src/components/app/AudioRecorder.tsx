@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useReactMediaRecorder } from 'react-media-recorder'
 import { Button } from '@/components/ui/button'
 
@@ -12,34 +12,60 @@ export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProp
   const { status, startRecording, stopRecording, mediaBlobUrl, clearBlobUrl } =
     useReactMediaRecorder({ audio: true })
 
-  const [localBlobUrl, setLocalBlobUrl] = useState<string | null>(null)
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null)
 
+  /** mantém a referência estável do callback */
+  const callbackRef = useRef(onRecordingComplete)
   useEffect(() => {
-    if (mediaBlobUrl) {
-      setLocalBlobUrl(mediaBlobUrl)
-      fetch(mediaBlobUrl)
-        .then((res) => res.blob())
-        .then((blob) => {
-          const file = new File([blob], 'recorded-audio.webm', { type: 'audio/webm' })
-          onRecordingComplete(file, mediaBlobUrl)
-        })
-        .catch(() => {
-          // Opcional: limpar estado ou avisar falha
-          setLocalBlobUrl(null)
-          onRecordingComplete(null, '')
-        })
+    callbackRef.current = onRecordingComplete
+  }, [onRecordingComplete])
+
+  /** guarda o último blob para revogar */
+  const prevBlobRef = useRef<string | null>(null)
+
+  /** dispara só quando o blob gerado muda */
+  useEffect(() => {
+    if (!mediaBlobUrl) return
+
+    // revoga URL anterior
+    if (prevBlobRef.current && prevBlobRef.current !== mediaBlobUrl) {
+      URL.revokeObjectURL(prevBlobRef.current)
     }
-  }, [mediaBlobUrl, onRecordingComplete])
+    prevBlobRef.current = mediaBlobUrl
+    setPreviewUrl(mediaBlobUrl)
+
+    // converte para File e chama callback 1 única vez
+    ;(async () => {
+      try {
+        const blob = await fetch(mediaBlobUrl).then((r) => r.blob())
+        const file = new File([blob], 'recorded-audio.webm', { type: 'audio/webm' })
+        callbackRef.current(file, mediaBlobUrl)
+      } catch {
+        setPreviewUrl(null)
+        callbackRef.current(null, '')
+      }
+    })()
+
+    // cleanup ao desmontar
+    return () => {
+      if (prevBlobRef.current) URL.revokeObjectURL(prevBlobRef.current)
+    }
+  }, [mediaBlobUrl])
 
   const handleDiscard = useCallback(() => {
-    setLocalBlobUrl(null)
-    onRecordingComplete(null, '')
+    if (prevBlobRef.current) {
+      URL.revokeObjectURL(prevBlobRef.current)
+      prevBlobRef.current = null
+    }
+    setPreviewUrl(null)
+    callbackRef.current(null, '')
     clearBlobUrl?.()
-  }, [clearBlobUrl, onRecordingComplete])
+  }, [clearBlobUrl])
 
   return (
     <div className="flex flex-col items-center gap-2">
       <p>Status: {status}</p>
+
       <div className="flex gap-2">
         <Button onClick={startRecording} disabled={status === 'recording'}>
           Gravar
@@ -47,14 +73,14 @@ export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProp
         <Button onClick={stopRecording} disabled={status !== 'recording'}>
           Parar
         </Button>
-        {localBlobUrl && (
+        {previewUrl && (
           <Button variant="destructive" onClick={handleDiscard}>
             Descartar
           </Button>
         )}
       </div>
 
-      {/* {localBlobUrl && <audio src={localBlobUrl} controls className="w-full mt-2" />} */}
+      {/* {previewUrl && <audio src={previewUrl} controls className="w-full mt-2" />} */}
     </div>
   )
 }
