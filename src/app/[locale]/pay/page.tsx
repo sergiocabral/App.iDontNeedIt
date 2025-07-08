@@ -67,13 +67,13 @@ export default function PayPage() {
     fetchValues: fetchNames,
     getNextValue: getNextName,
     values: names,
-  } = useRotatingValues('/api/generate-name')
+  } = useRotatingValues('/api/generate/name')
 
   const {
     fetchValues: fetchMessages,
     getNextValue: getNextMessage,
     values: messages,
-  } = useRotatingValues('/api/generate-message')
+  } = useRotatingValues('/api/generate/message')
 
   const fetchNamesMemo = useCallback(() => fetchNames(locale), [fetchNames, locale])
   const fetchMessagesMemo = useCallback(() => fetchMessages(locale), [fetchMessages, locale])
