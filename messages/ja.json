@@ -3,7 +3,13 @@
     "status": "ステータス",
     "startRecording": "録音開始",
     "stopRecording": "録音停止",
-    "discardRecording": "録音を破棄"
+    "discardRecording": "録音を破棄",
+    "status-idle": "録音を待機中",
+    "status-recording": "録音中",
+    "status-stopping": "停止中",
+    "status-stopped": "録音済み",
+    "status-acquiring_media": "音声を取得中",
+    "status-error": "エラー"
   },
   "AvatarUploadComponent": {
     "invalidFileType": "画像ファイルのみ使用できます"

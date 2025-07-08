@@ -3,7 +3,13 @@
     "status": "Statut",
     "startRecording": "Enregistrer l'audio",
     "stopRecording": "Arrêter l'enregistrement",
-    "discardRecording": "Annuler l'enregistrement"
+    "discardRecording": "Annuler l'enregistrement",
+    "status-idle": "En attente d'enregistrement",
+    "status-recording": "Enregistrement",
+    "status-stopping": "Arrêt en cours",
+    "status-stopped": "Enregistré",
+    "status-acquiring_media": "Obtention de l'audio",
+    "status-error": "Erreur"
   },
   "AvatarUploadComponent": {
     "invalidFileType": "Seuls les fichiers image sont autorisés"

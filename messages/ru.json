@@ -3,7 +3,13 @@
     "status": "Статус",
     "startRecording": "Начать запись",
     "stopRecording": "Остановить запись",
-    "discardRecording": "Удалить запись"
+    "discardRecording": "Удалить запись",
+    "status-idle": "Ожидание записи",
+    "status-recording": "Запись",
+    "status-stopping": "Останавливается",
+    "status-stopped": "Записано",
+    "status-acquiring_media": "Получение аудио",
+    "status-error": "Ошибка"
   },
   "AvatarUploadComponent": {
     "invalidFileType": "Разрешены только изображения"

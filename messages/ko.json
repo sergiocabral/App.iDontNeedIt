@@ -3,7 +3,13 @@
     "status": "상태",
     "startRecording": "오디오 녹음",
     "stopRecording": "녹음 중지",
-    "discardRecording": "녹음 삭제"
+    "discardRecording": "녹음 삭제",
+    "status-idle": "녹음 대기 중",
+    "status-recording": "녹음 중",
+    "status-stopping": "중지 중",
+    "status-stopped": "녹음됨",
+    "status-acquiring_media": "오디오 가져오는 중",
+    "status-error": "오류"
   },
   "AvatarUploadComponent": {
     "invalidFileType": "이미지 파일만 허용됩니다"

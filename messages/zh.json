@@ -3,7 +3,13 @@
     "status": "状态",
     "startRecording": "开始录音",
     "stopRecording": "停止录音",
-    "discardRecording": "丢弃录音"
+    "discardRecording": "丢弃录音",
+    "status-idle": "等待录音",
+    "status-recording": "录音中",
+    "status-stopping": "停止中",
+    "status-stopped": "已录制",
+    "status-acquiring_media": "获取音频",
+    "status-error": "错误"
   },
   "AvatarUploadComponent": {
     "invalidFileType": "只允许上传图片文件"

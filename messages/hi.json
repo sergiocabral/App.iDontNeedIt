@@ -3,7 +3,13 @@
     "status": "स्थिति",
     "startRecording": "ऑडियो रिकॉर्ड करें",
     "stopRecording": "रिकॉर्डिंग बंद करें",
-    "discardRecording": "रिकॉर्डिंग हटाएं"
+    "discardRecording": "रिकॉर्डिंग हटाएं",
+    "status-idle": "रिकॉर्डिंग का इंतजार",
+    "status-recording": "रिकॉर्ड हो रहा है",
+    "status-stopping": "रोक रहा है",
+    "status-stopped": "रिकॉर्ड किया गया",
+    "status-acquiring_media": "ऑडियो प्राप्त कर रहे हैं",
+    "status-error": "त्रुटि"
   },
   "AvatarUploadComponent": {
     "invalidFileType": "केवल छवि फ़ाइलों की अनुमति है"
