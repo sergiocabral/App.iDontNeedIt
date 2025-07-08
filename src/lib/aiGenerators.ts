@@ -16,7 +16,7 @@ async function generateList(
   suggestionType: SuggestionType
 ) {
   locale = getLocale(locale)
-  prompt = `Gere um total de ${count} resultados, 1 por linha. Escreva no idioma do locale ${locale}:\n\n${prompt}`
+  prompt = `Responda no idioma '${locale}'. Gere um total de ${count} resultados, 1 por linha:\n\n${prompt}`
   locale = locale.slice(0, 2)
 
   const generated: string[] = []
@@ -28,6 +28,7 @@ async function generateList(
       .split('\n')
       .map((s) => s.replace(/^\d+\.\s*/, '')) // remove número e ponto no início da linha
       .map((s) => s.trim())
+      .map((s) => s.replace(/^['"]|['"]$/g, '')) // remove aspas simples ou duplas no início/fim
       .filter(Boolean)
 
     // Buscar existentes para evitar duplicados
