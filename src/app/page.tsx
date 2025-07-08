@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
 const phrases: Record<string, string> = {
   pt: "Algo insano está chegando...",
@@ -10,14 +10,14 @@ const phrases: Record<string, string> = {
   fr: "Quelque chose de fou arrive...",
   de: "Etwas Verrücktes kommt bald...",
   default: "Coming soon...",
-};
+}
 
 export default function Home() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("")
 
   useEffect(() => {
-    const lang = navigator.language.slice(0, 2);
-    setText(phrases[lang] || phrases["default"]);
+    const lang = navigator.language.slice(0, 2)
+    setText(phrases[lang] || phrases["default"])
 
     fetch('/api/ping', {
       method: 'POST',
@@ -29,7 +29,7 @@ export default function Home() {
         'Content-Type': 'application/json',
       },
     })
-  }, []);
+  }, [])
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white text-center overflow-hidden">
@@ -43,5 +43,5 @@ export default function Home() {
       />
       <h1 className="text-2xl mt-5 animate-fade-in">{text}</h1>
     </div>
-  );
+  )
 }

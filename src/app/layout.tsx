@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { Copse } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next"
+import { Copse } from "next/font/google"
+import "./globals.css"
 
 const copse = Copse({
   weight: "400",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     creator: "@qynea",
     images: ["/opengraph-image.png"],
   },
-};
+}
 
 export default function RootLayout({
   children,
