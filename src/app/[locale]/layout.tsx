@@ -61,7 +61,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className={`${copse.variable} antialiased`}>
         <Script
           async
