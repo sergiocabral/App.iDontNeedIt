@@ -66,8 +66,11 @@ export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProp
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <p>
-        {t('status')}: {status}
+      <p className="text-xs text-gray-500 dark:text-gray-400">
+        {t('status')}:{' '}
+        <span className="font-medium text-gray-600 dark:text-gray-300">
+          {t(`status-${status}`)}
+        </span>
       </p>
 
       <div className="flex gap-2">
