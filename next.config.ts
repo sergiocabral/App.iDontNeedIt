@@ -1,16 +1,18 @@
 import { withSentryConfig } from '@sentry/nextjs'
 import type { NextConfig } from 'next'
+import createNextIntlPlugin from 'next-intl/plugin'
 
-const nextConfig: NextConfig = {
-  /* config options here */
-}
+const nextConfig: NextConfig = {}
 
-export default withSentryConfig(nextConfig, {
+const withNextIntl = createNextIntlPlugin()
+const nextConfigWithIntl = withNextIntl(nextConfig)
+
+export default withSentryConfig(nextConfigWithIntl, {
   // For all available options, see:
   // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-  org: 'cabralbrcom',
-  project: 'i-dont-need-it',
+  org: process.env.SENTRY_ORGANIZATION,
+  project: process.env.SENTRY_PROJECT,
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
