@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
   try {
     await prisma.accessLog.create({
-      data: { ip, userAgent, referrer }
+      data: { ip, userAgent, referrer },
     })
 
     console.info(`[AccessLog] [${new Date().toISOString()}] Logged access from IP ${ip}`)
@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       ip,
       userAgent,
       referrer,
-      error: (err as Error).message
+      error: (err as Error).message,
     })
   }
 

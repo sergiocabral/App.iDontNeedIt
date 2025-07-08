@@ -1,23 +1,23 @@
-"use client"
+'use client'
 
-import Image from "next/image"
-import { useEffect, useState } from "react"
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const phrases: Record<string, string> = {
-  pt: "Algo insano está chegando...",
-  en: "Something insane is coming...",
-  es: "Algo insano está por llegar...",
-  fr: "Quelque chose de fou arrive...",
-  de: "Etwas Verrücktes kommt bald...",
-  default: "Coming soon...",
+  pt: 'Algo insano está chegando...',
+  en: 'Something insane is coming...',
+  es: 'Algo insano está por llegar...',
+  fr: 'Quelque chose de fou arrive...',
+  de: 'Etwas Verrücktes kommt bald...',
+  default: 'Coming soon...',
 }
 
 export default function Home() {
-  const [text, setText] = useState("")
+  const [text, setText] = useState('')
 
   useEffect(() => {
     const lang = navigator.language.slice(0, 2)
-    setText(phrases[lang] || phrases["default"])
+    setText(phrases[lang] || phrases['default'])
 
     fetch('/api/ping', {
       method: 'POST',
