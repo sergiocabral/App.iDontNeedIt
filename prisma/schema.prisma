@@ -21,3 +21,17 @@ model AccessLog {
   referrer  String?
   createdAt DateTime @default(now())
 }
+
+enum SuggestionType {
+  confidenceBoost
+  personsName
+}
+
+model AiSuggestion {
+  id        String         @id @default(uuid())
+  type      SuggestionType
+  value     String
+  locale    String
+  used      Boolean        @default(false)
+  createdAt DateTime       @default(now())
+}
