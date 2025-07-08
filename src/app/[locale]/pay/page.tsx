@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { RefreshCwIcon, SparklesIcon, MessageSquareQuoteIcon } from 'lucide-react'
+import { RefreshCwIcon, SparklesIcon, MessageSquareQuoteIcon, CircleUserRound } from 'lucide-react'
 import { getDefinitions } from '@/lib/definitions'
 import { useRotatingValues } from '@/hooks/useRotatingValues'
 import { useParams } from 'next/navigation'
@@ -104,7 +104,9 @@ export default function PayPage() {
         <div className="relative w-28 h-28 mx-auto">
           <Avatar className="w-28 h-28" style={{ backgroundColor: avatarBg }}>
             <AvatarImage src={avatarUrl} alt={t('avatarAlt')} />
-            <AvatarFallback>?</AvatarFallback>
+            <AvatarFallback className="flex items-center justify-center bg-purple-200">
+              <CircleUserRound className="w-16 h-16 text-purple-800" />
+            </AvatarFallback>
           </Avatar>
 
           {/* Upload de avatar (esquerda) */}
