@@ -2,11 +2,10 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Copse } from 'next/font/google'
 import '../globals.css'
-import { hasLocale, NextIntlClientProvider } from 'next-intl'
-import { notFound } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { getDefinitions } from '@/lib/definitions'
+import { ReactNode } from 'react'
 
 const copse = Copse({
   weight: '400',
@@ -47,18 +46,24 @@ export async function generateMetadata({
   }
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode
-  params: Promise<{ locale: string }>
-}>) {
-  // Ensure that the incoming `locale` is valid
-  const { locale } = await params
-  if (!hasLocale(routing.locales, locale)) {
-    notFound()
-  }
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'pt' }, { locale: 'es' }]
+}
+
+interface Props {
+  children: ReactNode
+  params: { locale: string }
+}
+
+export default async function LocaleLayout({ children, params: { locale } }: Props) {
+  const defaultMessages = (await import('@/../messages/en.json')).default
+
+  let localeMessages = {}
+  try {
+    localeMessages = (await import(`@/../messages/${locale}.json`)).default
+  } catch {}
+
+  const messages = { ...defaultMessages, ...localeMessages }
 
   return (
     <html lang="en" className="light">
@@ -71,7 +76,9 @@ export default async function LocaleLayout({
             strategy="afterInteractive"
           />
         )}
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   )
