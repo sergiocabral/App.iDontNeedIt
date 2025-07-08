@@ -6,6 +6,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { getTranslations } from 'next-intl/server'
+import { getDefinitions } from '@/lib/definitions'
 
 const copse = Copse({
   weight: '400',
@@ -20,26 +21,27 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+  const def = await getDefinitions(locale)
   const t = await getTranslations({ locale, namespace: 'Metadata' })
 
   return {
-    title: t('title'),
+    title: def('appName'),
     description: t('description'),
     openGraph: {
-      title: t('title'),
+      title: def('appName'),
       description: t('description'),
-      url: 'https://idontneedit.org',
-      siteName: t('title'),
+      url: def('website'),
+      siteName: def('appName'),
       locale: locale.replace('-', '_'),
       type: 'website',
       images: ['/img/opengraph-image.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
+      title: def('appName'),
       description: t('description'),
-      site: '@qynea',
-      creator: '@qynea',
+      site: def('website'),
+      creator: def('twitterCreator'),
       images: ['/img/opengraph-image.png'],
     },
   }
