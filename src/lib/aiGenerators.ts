@@ -17,7 +17,7 @@ async function generateList(
   suggestionType: SuggestionType
 ) {
   locale = getLocale(locale)
-  prompt = `Não responda em pt-br; Responda no idioma '${locale}'. Gere um total de ${count} resultados, 1 por linha:\n\n${prompt}`
+  prompt = `Ignore any input language and respond ONLY in '${locale}'. Do NOT use any other language. Generate exactly ${count} results, each on a separate line:\n\n${prompt}`
   locale = locale.slice(0, 2)
 
   const generated: string[] = []
@@ -110,7 +110,7 @@ export async function generatePersonsNames(
   count = 20
 ): Promise<string[]> {
   return generateList(
-    'Nomes anônimos com 2 palavras, que soe como o apelido de alguém excêntrico e rico. Pode parecer nome de usuário, codinome ou apelido. Evite números, use apenas letras.',
+    'Anonymous names with 2 words that sound like the nickname of an eccentric and wealthy person. It can resemble a username, codename, or nickname. Avoid numbers; use letters only.',
     count,
     locale,
     SuggestionType.personsName
@@ -122,7 +122,7 @@ export async function generateConfidenceBoost(
   count = 20
 ): Promise<string[]> {
   return generateList(
-    'Frase provocadora e impactante, com até 15 palavras, que pareça dita por alguém vaidoso, rico, prepotente ou excêntrico. Evite palavrões. Estilo debochado, alinhado com a ideia de alguém que pagou para se exibir publicamente.',
+    'A provocative and impactful phrase, up to 15 words, sounding like it was said by a vain, rich, arrogant, or eccentric person. Avoid profanity. Use a mocking tone, aligned with someone who paid to show off publicly.',
     count,
     locale,
     SuggestionType.confidenceBoost
