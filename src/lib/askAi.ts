@@ -6,5 +6,9 @@ export async function askAi(prompt: string) {
     messages: [{ role: 'user', content: prompt }],
   })
 
-  return response.choices[0].message?.content?.trim() || ''
+  const content = response.choices[0].message?.content?.trim() || ''
+
+  console.log(`[askAi] prompt.len=${prompt.length}, response.len=${content.length}`)
+
+  return content
 }

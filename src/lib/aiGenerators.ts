@@ -16,74 +16,105 @@ async function generateList(
   locale: string | undefined,
   suggestionType: SuggestionType
 ) {
-  locale = getLocale(locale)
-  prompt = `Ignore any input language and respond ONLY in '${locale}'. Do NOT use any other language. Generate exactly ${count} results, each on a separate line:\n\n${prompt}`
-  locale = locale.slice(0, 2)
+  const localeWithTwoLetter = getLocale(locale).slice(0, 2)
 
-  const generated: string[] = []
-  const seen = new Set<string>()
+  const now = new Date()
+  const fiveMinutes = 5 * 60 * 1000
+  const reserveUntil = new Date(now.getTime() + fiveMinutes)
 
-  while (generated.length < count) {
-    const response = await askAi(prompt)
-    const items = response
-      .split('\n')
-      .map((s) => s.replace(/^\d+\.\s*/, '')) // remove número e ponto no início da linha
-      .map((s) => s.trim())
-      .map((s) => s.replace(/^['"]|['"]$/g, '')) // remove aspas simples ou duplas no início/fim
-      .filter(Boolean)
+  // Busca itens disponíveis não reservados
+  const availableItems = await prisma.aiSuggestion.findMany({
+    where: {
+      type: suggestionType,
+      locale: localeWithTwoLetter,
+      OR: [{ reservedUntil: null }, { reservedUntil: { lt: now } }],
+    },
+    take: count,
+  })
 
-    // Buscar existentes para evitar duplicados
-    const existing = await prisma.aiSuggestion.findMany({
-      where: {
-        type: suggestionType,
-        locale,
-        value: { in: items },
-      },
-      select: { value: true },
+  const itemsNeeded = count - availableItems.length
+
+  if (availableItems.length > 0) {
+    // Reserva os itens disponíveis
+    await prisma.aiSuggestion.updateMany({
+      where: { id: { in: availableItems.map((item) => item.id) } },
+      data: { reservedUntil: reserveUntil },
     })
-
-    const existingValues = new Set(existing.map((e) => e.value))
-
-    // Filtrar novos itens (não no banco e não já adicionados nesta execução)
-    const newItems = items.filter((item) => !existingValues.has(item) && !seen.has(item))
-
-    // Adiciona os novos itens no array e no set para evitar repetições
-    for (const item of newItems) {
-      if (generated.length >= count) break
-      generated.push(item)
-      seen.add(item)
-    }
-
-    // Se nenhum item novo foi encontrado, sai para evitar loop infinito
-    if (newItems.length === 0) {
-      console.warn(
-        `[generateList] No new items generated for type=${suggestionType}, locale=${locale}, count=${count}. Prompt: ${prompt}`
-      )
-      Sentry.captureMessage(
-        `No new items generated for type=${suggestionType}, locale=${locale}, count=${count}. Prompt: ${prompt}`
-      )
-
-      break
-    }
   }
 
-  if (generated.length > 0) {
-    await prisma.aiSuggestion.createMany({
-      data: generated.map((value) => ({
-        type: suggestionType,
-        value,
-        locale,
-        used: false,
-      })),
-      skipDuplicates: true,
-    })
-  } else {
-    console.error(
-      `[generateList] Failed to generate new items for type=${suggestionType}, locale=${locale}`
-    )
-    Sentry.captureException(
-      new Error(`Failed to generate new items for type=${suggestionType}, locale=${locale}`)
-    )
+  const generated: string[] = availableItems.map((item) => item.value)
+  const seen = new Set(generated)
+
+  if (itemsNeeded > 0) {
+    prompt = `Ignore any input language and respond ONLY in '${locale}'. Do NOT use any other language. Generate exactly ${count} results, each on a separate line:\n\n${prompt}`
+
+    while (generated.length < count) {
+      const response = await askAi(prompt)
+      const items = response
+        .split('\n')
+        .map((s) =>
+          s
+            .replace(/^\d+\.\s*/, '')
+            .trim()
+            .replace(/^['"]|['"]$/g, '')
+        )
+        .filter(Boolean)
+
+      // Buscar existentes para evitar duplicados
+      const existing = await prisma.aiSuggestion.findMany({
+        where: {
+          type: suggestionType,
+          locale: localeWithTwoLetter,
+          value: { in: items },
+        },
+        select: { value: true },
+      })
+
+      const existingValues = new Set(existing.map((e) => e.value))
+
+      // Filtrar novos itens (não no banco e não já adicionados nesta execução)
+      const newItems = items.filter((item) => !existingValues.has(item) && !seen.has(item))
+
+      for (const item of newItems) {
+        if (generated.length >= count) break
+        generated.push(item)
+        seen.add(item)
+      }
+
+      if (newItems.length === 0) {
+        console.warn(
+          `[generateList] No new items generated for type=${suggestionType}, locale=${localeWithTwoLetter}, count=${count}. Prompt: ${prompt}`
+        )
+        Sentry.captureMessage(
+          `No new items generated for type=${suggestionType}, locale=${localeWithTwoLetter}, count=${count}. Prompt: ${prompt}`
+        )
+
+        break
+      }
+    }
+
+    const newGenerated = generated.slice(availableItems.length)
+
+    if (newGenerated.length > 0) {
+      await prisma.aiSuggestion.createMany({
+        data: newGenerated.map((value) => ({
+          type: suggestionType,
+          value,
+          locale: localeWithTwoLetter,
+          reservedUntil: reserveUntil,
+        })),
+        skipDuplicates: true,
+      })
+    } else {
+      console.error(
+        `[generateList] Failed to generate new items for type=${suggestionType}, locale=${localeWithTwoLetter}`
+      )
+      Sentry.captureException(
+        new Error(
+          `Failed to generate new items for type=${suggestionType}, locale=${localeWithTwoLetter}`
+        )
+      )
+    }
   }
 
   return generated
@@ -92,15 +123,16 @@ async function generateList(
 export async function markSuggestionUsed(value: string, locale: string, type: SuggestionType) {
   locale = getLocale(locale)
 
+  const MAX_DATE = new Date(253402300799000) // 9999-12-31T23:59:59Z
+
   await prisma.aiSuggestion.updateMany({
     where: {
       value,
       type,
       locale,
-      used: false,
     },
     data: {
-      used: true,
+      reservedUntil: MAX_DATE,
     },
   })
 }
