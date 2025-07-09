@@ -10,9 +10,11 @@ import { getDefinitions } from '@/lib/definitions'
 import { useRotatingValues } from '@/hooks/useRotatingValues'
 import { useParams } from 'next/navigation'
 import { AvatarUpload } from '@/components/app/AvatarUpload'
-
+import * as Sentry from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
+import { fetchUrlAsFile } from '@/lib/utils'
+
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
   { ssr: false }
@@ -35,6 +37,8 @@ export default function PayPage() {
   const [avatarBg, setAvatarBg] = useState('')
   const [customAvatarFile, setCustomAvatarFile] = useState<File | null>(null)
   const [avatarUrl, setAvatarUrl] = useState('')
+
+  const [loading, setLoading] = useState(false)
 
   // Gera a URL do avatar baseado no seed, ou usa a imagem customizada
   useEffect(() => {
@@ -94,6 +98,73 @@ export default function PayPage() {
     if (messages.length === 0) return
     setMessage(getNextMessage())
   }, [messages, getNextMessage])
+
+  async function uploadFile(file: File, folder: string): Promise<string> {
+    const res = await fetch('/api/upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contentType: file.type, folder }),
+    })
+
+    if (!res.ok) {
+      throw new Error('Failed to get upload URL.')
+    }
+
+    const { url, key } = await res.json()
+
+    const uploadRes = await fetch(url, {
+      method: 'PUT',
+      body: file,
+      headers: { 'Content-Type': file.type },
+    })
+
+    if (!uploadRes.ok) {
+      throw new Error('Failed to upload file.')
+    }
+
+    const publicUrl = `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_URL}/${key}`
+
+    return publicUrl
+  }
+
+  const handlePayClick = async () => {
+    setLoading(true)
+    try {
+      let finalImageUrl: string
+      if (customAvatarFile) {
+        finalImageUrl = await uploadFile(customAvatarFile, 'avatar')
+      } else {
+        const dicebearFile = await fetchUrlAsFile(avatarUrl, 'dicebear.png')
+        finalImageUrl = await uploadFile(dicebearFile, 'avatar')
+      }
+
+      const finalAudioUrl = audioFile ? await uploadFile(audioFile, 'audio') : undefined
+
+      const response = await fetch('/api/king', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          message,
+          imageUrl: finalImageUrl,
+          audioUrl: finalAudioUrl,
+          amount: 1,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to save king data.')
+      }
+
+      alert('Data saved successfully!')
+    } catch (error) {
+      console.error('Error during saving king data:', error)
+      Sentry.captureException(error)
+      alert('An error occurred. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
@@ -180,7 +251,11 @@ export default function PayPage() {
         {/* Preview do áudio */}
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
-        <Button className="w-full mt-4 bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300">
+        <Button
+          className="w-full mt-4 bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300"
+          disabled={loading}
+          onClick={handlePayClick}
+        >
           {t('payButton', { ammount: '$1' })}
         </Button>
       </div>
