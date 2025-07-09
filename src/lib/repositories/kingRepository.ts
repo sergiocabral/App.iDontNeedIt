@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { getDefinitions } from '../definitions'
-import { formatAmmount } from '../utils'
+import { formatAmmount } from '../utilsApp'
 
 const def = getDefinitions()
 

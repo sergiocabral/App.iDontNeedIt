@@ -17,6 +17,7 @@ import { fetchUrlAsFile } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
 import { StripePayForm } from '@/components/app/StripePayForm'
 import { AmountType } from '@/lib/repositories/kingRepository'
+import { splitByMarker } from '@/lib/utilsApp'
 
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
@@ -222,11 +223,17 @@ export default function PayPage() {
     }
   }
 
+  const pageTitle = splitByMarker(t('title', { ammount: '|' }), '|')
+
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
       <div className="w-full max-w-md p-6 space-y-4">
         <h1 className="text-2xl font-bold text-center">
-          {t('title', { ammount: nextAmount ? nextAmount.formatted : '$$$' })}
+          {pageTitle.left}{' '}
+          <span className="inline-block bg-green-600 text-background px-4 py-1 rounded">
+            {nextAmount ? nextAmount.formatted : '$$$'}
+          </span>{' '}
+          {pageTitle.right}
         </h1>
 
         {/* Avatar com botões sobrepostos */}

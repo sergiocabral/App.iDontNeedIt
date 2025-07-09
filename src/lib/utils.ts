@@ -1,5 +1,4 @@
 import { clsx, type ClassValue } from 'clsx'
-import { Currency } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
@@ -39,11 +38,4 @@ export async function fetchUrlAsFile(
   const contentType = forcedContentType || blob.type || 'application/octet-stream'
 
   return new File([blob], filename, { type: contentType })
-}
-
-export function formatAmmount(data: { amount: number; currency: string }): string {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: data.currency,
-  }).format(data.amount / 100)
 }

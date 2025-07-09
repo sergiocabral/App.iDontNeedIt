@@ -1,21 +1,11 @@
 import { KingRepository } from '@/lib/repositories/kingRepository'
-import { formatAmmount } from '@/lib/utils'
+import { formatAmmount, splitByMarker } from '@/lib/utilsApp'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default async function HomePage() {
   const t = await getTranslations('HomePage')
-
-  const splitByMarker = (text: string, marker: string = 'ammount') => {
-    const mark = '|'
-    const values: Record<string, string> = {}
-    values[marker] = mark
-    text = t(text, values)
-    const left = text.substring(0, text.indexOf(mark))
-    const right = text === left ? '' : text.substring(text.indexOf(mark) + mark.length)
-    return { left, right }
-  }
 
   const kings = await KingRepository.listAll()
 
@@ -39,8 +29,8 @@ export default async function HomePage() {
     (a, b) => b.amount - a.amount || b.createdAt.getTime() - a.createdAt.getTime()
   )
 
-  const pageTitle = splitByMarker('droppedToLeaveMark')
-  const kingTitle = splitByMarker('wastedBecauseICan')
+  const pageTitle = splitByMarker(t('droppedToLeaveMark', { ammount: '|' }), '|')
+  const kingTitle = splitByMarker(t('wastedBecauseICan', { ammount: '|' }), '|')
 
   return (
     <main className="max-w-4xl mx-auto p-8 space-y-8">
