@@ -1,0 +1,12 @@
+{
+  "defaultLocale": "pt",
+  "defaultCountry": "BR",
+  "appName": "I Don't Need It",
+  "website": "https://idontneedit.org",
+  "email": "contact@idontneedit.org",
+  "twitterCreator": "@devnator_com",
+  "dicerbearAvatarGeneratorUrl": "https://api.dicebear.com/6.x/miniavs/svg?seed={seed}&backgroundColor=transparent&backgroundType=gradientLinear&backgroundGradientColor1=transparent&backgroundGradientColor2=transparent&backgroundGradientRotation=0&size=100",
+  "paymentCurrency": "brl",
+  "paymentInitial": 100,
+  "paymentIncrement": 100
+}

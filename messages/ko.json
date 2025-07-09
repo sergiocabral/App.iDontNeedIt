@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "나보다 부자라고? 증명해봐.",
-    "twitter": "나보다 부자라고? 증명해봐."
+  "AudioRecorderComponent": {
+    "status": "상태",
+    "startRecording": "오디오 녹음",
+    "stopRecording": "녹음 중지",
+    "discardRecording": "녹음 삭제",
+    "status-idle": "녹음 대기 중",
+    "status-recording": "녹음 중",
+    "status-stopping": "중지 중",
+    "status-stopped": "녹음됨",
+    "status-acquiring_media": "오디오 가져오는 중",
+    "status-error": "오류"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "이미지 파일만 허용됩니다"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "이미지 또는 오디오 파일만 허용됩니다",
+    "dropFileHere": "파일을 여기에 드롭하세요...",
+    "dragAndDropOrClick": "이미지 또는 오디오를 드래그 앤 드롭하거나 클릭하여 업로드",
+    "imagePreview": "이미지 미리보기",
+    "notSupportedAudio": "브라우저에서 오디오를 지원하지 않습니다."
+  },
+  "LocaleLayout": {
+    "description": "나보다 부자라고? 증명해봐."
   },
   "HomePage": {
-    "comingSoon": "무언가 미친 일이 다가오고 있어요..."
+    "proveRichest": "당신이 세상에서 제일 부자라는 걸 증명해봐",
+    "throwOneDollar": "{amount}을 버려봐",
+    "droppedToLeaveMark": "내 흔적을 남기기 위해 {amount}을 썼어",
+    "wastedBecauseICan": "{amount}을 낭비한 건 그냥 내가 할 수 있으니까",
+    "richestListTitle": "진짜 필요 없는 사람들",
+    "audioNotSupported": "브라우저가 오디오 재생을 지원하지 않습니다."
+  },
+  "KingPage": {
+    "title": "{date}에 재산의 정점에 있었다",
+    "description": "아무렇지 않게 {amount}를 버렸다",
+    "backHome": "왕실 홀로 돌아가기",
+    "audioNotSupported": "사용 중인 브라우저는 오디오 재생을 지원하지 않습니다."
+  },
+  "PayPage": {
+    "title": "{amount}만으로 왕좌는 당신의 것. 어차피 당신 통장엔 티도 안 나잖아.",
+    "namePlaceholder": "이름 또는 닉네임 (선택사항)",
+    "messagePlaceholder": "텍스트 또는 오디오로 도발적인 문구를 남겨주세요 (선택 사항)",
+    "generateNameButton": "이름 생성",
+    "generateMessageButton": "문장 생성",
+    "payButton": "{amount}만으로 전 왕을 몰아내세요",
+    "avatarAlt": "당신의 아바타",
+    "uploadAvatarButton": "이미지를 업로드하여 아바타로 사용",
+    "generateAvatarButton": "무작위 이미지로 아바타 생성",
+    "fileLimit": "파일 크기는 {actualMB}MB입니다. 최대 허용 크기는 {maxSizeMB}MB입니다. 더 작은 파일을 선택하세요.",
+    "errorAndTryAgain": "오류가 발생했습니다. 다시 시도해주세요.",
+    "backToHome": "포기합니다. 하고 싶었지만 잔고가 안 도와줘요.",
+    "languageFromBrowser": "브라우저에서 국적이 감지되었습니다",
+    "disclaimerPublicInfo": "여기에 게시된 모든 정보는 <em>공개</em>되며 <em>영구적</em>입니다. 제출하기 전에 신중히 생각하세요. 당신은 앞으로 <strong>지울 수 없는</strong> 흔적을 남기게 됩니다."
   }
 }

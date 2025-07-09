@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "あなたは私より裕福ですか？証明してみて。",
-    "twitter": "あなたは私より裕福ですか？証明してみて。"
+  "AudioRecorderComponent": {
+    "status": "ステータス",
+    "startRecording": "録音開始",
+    "stopRecording": "録音停止",
+    "discardRecording": "録音を破棄",
+    "status-idle": "録音を待機中",
+    "status-recording": "録音中",
+    "status-stopping": "停止中",
+    "status-stopped": "録音済み",
+    "status-acquiring_media": "音声を取得中",
+    "status-error": "エラー"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "画像ファイルのみ使用できます"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "画像または音声ファイルのみ使用できます",
+    "dropFileHere": "ここにファイルをドロップ...",
+    "dragAndDropOrClick": "画像または音声をドラッグ＆ドロップまたはクリックしてアップロード",
+    "imagePreview": "画像プレビュー",
+    "notSupportedAudio": "お使いのブラウザは音声をサポートしていません。"
+  },
+  "LocaleLayout": {
+    "description": "あなたは私より裕福ですか？証明してみて。"
   },
   "HomePage": {
-    "comingSoon": "とんでもないことがやってくる……"
+    "proveRichest": "自分が世界一の金持ちだと証明してみろ",
+    "throwOneDollar": "{amount} を無駄にする",
+    "droppedToLeaveMark": "{amount} を使って存在感を示した",
+    "wastedBecauseICan": "できるから {amount} を無駄にした",
+    "richestListTitle": "本当に必要としていない人たち",
+    "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
+  },
+  "KingPage": {
+    "title": "{date}に財産の絶頂にいた",
+    "description": "何も気にせず{amount}を投げ捨てた",
+    "backHome": "王室のホールに戻る",
+    "audioNotSupported": "お使いのブラウザはオーディオの再生をサポートしていません。"
+  },
+  "PayPage": {
+    "title": "{amount} だけで王座はあなたのもの。それくらいあなたの口座には痛くもないでしょう。",
+    "namePlaceholder": "名前またはニックネーム（任意）",
+    "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
+    "generateNameButton": "名前を生成",
+    "generateMessageButton": "フレーズを生成",
+    "payButton": "たった {amount} で前の王を退位させよう",
+    "avatarAlt": "あなたのアバター",
+    "uploadAvatarButton": "画像をアップロードしてアバターにする",
+    "generateAvatarButton": "ランダム画像をアバターとして生成する",
+    "fileLimit": "ファイルサイズは {actualMB}MB です。最大許容サイズは {maxSizeMB}MB です。より小さいファイルを選択してください。",
+    "errorAndTryAgain": "エラーが発生しました。もう一度お試しください。",
+    "backToHome": "諦めます。気持ちはあっても、残高がついてこない。",
+    "languageFromBrowser": "お使いのブラウザがあなたの国籍を示しました",
+    "disclaimerPublicInfo": "ここに投稿された情報はすべて<em>公開</em>かつ<em>永続的</em>です。送信前によく考えてください。あなたは未来に<strong>消せない</strong>痕跡を残そうとしています。"
   }
 }

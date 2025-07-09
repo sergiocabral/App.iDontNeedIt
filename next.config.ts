@@ -2,7 +2,12 @@ import { withSentryConfig } from '@sentry/nextjs'
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
 
-const nextConfig: NextConfig = {}
+const nextConfig: NextConfig = {
+  images: {
+    domains: ['flagcdn.com'],
+    dangerouslyAllowSVG: true,
+  },
+}
 
 const withNextIntl = createNextIntlPlugin()
 const nextConfigWithIntl = withNextIntl(nextConfig)

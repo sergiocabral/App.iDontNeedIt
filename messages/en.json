@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "Are you richer than me? Prove it.",
-    "twitter": "Are you richer than me? Prove it."
+  "AudioRecorderComponent": {
+    "status": "Status",
+    "startRecording": "Record Audio",
+    "stopRecording": "Stop Recording",
+    "discardRecording": "Discard Recording",
+    "status-idle": "Waiting to record",
+    "status-recording": "Recording",
+    "status-stopping": "Stopping",
+    "status-stopped": "Recorded",
+    "status-acquiring_media": "Getting audio",
+    "status-error": "Error"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Only image files are allowed"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Only image or audio files are allowed",
+    "dropFileHere": "Drop file here...",
+    "dragAndDropOrClick": "Drag & drop or click to upload image or audio",
+    "imagePreview": "Image Preview",
+    "notSupportedAudio": "Your browser does not support audio."
+  },
+  "LocaleLayout": {
+    "description": "Are you richer than me? Prove it."
   },
   "HomePage": {
-    "comingSoon": "Something insane is coming..."
+    "proveRichest": "Prove you're the richest in the world",
+    "throwOneDollar": "Throw {amount} away",
+    "droppedToLeaveMark": "Dropped {amount} just to leave my mark",
+    "wastedBecauseICan": "Wasted {amount} because I can",
+    "richestListTitle": "The Ones Who Really Don’t Need It",
+    "audioNotSupported": "Your browser does not support audio playback."
+  },
+  "KingPage": {
+    "title": "At the height of fortune on {date}",
+    "description": "I threw away {amount} without a care",
+    "backHome": "Return to the hall of royalty",
+    "audioNotSupported": "Your browser does not support audio playback."
+  },
+  "PayPage": {
+    "title": "For just {amount}, the throne is yours. After all, that doesn't even scratch your account.",
+    "namePlaceholder": "Your name or nickname (optional)",
+    "messagePlaceholder": "Leave a provocative phrase in text or audio (optional)",
+    "generateNameButton": "Generate name",
+    "generateMessageButton": "Generate message",
+    "payButton": "Dethrone the last king for just {amount}",
+    "avatarAlt": "Your avatar",
+    "uploadAvatarButton": "Upload an image as your avatar",
+    "generateAvatarButton": "Generate a random image as your avatar",
+    "fileLimit": "File is {actualMB}MB. Maximum allowed is {maxSizeMB}MB. Please choose a smaller file.",
+    "errorAndTryAgain": "An error occurred. Please try again.",
+    "backToHome": "I give up. I wanted to, but my balance doesn’t agree.",
+    "languageFromBrowser": "Your browser indicated your nationality",
+    "disclaimerPublicInfo": "All information posted here will be <em>public</em> and <em>permanent</em>. Think carefully before submitting. You are leaving an <strong>indelible</strong> mark for the times to come."
   }
 }

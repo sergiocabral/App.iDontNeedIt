@@ -21,3 +21,38 @@ model AccessLog {
   referrer  String?
   createdAt DateTime @default(now())
 }
+
+enum SuggestionType {
+  confidenceBoost
+  personsName
+}
+
+model AiSuggestion {
+  id            String         @id @default(uuid())
+  type          SuggestionType
+  value         String
+  locale        String
+  reservedUntil DateTime?
+  createdAt     DateTime       @default(now())
+}
+
+model King {
+  id            String   @id @default(cuid())
+  name          String?
+  message       String?
+  imageUrl      String
+  imageBgColor  String
+  audioUrl      String?
+  amount        Int
+  currency      String
+  locale        String
+  createdAt     DateTime @default(now())
+}
+
+model Payment {
+  id              String   @id @default(cuid())
+  stripeIntentId  String   @unique
+  amount          Float
+  currency        String
+  createdAt       DateTime @default(now())
+}

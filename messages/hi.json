@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "क्या आप मुझसे अमीर हैं? तो साबित करें।",
-    "twitter": "क्या आप मुझसे अमीर हैं? तो साबित करें।"
+  "AudioRecorderComponent": {
+    "status": "स्थिति",
+    "startRecording": "ऑडियो रिकॉर्ड करें",
+    "stopRecording": "रिकॉर्डिंग बंद करें",
+    "discardRecording": "रिकॉर्डिंग हटाएं",
+    "status-idle": "रिकॉर्डिंग का इंतजार",
+    "status-recording": "रिकॉर्ड हो रहा है",
+    "status-stopping": "रोक रहा है",
+    "status-stopped": "रिकॉर्ड किया गया",
+    "status-acquiring_media": "ऑडियो प्राप्त कर रहे हैं",
+    "status-error": "त्रुटि"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "केवल छवि फ़ाइलों की अनुमति है"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "केवल छवि या ऑडियो फ़ाइलों की अनुमति है",
+    "dropFileHere": "फ़ाइल यहाँ छोड़ें...",
+    "dragAndDropOrClick": "छवि या ऑडियो अपलोड करने के लिए खींचें और छोड़ें या क्लिक करें",
+    "imagePreview": "छवि पूर्वावलोकन",
+    "notSupportedAudio": "आपका ब्राउज़र ऑडियो का समर्थन नहीं करता।"
+  },
+  "LocaleLayout": {
+    "description": "क्या आप मुझसे अमीर हैं? तो साबित करें।"
   },
   "HomePage": {
-    "comingSoon": "कुछ पागलपन भरा आने वाला है..."
+    "proveRichest": "साबित करो कि तुम दुनिया के सबसे अमीर हो",
+    "throwOneDollar": "{amount} फेंक दो",
+    "droppedToLeaveMark": "मैंने {amount} खर्च किए बस अपनी छाप छोड़ने के लिए",
+    "wastedBecauseICan": "मैंने {amount} बर्बाद किए क्योंकि मैं कर सकता हूँ",
+    "richestListTitle": "जिन्हें सच में इसकी ज़रूरत नहीं",
+    "audioNotSupported": "आपका ब्राउज़र ऑडियो प्लेबैक को सपोर्ट नहीं करता।"
+  },
+  "KingPage": {
+    "title": "{date} को संपत्ति की चरम सीमा पर था",
+    "description": "मैंने {amount} को बिना परवाह किए फेंक दिया",
+    "backHome": "शाही हॉल में वापस जाएं",
+    "audioNotSupported": "आपका ब्राउज़र ऑडियो प्लेबैक का समर्थन नहीं करता है।"
+  },
+  "PayPage": {
+    "title": "सिर्फ {amount} में सिंहासन आपका है। आखिरकार, यह आपके खाते को छूता भी नहीं।",
+    "namePlaceholder": "आपका नाम या उपनाम (वैकल्पिक)",
+    "messagePlaceholder": "टेक्स्ट या ऑडियो में एक उत्तेजक वाक्य छोड़ें (वैकल्पिक)",
+    "generateNameButton": "नाम बनाएं",
+    "generateMessageButton": "वाक्य बनाएं",
+    "payButton": "सिर्फ {amount} में पिछले राजा को हटाएँ",
+    "avatarAlt": "आपका अवतार",
+    "uploadAvatarButton": "अपनी छवि को अवतार के रूप में अपलोड करें",
+    "generateAvatarButton": "एक यादृच्छिक छवि को अपने अवतार के रूप में जनरेट करें",
+    "fileLimit": "फ़ाइल का आकार {actualMB}MB है। अधिकतम अनुमति प्राप्त आकार {maxSizeMB}MB है। कृपया एक छोटी फ़ाइल चुनें।",
+    "errorAndTryAgain": "एक त्रुटि हुई। कृपया पुनः प्रयास करें।",
+    "backToHome": "मैं हार मानता हूँ। चाहा तो था, लेकिन बैलेंस ने साथ नहीं दिया।",
+    "languageFromBrowser": "आपके ब्राउज़र ने आपकी राष्ट्रीयता बताई",
+    "disclaimerPublicInfo": "यहाँ प्रकाशित की गई सभी जानकारी <em>सार्वजनिक</em> और <em>स्थायी</em> होगी। भेजने से पहले अच्छी तरह सोचें। आप भविष्य के लिए <strong>अमिट</strong> छाप छोड़ रहे हैं।"
   }
 }

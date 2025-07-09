@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "Ты богаче меня? Докажи это.",
-    "twitter": "Ты богаче меня? Докажи это."
+  "AudioRecorderComponent": {
+    "status": "Статус",
+    "startRecording": "Начать запись",
+    "stopRecording": "Остановить запись",
+    "discardRecording": "Удалить запись",
+    "status-idle": "Ожидание записи",
+    "status-recording": "Запись",
+    "status-stopping": "Останавливается",
+    "status-stopped": "Записано",
+    "status-acquiring_media": "Получение аудио",
+    "status-error": "Ошибка"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Разрешены только изображения"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Разрешены только изображения или аудио",
+    "dropFileHere": "Перетащите файл сюда...",
+    "dragAndDropOrClick": "Перетащите или нажмите, чтобы загрузить изображение или аудио",
+    "imagePreview": "Предпросмотр изображения",
+    "notSupportedAudio": "Ваш браузер не поддерживает воспроизведение аудио."
+  },
+  "LocaleLayout": {
+    "description": "Ты богаче меня? Докажи это."
   },
   "HomePage": {
-    "comingSoon": "Грядёт нечто безумное..."
+    "proveRichest": "Докажи, что ты самый богатый в мире",
+    "throwOneDollar": "Выбрось {amount}",
+    "droppedToLeaveMark": "Потратил {amount}, чтобы оставить след",
+    "wastedBecauseICan": "Потратил {amount}, потому что могу себе позволить",
+    "richestListTitle": "Те, кто действительно в этом не нуждаются",
+    "audioNotSupported": "Ваш браузер не поддерживает воспроизведение аудио."
+  },
+  "KingPage": {
+    "title": "На пике богатства {date}",
+    "description": "Я безразлично выбросил {amount}",
+    "backHome": "Вернуться в зал королей",
+    "audioNotSupported": "Ваш браузер не поддерживает воспроизведение аудио."
+  },
+  "PayPage": {
+    "title": "Всего за {amount} трон твой. Это ведь даже не ударит по твоему счёту.",
+    "namePlaceholder": "Ваше имя или ник (необязательно)",
+    "messagePlaceholder": "Оставьте провокационную фразу в тексте или аудио (необязательно)",
+    "generateNameButton": "Сгенерировать имя",
+    "generateMessageButton": "Сгенерировать фразу",
+    "payButton": "Свергни последнего короля всего за {amount}",
+    "avatarAlt": "Ваш аватар",
+    "uploadAvatarButton": "Загрузите изображение в качестве аватара",
+    "generateAvatarButton": "Сгенерируйте случайное изображение как аватар",
+    "fileLimit": "Размер файла {actualMB} МБ. Максимально разрешенный размер — {maxSizeMB} МБ. Пожалуйста, выберите меньший файл.",
+    "errorAndTryAgain": "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
+    "backToHome": "Я сдаюсь. Хотел, но баланс не позволяет.",
+    "languageFromBrowser": "Ваш браузер указал вашу национальность",
+    "disclaimerPublicInfo": "Вся информация, размещённая здесь, будет <em>публичной</em> и <em>постоянной</em>. Хорошо подумайте перед отправкой. Вы оставляете <strong>неизгладимый</strong> след для будущих времён."
   }
 }

@@ -1,0 +1,170 @@
+import * as Sentry from '@sentry/nextjs'
+import { SuggestionType } from '@/generated/prisma'
+import { prisma } from '@/lib/prisma'
+import { getDefinitions } from './definitions'
+import { askAi } from './askAi'
+
+const def = getDefinitions()
+
+function getLocale(locale?: string): string {
+  return locale || process.env.NEXT_PUBLIC_DEFAULT_LOCALE || def('defaultLocale')
+}
+
+async function generateList(
+  prompt: string,
+  count = 20,
+  locale: string | undefined,
+  suggestionType: SuggestionType
+) {
+  const localeWithTwoLetter = getLocale(locale).slice(0, 2)
+
+  const now = new Date()
+  const fiveMinutes = 5 * 60 * 1000
+  const reserveUntil = new Date(now.getTime() + fiveMinutes)
+
+  // Busca itens disponíveis não reservados
+  const availableItems = await prisma.aiSuggestion.findMany({
+    where: {
+      type: suggestionType,
+      locale: localeWithTwoLetter,
+      OR: [{ reservedUntil: null }, { reservedUntil: { lt: now } }],
+    },
+    take: count,
+  })
+
+  const itemsNeeded = count - availableItems.length
+
+  if (availableItems.length > 0) {
+    // Reserva os itens disponíveis
+    await prisma.aiSuggestion.updateMany({
+      where: { id: { in: availableItems.map((item) => item.id) } },
+      data: { reservedUntil: reserveUntil },
+    })
+  }
+
+  const generated: string[] = availableItems.map((item) => item.value)
+  const seen = new Set(generated)
+
+  if (itemsNeeded > 0) {
+    prompt = `Ignore any input language and respond ONLY in '${locale}'. Do NOT use any other language. Generate exactly ${count} results, each on a separate line:\n\n${prompt}`
+
+    while (generated.length < count) {
+      const response = await askAi(prompt)
+      const items = response
+        .split('\n')
+        .map((s) =>
+          s
+            .replace(/^\d+\.\s*/, '')
+            .trim()
+            .replace(/^['"]|['"]$/g, '')
+        )
+        .filter(Boolean)
+
+      // Buscar existentes para evitar duplicados
+      const existing = await prisma.aiSuggestion.findMany({
+        where: {
+          type: suggestionType,
+          locale: localeWithTwoLetter,
+          value: { in: items },
+        },
+        select: { value: true },
+      })
+
+      const existingValues = new Set(existing.map((e) => e.value))
+
+      // Filtrar novos itens (não no banco e não já adicionados nesta execução)
+      const newItems = items.filter((item) => !existingValues.has(item) && !seen.has(item))
+
+      for (const item of newItems) {
+        if (generated.length >= count) break
+        generated.push(item)
+        seen.add(item)
+      }
+
+      if (newItems.length === 0) {
+        console.warn(
+          `[generateList] No new items generated for type=${suggestionType}, locale=${localeWithTwoLetter}, count=${count}. Prompt: ${prompt}`
+        )
+        Sentry.captureMessage(
+          `No new items generated for type=${suggestionType}, locale=${localeWithTwoLetter}, count=${count}. Prompt: ${prompt}`
+        )
+
+        break
+      }
+    }
+
+    const newGenerated = generated.slice(availableItems.length)
+
+    if (newGenerated.length > 0) {
+      await prisma.aiSuggestion.createMany({
+        data: newGenerated.map((value) => ({
+          type: suggestionType,
+          value,
+          locale: localeWithTwoLetter,
+          reservedUntil: reserveUntil,
+        })),
+        skipDuplicates: true,
+      })
+    } else {
+      console.error(
+        `[generateList] Failed to generate new items for type=${suggestionType}, locale=${localeWithTwoLetter}`
+      )
+      Sentry.captureException(
+        new Error(
+          `Failed to generate new items for type=${suggestionType}, locale=${localeWithTwoLetter}`
+        )
+      )
+    }
+  }
+
+  return generated
+}
+
+export async function markSuggestionUsed(value: string, locale: string, type: SuggestionType) {
+  locale = getLocale(locale)
+
+  const MAX_DATE = new Date(253402300799000) // 9999-12-31T23:59:59Z
+
+  await prisma.aiSuggestion.updateMany({
+    where: {
+      value,
+      type,
+      locale,
+    },
+    data: {
+      reservedUntil: MAX_DATE,
+    },
+  })
+}
+
+export async function generatePersonsNames(
+  locale: string | undefined,
+  count = 20
+): Promise<string[]> {
+  return generateList(
+    'Anonymous names with 2 words that sound like the nickname of an eccentric and wealthy person. It can resemble a username, codename, or nickname. Avoid numbers; use letters only.',
+    count,
+    locale,
+    SuggestionType.personsName
+  )
+}
+
+export async function generateConfidenceBoost(
+  locale: string | undefined,
+  count = 20
+): Promise<string[]> {
+  return generateList(
+    'A provocative and impactful phrase, up to 15 words, sounding like it was said by a vain, rich, arrogant, or eccentric person. Avoid profanity. Use a mocking tone, aligned with someone who paid to show off publicly.',
+    count,
+    locale,
+    SuggestionType.confidenceBoost
+  )
+}
+
+export async function markPersonNameUsed(value: string, locale: string) {
+  await markSuggestionUsed(value, locale, SuggestionType.personsName)
+}
+
+export async function markConfidenceBoostUsed(value: string, locale: string) {
+  await markSuggestionUsed(value, locale, SuggestionType.confidenceBoost)
+}

@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "你比我有钱？那就证明给我看。",
-    "twitter": "你比我有钱？那就证明给我看。"
+  "AudioRecorderComponent": {
+    "status": "状态",
+    "startRecording": "开始录音",
+    "stopRecording": "停止录音",
+    "discardRecording": "丢弃录音",
+    "status-idle": "等待录音",
+    "status-recording": "录音中",
+    "status-stopping": "停止中",
+    "status-stopped": "已录制",
+    "status-acquiring_media": "获取音频",
+    "status-error": "错误"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "只允许上传图片文件"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "只允许上传图片或音频文件",
+    "dropFileHere": "将文件拖到此处...",
+    "dragAndDropOrClick": "拖放或点击上传图片或音频",
+    "imagePreview": "图片预览",
+    "notSupportedAudio": "您的浏览器不支持音频播放。"
+  },
+  "LocaleLayout": {
+    "description": "你比我有钱？那就证明给我看。"
   },
   "HomePage": {
-    "comingSoon": "有疯狂的事情即将发生……"
+    "proveRichest": "证明你是世界上最富有的人",
+    "throwOneDollar": "扔掉 {amount}",
+    "droppedToLeaveMark": "我花了 {amount} 只是为了留下我的印记",
+    "wastedBecauseICan": "我浪费了 {amount} 因为我可以",
+    "richestListTitle": "真正不需要它的人",
+    "audioNotSupported": "你的浏览器不支持音频播放。"
+  },
+  "KingPage": {
+    "title": "{date}财富巅峰时",
+    "description": "我无所谓地扔掉了{amount}",
+    "backHome": "返回王室大厅",
+    "audioNotSupported": "您的浏览器不支持音频播放。"
+  },
+  "PayPage": {
+    "title": "只需 {amount}，王座就是你的。毕竟这对你的账户来说不算什么。",
+    "namePlaceholder": "你的名字或昵称（可选）",
+    "messagePlaceholder": "以文本或音频形式留下挑衅性短语（可选）",
+    "generateNameButton": "生成名字",
+    "generateMessageButton": "生成句子",
+    "payButton": "只需 {amount} 即可废黜上任国王",
+    "avatarAlt": "你的头像",
+    "uploadAvatarButton": "上传一张图片作为你的头像",
+    "generateAvatarButton": "随机生成一张头像图片",
+    "fileLimit": "文件大小为 {actualMB}MB。最大允许为 {maxSizeMB}MB。请选择较小的文件。",
+    "errorAndTryAgain": "发生错误。请重试。",
+    "backToHome": "我放弃了。我想试试，但我的余额不同意。",
+    "languageFromBrowser": "您的浏览器指示了您的国籍",
+    "disclaimerPublicInfo": "此处发布的所有信息将是<em>公开</em>且<em>永久</em>的。提交前请三思。你正在为未来留下<strong>不可磨灭</strong>的印记。"
   }
 }

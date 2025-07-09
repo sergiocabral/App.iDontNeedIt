@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "Bist du reicher als ich? Beweise es.",
-    "twitter": "Bist du reicher als ich? Beweise es."
+  "AudioRecorderComponent": {
+    "status": "Status",
+    "startRecording": "Audio aufnehmen",
+    "stopRecording": "Aufnahme stoppen",
+    "discardRecording": "Aufnahme verwerfen",
+    "status-idle": "Warten auf Aufnahme",
+    "status-recording": "Aufnahme läuft",
+    "status-stopping": "Wird gestoppt",
+    "status-stopped": "Aufgenommen",
+    "status-acquiring_media": "Audio wird erfasst",
+    "status-error": "Fehler"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Nur Bilddateien sind erlaubt"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Nur Bild- oder Audiodateien sind erlaubt",
+    "dropFileHere": "Datei hier ablegen...",
+    "dragAndDropOrClick": "Bild oder Audio per Drag & Drop oder Klick hochladen",
+    "imagePreview": "Bildvorschau",
+    "notSupportedAudio": "Ihr Browser unterstützt keine Audio-Wiedergabe."
+  },
+  "LocaleLayout": {
+    "description": "Bist du reicher als ich? Beweise es."
   },
   "HomePage": {
-    "comingSoon": "Etwas Verrücktes kommt bald..."
+    "proveRichest": "Beweise, dass du der reichste Mensch der Welt bist",
+    "throwOneDollar": "Wirf {amount} weg",
+    "droppedToLeaveMark": "Ich habe {amount} ausgegeben, um ein Zeichen zu setzen",
+    "wastedBecauseICan": "Ich habe {amount} verschwendet, weil ich es kann",
+    "richestListTitle": "Die, die es wirklich nicht brauchen",
+    "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
+  },
+  "KingPage": {
+    "title": "Am Höhepunkt des Reichtums am {date}",
+    "description": "Ich habe {amount} achtlos weggeworfen",
+    "backHome": "Zurück in die Halle der Könige",
+    "audioNotSupported": "Ihr Browser unterstützt keine Audiowiedergabe."
+  },
+  "PayPage": {
+    "title": "Für nur {amount} gehört dir der Thron. Das kratzt dein Konto ja nicht einmal.",
+    "namePlaceholder": "Dein Name oder Spitzname (optional)",
+    "messagePlaceholder": "Hinterlasse eine provokante Aussage als Text oder Audio (optional)",
+    "generateNameButton": "Name generieren",
+    "generateMessageButton": "Nachricht generieren",
+    "payButton": "Stürze den letzten König für nur {amount}",
+    "avatarAlt": "Dein Avatar",
+    "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
+    "generateAvatarButton": "Zufälliges Bild als Avatar generieren",
+    "fileLimit": "Die Datei ist {actualMB} MB groß. Maximal erlaubt sind {maxSizeMB} MB. Bitte wählen Sie eine kleinere Datei aus.",
+    "errorAndTryAgain": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+    "backToHome": "Ich gebe auf. Ich wollte, aber mein Kontostand spielt nicht mit.",
+    "languageFromBrowser": "Ihr Browser hat Ihre Nationalität angegeben",
+    "disclaimerPublicInfo": "Alle hier veröffentlichten Informationen sind <em>öffentlich</em> und <em>dauerhaft</em>. Überlege gut, bevor du etwas absendest. Du hinterlässt eine <strong>unauslöschliche</strong> Spur für die Zukunft."
   }
 }

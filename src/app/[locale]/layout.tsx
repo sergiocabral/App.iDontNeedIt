@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Copse } from 'next/font/google'
 import '../globals.css'
-import { hasLocale, NextIntlClientProvider } from 'next-intl'
-import { notFound } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
+import { getDefinitions } from '@/lib/definitions'
+import { ReactNode } from 'react'
+import { ToastProvider } from '@/components/ui/toaster'
 
 const copse = Copse({
   weight: '400',
@@ -20,54 +21,69 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'Metadata' })
+  const def = getDefinitions()
+  const t = await getTranslations({ locale, namespace: 'LocaleLayout' })
 
   return {
-    title: t('title'),
+    title: def('appName'),
     description: t('description'),
     openGraph: {
-      title: t('title'),
+      title: def('appName'),
       description: t('description'),
-      url: 'https://idontneedit.org',
-      siteName: t('title'),
+      url: def('website'),
+      siteName: def('appName'),
       locale: locale.replace('-', '_'),
       type: 'website',
       images: ['/img/opengraph-image.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('twitter'),
-      site: '@qynea',
-      creator: '@qynea',
+      title: def('appName'),
+      description: t('description'),
+      site: def('website'),
+      creator: def('twitterCreator'),
       images: ['/img/opengraph-image.png'],
     },
   }
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'pt' }, { locale: 'es' }]
+}
+
+interface Props {
+  children: ReactNode
   params: Promise<{ locale: string }>
-}>) {
-  // Ensure that the incoming `locale` is valid
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params
-  if (!hasLocale(routing.locales, locale)) {
-    notFound()
-  }
+
+  const defaultMessages = (await import('@/../messages/en.json')).default
+
+  let localeMessages = {}
+  try {
+    localeMessages = (await import(`@/../messages/${locale}.json`)).default
+  } catch {}
+
+  const messages = { ...defaultMessages, ...localeMessages }
 
   return (
-    <html lang="en">
-      <body className={`${copse.variable} antialiased`}>
-        <Script
-          async
-          src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-          strategy="afterInteractive"
-        />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+    <html lang="en" className="light">
+      <body
+        className={`${copse.variable} antialiased min-h-screen bg-gradient-to-b from-[#f3e8ff] via-[#f9f5ff] to-[#fdfcfe]`}
+      >
+        {process.env.NODE_ENV === 'production' && (
+          <Script
+            async
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ToastProvider>{children}</ToastProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

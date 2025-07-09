@@ -13,5 +13,5 @@ export const routing = defineRouting({
     'ko', // Korean
     'hi', // Hindi
   ],
-  defaultLocale: 'en',
+  defaultLocale: (process.env.NEXT_PUBLIC_DEFAULT_LOCALE as 'en') || 'en',
 })

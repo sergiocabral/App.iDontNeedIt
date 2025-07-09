@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "¿Eres más rico que yo? Demuéstralo.",
-    "twitter": "¿Eres más rico que yo? Demuéstralo."
+  "AudioRecorderComponent": {
+    "status": "Estado",
+    "startRecording": "Grabar audio",
+    "stopRecording": "Detener grabación",
+    "discardRecording": "Descartar grabación",
+    "status-idle": "Esperando para grabar",
+    "status-recording": "Grabando",
+    "status-stopping": "Deteniendo",
+    "status-stopped": "Grabado",
+    "status-acquiring_media": "Obteniendo audio",
+    "status-error": "Error"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Solo se permiten archivos de imagen"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Solo se permiten archivos de imagen o audio",
+    "dropFileHere": "Suelta el archivo aquí...",
+    "dragAndDropOrClick": "Arrastra y suelta o haz clic para subir imagen o audio",
+    "imagePreview": "Vista previa de imagen",
+    "notSupportedAudio": "Tu navegador no admite audio."
+  },
+  "LocaleLayout": {
+    "description": "¿Eres más rico que yo? Demuéstralo."
   },
   "HomePage": {
-    "comingSoon": "Algo insano está por llegar..."
+    "proveRichest": "Demuestra que eres el más rico del mundo",
+    "throwOneDollar": "Lanza {amount} a la basura",
+    "droppedToLeaveMark": "Gasté {amount} solo para dejar mi huella",
+    "wastedBecauseICan": "Desperdicié {amount} porque puedo",
+    "richestListTitle": "Los que realmente no lo necesitan",
+    "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
+  },
+  "KingPage": {
+    "title": "En la cumbre de la fortuna el {date}",
+    "description": "Dejé ir {amount} al viento sin cuidado",
+    "backHome": "Volver al salón de la realeza",
+    "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
+  },
+  "PayPage": {
+    "title": "Por solo {amount}, el trono es tuyo. Al fin y al cabo, eso ni roza tu cuenta.",
+    "namePlaceholder": "Tu nombre o apodo (opcional)",
+    "messagePlaceholder": "Deja una frase provocadora en texto o audio (opcional)",
+    "generateNameButton": "Generar nombre",
+    "generateMessageButton": "Generar frase",
+    "payButton": "Derroca al último rey por solo {amount}",
+    "avatarAlt": "Tu avatar",
+    "uploadAvatarButton": "Sube una imagen como tu avatar",
+    "generateAvatarButton": "Genera una imagen aleatoria como tu avatar",
+    "fileLimit": "El archivo tiene {actualMB}MB. El máximo permitido es {maxSizeMB}MB. Por favor, elija un archivo más pequeño.",
+    "errorAndTryAgain": "Ocurrió un error. Por favor, inténtalo de nuevo.",
+    "backToHome": "Me rindo. Quería, pero mi saldo no ayuda.",
+    "languageFromBrowser": "Tu navegador indicó tu nacionalidad",
+    "disclaimerPublicInfo": "Toda la información publicada aquí será <em>pública</em> y <em>permanente</em>. Piénsalo bien antes de enviar. Estás dejando una marca <strong>imborrable</strong> para los tiempos futuros."
   }
 }

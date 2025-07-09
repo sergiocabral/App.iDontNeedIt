@@ -1,10 +1,57 @@
 {
-  "Metadata": {
-    "title": "I Don't Need It",
-    "description": "Es-tu plus riche que moi ? Prouve-le.",
-    "twitter": "Es-tu plus riche que moi ? Prouve-le."
+  "AudioRecorderComponent": {
+    "status": "Statut",
+    "startRecording": "Enregistrer l'audio",
+    "stopRecording": "Arrêter l'enregistrement",
+    "discardRecording": "Annuler l'enregistrement",
+    "status-idle": "En attente d'enregistrement",
+    "status-recording": "Enregistrement",
+    "status-stopping": "Arrêt en cours",
+    "status-stopped": "Enregistré",
+    "status-acquiring_media": "Obtention de l'audio",
+    "status-error": "Erreur"
+  },
+  "AvatarUploadComponent": {
+    "invalidFileType": "Seuls les fichiers image sont autorisés"
+  },
+  "FileUploadComponent": {
+    "invalidFileType": "Seuls les fichiers image ou audio sont autorisés",
+    "dropFileHere": "Déposez le fichier ici...",
+    "dragAndDropOrClick": "Glissez-déposez ou cliquez pour téléverser une image ou un audio",
+    "imagePreview": "Aperçu de l'image",
+    "notSupportedAudio": "Votre navigateur ne prend pas en charge l'audio."
+  },
+  "LocaleLayout": {
+    "description": "Es-tu plus riche que moi ? Prouve-le."
   },
   "HomePage": {
-    "comingSoon": "Quelque chose de fou arrive..."
+    "proveRichest": "Prouve que tu es le plus riche du monde",
+    "throwOneDollar": "Jette {amount}",
+    "droppedToLeaveMark": "J'ai dépensé {amount} juste pour marquer le coup",
+    "wastedBecauseICan": "J'ai gaspillé {amount} parce que je peux",
+    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin",
+    "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
+  },
+  "KingPage": {
+    "title": "Au sommet de la fortune le {date}",
+    "description": "J’ai jeté {amount} au vent sans souci",
+    "backHome": "Retourner dans le hall de la royauté",
+    "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
+  },
+  "PayPage": {
+    "title": "Pour seulement {amount}, le trône est à vous. Après tout, cela ne touche même pas à votre compte.",
+    "namePlaceholder": "Votre nom ou surnom (optionnel)",
+    "messagePlaceholder": "Laissez une phrase provocante en texte ou en audio (optionnel)",
+    "generateNameButton": "Générer un nom",
+    "generateMessageButton": "Générer une phrase",
+    "payButton": "Défie le dernier roi pour seulement {amount}",
+    "avatarAlt": "Votre avatar",
+    "uploadAvatarButton": "Téléversez une image comme avatar",
+    "generateAvatarButton": "Générez une image aléatoire comme avatar",
+    "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit.",
+    "errorAndTryAgain": "Une erreur s'est produite. Veuillez réessayer.",
+    "backToHome": "J’abandonne. Je voulais, mais mon solde ne suit pas.",
+    "languageFromBrowser": "Votre navigateur a indiqué votre nationalité",
+    "disclaimerPublicInfo": "Toute information publiée ici sera <em>publique</em> et <em>permanente</em>. Réfléchissez bien avant de soumettre. Vous laissez une marque <strong>indélébile</strong> pour les temps à venir."
   }
 }
