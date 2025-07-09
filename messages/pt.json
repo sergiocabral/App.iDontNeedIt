@@ -28,13 +28,13 @@
     "paymentError": "Não foi possível processar seu pagamento. Se necessário, recarregue a página e tente novamente."
   },
   "LocaleLayout": {
-    "description": "Você é mais rico que eu? Prove."
+    "description": "Prove que você é o mais rico do mundo"
   },
   "HomePage": {
-    "proveRichest": "Prove que você é o mais rico do mundo",
-    "throwOneDollar": "Jogue {amount} fora",
-    "droppedToLeaveMark": "Gastei {amount} só para deixar minha marca",
-    "wastedBecauseICan": "Desperdicei {amount} porque eu posso",
+    "title": "Prove que você é o mais rico do mundo",
+    "payButton": "Jogue {amount} fora",
+    "description": "Gastei {amount} só para deixar minha marca",
+    "description2": "Desperdicei {amount} porque eu posso",
     "richestListTitle": "Os que realmente não precisam",
     "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
   },

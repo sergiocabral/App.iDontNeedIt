@@ -28,13 +28,13 @@
     "paymentError": "Nous n'avons pas pu traiter votre paiement. Si nécessaire, rechargez la page et réessayez."
   },
   "LocaleLayout": {
-    "description": "Es-tu plus riche que moi ? Prouve-le."
+    "description": "Prouve que tu es le plus riche du monde"
   },
   "HomePage": {
-    "proveRichest": "Prouve que tu es le plus riche du monde",
-    "throwOneDollar": "Jette {amount}",
-    "droppedToLeaveMark": "J'ai dépensé {amount} juste pour marquer le coup",
-    "wastedBecauseICan": "J'ai gaspillé {amount} parce que je peux",
+    "title": "Prouve que tu es le plus riche du monde",
+    "payButton": "Jette {amount}",
+    "description": "J'ai dépensé {amount} juste pour marquer le coup",
+    "description2": "J'ai gaspillé {amount} parce que je peux",
     "richestListTitle": "Ceux qui n’en ont vraiment pas besoin",
     "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
   },

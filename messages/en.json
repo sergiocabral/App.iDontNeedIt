@@ -28,13 +28,13 @@
     "paymentError": "We couldn't process your payment. If necessary, reload the page and try again."
   },
   "LocaleLayout": {
-    "description": "Are you richer than me? Prove it."
+    "description": "Prove you're the richest in the world"
   },
   "HomePage": {
-    "proveRichest": "Prove you're the richest in the world",
-    "throwOneDollar": "Throw {amount} away",
-    "droppedToLeaveMark": "Dropped {amount} just to leave my mark",
-    "wastedBecauseICan": "Wasted {amount} because I can",
+    "title": "Prove you're the richest in the world",
+    "payButton": "Throw {amount} away",
+    "description": "Dropped {amount} just to leave my mark",
+    "description2": "Wasted {amount} because I can",
     "richestListTitle": "The Ones Who Really Don’t Need It",
     "audioNotSupported": "Your browser does not support audio playback."
   },
