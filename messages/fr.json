@@ -21,6 +21,12 @@
     "imagePreview": "Aperçu de l'image",
     "notSupportedAudio": "Votre navigateur ne prend pas en charge l'audio."
   },
+  "StripePayFormComponent": {
+    "payButton": "Défie le dernier roi pour seulement {amount}",
+    "paymentSending": "Merci ! Nous traitons votre paiement...",
+    "paymentSuccess": "Paiement reçu. Merci encore !",
+    "paymentError": "Nous n'avons pas pu traiter votre paiement. Si nécessaire, rechargez la page et réessayez."
+  },
   "LocaleLayout": {
     "description": "Es-tu plus riche que moi ? Prouve-le."
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "Laissez une phrase provocante en texte ou en audio (optionnel)",
     "generateNameButton": "Générer un nom",
     "generateMessageButton": "Générer une phrase",
-    "payButton": "Défie le dernier roi pour seulement {amount}",
     "avatarAlt": "Votre avatar",
     "uploadAvatarButton": "Téléversez une image comme avatar",
     "generateAvatarButton": "Générez une image aléatoire comme avatar",

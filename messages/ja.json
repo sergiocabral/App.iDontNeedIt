@@ -21,6 +21,12 @@
     "imagePreview": "画像プレビュー",
     "notSupportedAudio": "お使いのブラウザは音声をサポートしていません。"
   },
+  "StripePayFormComponent": {
+    "payButton": "たった {amount} で前の王を退位させよう",
+    "paymentSending": "ありがとうございます。お支払いを処理しています...",
+    "paymentSuccess": "お支払いを受け取りました。改めて感謝します！",
+    "paymentError": "お支払いを処理できませんでした。必要に応じてページを再読み込みして、もう一度お試しください。"
+  },
   "LocaleLayout": {
     "description": "あなたは私より裕福ですか？証明してみて。"
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
     "generateNameButton": "名前を生成",
     "generateMessageButton": "フレーズを生成",
-    "payButton": "たった {amount} で前の王を退位させよう",
     "avatarAlt": "あなたのアバター",
     "uploadAvatarButton": "画像をアップロードしてアバターにする",
     "generateAvatarButton": "ランダム画像をアバターとして生成する",

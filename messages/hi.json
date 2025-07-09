@@ -21,6 +21,12 @@
     "imagePreview": "छवि पूर्वावलोकन",
     "notSupportedAudio": "आपका ब्राउज़र ऑडियो का समर्थन नहीं करता।"
   },
+  "StripePayFormComponent": {
+    "payButton": "सिर्फ {amount} में पिछले राजा को हटाएँ",
+    "paymentSending": "धन्यवाद! हम आपका भुगतान संसाधित कर रहे हैं...",
+    "paymentSuccess": "भुगतान प्राप्त हुआ। एक बार फिर धन्यवाद!",
+    "paymentError": "हम आपका भुगतान प्रोसेस नहीं कर सके। आवश्यकता होने पर पेज को रीलोड करें और दोबारा प्रयास करें।"
+  },
   "LocaleLayout": {
     "description": "क्या आप मुझसे अमीर हैं? तो साबित करें।"
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "टेक्स्ट या ऑडियो में एक उत्तेजक वाक्य छोड़ें (वैकल्पिक)",
     "generateNameButton": "नाम बनाएं",
     "generateMessageButton": "वाक्य बनाएं",
-    "payButton": "सिर्फ {amount} में पिछले राजा को हटाएँ",
     "avatarAlt": "आपका अवतार",
     "uploadAvatarButton": "अपनी छवि को अवतार के रूप में अपलोड करें",
     "generateAvatarButton": "एक यादृच्छिक छवि को अपने अवतार के रूप में जनरेट करें",
