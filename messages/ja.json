@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "自分が世界一の金持ちだと証明してみろ",
-    "throwOneDollar": "{ammount} を無駄にする",
-    "droppedToLeaveMark": "{ammount} を使って存在感を示した",
-    "wastedBecauseICan": "できるから {ammount} を無駄にした",
+    "throwOneDollar": "{amount} を無駄にする",
+    "droppedToLeaveMark": "{amount} を使って存在感を示した",
+    "wastedBecauseICan": "できるから {amount} を無駄にした",
     "richestListTitle": "本当に必要としていない人たち",
     "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
     "generateNameButton": "名前を生成",
     "generateMessageButton": "フレーズを生成",
-    "payButton": "{ammount} 円で前の金持ちを王座から引きずり下ろせ",
+    "payButton": "{amount} 円で前の金持ちを王座から引きずり下ろせ",
     "avatarAlt": "あなたのアバター",
     "uploadAvatarButton": "画像をアップロードしてアバターにする",
     "generateAvatarButton": "ランダム画像をアバターとして生成する",

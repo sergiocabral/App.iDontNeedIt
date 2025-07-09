@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "证明你是世界上最富有的人",
-    "throwOneDollar": "扔掉 {ammount}",
-    "droppedToLeaveMark": "我花了 {ammount} 只是为了留下我的印记",
-    "wastedBecauseICan": "我浪费了 {ammount} 因为我可以",
+    "throwOneDollar": "扔掉 {amount}",
+    "droppedToLeaveMark": "我花了 {amount} 只是为了留下我的印记",
+    "wastedBecauseICan": "我浪费了 {amount} 因为我可以",
     "richestListTitle": "真正不需要它的人",
     "audioNotSupported": "你的浏览器不支持音频播放。"
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "以文本或音频形式留下挑衅性短语（可选）",
     "generateNameButton": "生成名字",
     "generateMessageButton": "生成句子",
-    "payButton": "只需 {ammount} 元，赶下上一个富豪",
+    "payButton": "只需 {amount} 元，赶下上一个富豪",
     "avatarAlt": "你的头像",
     "uploadAvatarButton": "上传一张图片作为你的头像",
     "generateAvatarButton": "随机生成一张头像图片",

@@ -223,7 +223,7 @@ export default function PayPage() {
     }
   }
 
-  const pageTitle = splitByMarker(t('title', { ammount: '|' }), '|')
+  const pageTitle = splitByMarker(t('title', { amount: '|' }), '|')
 
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">

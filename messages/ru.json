@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "Докажи, что ты самый богатый в мире",
-    "throwOneDollar": "Выбрось {ammount}",
-    "droppedToLeaveMark": "Потратил {ammount}, чтобы оставить след",
-    "wastedBecauseICan": "Потратил {ammount}, потому что могу себе позволить",
+    "throwOneDollar": "Выбрось {amount}",
+    "droppedToLeaveMark": "Потратил {amount}, чтобы оставить след",
+    "wastedBecauseICan": "Потратил {amount}, потому что могу себе позволить",
     "richestListTitle": "Те, кто действительно в этом не нуждаются",
     "audioNotSupported": "Ваш браузер не поддерживает воспроизведение аудио."
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "Оставьте провокационную фразу в тексте или аудио (необязательно)",
     "generateNameButton": "Сгенерировать имя",
     "generateMessageButton": "Сгенерировать фразу",
-    "payButton": "Смени последнего богача всего за {ammount}",
+    "payButton": "Смени последнего богача всего за {amount}",
     "avatarAlt": "Ваш аватар",
     "uploadAvatarButton": "Загрузите изображение в качестве аватара",
     "generateAvatarButton": "Сгенерируйте случайное изображение как аватар",

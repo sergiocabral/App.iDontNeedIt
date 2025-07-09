@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "Prove you're the richest in the world",
-    "throwOneDollar": "Throw {ammount} away",
-    "droppedToLeaveMark": "Dropped {ammount} just to leave my mark",
-    "wastedBecauseICan": "Wasted {ammount} because I can",
+    "throwOneDollar": "Throw {amount} away",
+    "droppedToLeaveMark": "Dropped {amount} just to leave my mark",
+    "wastedBecauseICan": "Wasted {amount} because I can",
     "richestListTitle": "The Ones Who Really Don’t Need It",
     "audioNotSupported": "Your browser does not support audio playback."
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "Leave a provocative phrase in text or audio (optional)",
     "generateNameButton": "Generate name",
     "generateMessageButton": "Generate message",
-    "payButton": "Dethrone the last rich one for just {ammount}",
+    "payButton": "Dethrone the last rich one for just {amount}",
     "avatarAlt": "Your avatar",
     "uploadAvatarButton": "Upload an image as your avatar",
     "generateAvatarButton": "Generate a random image as your avatar",

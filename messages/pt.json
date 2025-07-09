@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "Prove que você é o mais rico do mundo",
-    "throwOneDollar": "Jogue {ammount} fora",
-    "droppedToLeaveMark": "Gastei {ammount} só para deixar minha marca",
-    "wastedBecauseICan": "Desperdicei {ammount} porque eu posso",
+    "throwOneDollar": "Jogue {amount} fora",
+    "droppedToLeaveMark": "Gastei {amount} só para deixar minha marca",
+    "wastedBecauseICan": "Desperdicei {amount} porque eu posso",
     "richestListTitle": "Os que realmente não precisam",
     "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "Deixe uma frase provocadora em texto ou áudio (opcional)",
     "generateNameButton": "Gerar nome",
     "generateMessageButton": "Gerar frase",
-    "payButton": "Desbanque o último rico por apenas {ammount}",
+    "payButton": "Desbanque o último rico por apenas {amount}",
     "avatarAlt": "Seu avatar",
     "uploadAvatarButton": "Carregar uma imagem como seu avatar",
     "generateAvatarButton": "Gerar imagem aleatória como seu avatar",

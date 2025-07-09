@@ -1,4 +1,4 @@
-export function formatAmmount(data: { amount: number; currency: string }): string {
+export function formatAmount(data: { amount: number; currency: string }): string {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: data.currency,

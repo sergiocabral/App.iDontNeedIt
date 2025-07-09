@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "Beweise, dass du der reichste Mensch der Welt bist",
-    "throwOneDollar": "Wirf {ammount} weg",
-    "droppedToLeaveMark": "Ich habe {ammount} ausgegeben, um ein Zeichen zu setzen",
-    "wastedBecauseICan": "Ich habe {ammount} verschwendet, weil ich es kann",
+    "throwOneDollar": "Wirf {amount} weg",
+    "droppedToLeaveMark": "Ich habe {amount} ausgegeben, um ein Zeichen zu setzen",
+    "wastedBecauseICan": "Ich habe {amount} verschwendet, weil ich es kann",
     "richestListTitle": "Die, die es wirklich nicht brauchen",
     "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "Hinterlasse eine provokante Aussage als Text oder Audio (optional)",
     "generateNameButton": "Name generieren",
     "generateMessageButton": "Nachricht generieren",
-    "payButton": "Stürze den letzten Reichen für nur {ammount}",
+    "payButton": "Stürze den letzten Reichen für nur {amount}",
     "avatarAlt": "Dein Avatar",
     "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
     "generateAvatarButton": "Zufälliges Bild als Avatar generieren",

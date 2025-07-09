@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { getDefinitions } from '../definitions'
-import { formatAmmount } from '../utilsApp'
+import { formatAmount } from '../utilsApp'
 
 const def = getDefinitions()
 
@@ -56,7 +56,7 @@ export const KingRepository = {
     }
     return {
       ...value,
-      formatted: formatAmmount(value),
+      formatted: formatAmount(value),
     }
   },
 }

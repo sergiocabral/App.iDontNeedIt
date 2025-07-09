@@ -89,7 +89,7 @@ function Checkout({ onClick }: { onClick?: () => void | boolean }) {
           disabled={loading}
           onClick={handleSubmit}
         >
-          {t('payButton', { ammount: nextAmount.formatted })}
+          {t('payButton', { amount: nextAmount.formatted })}
         </Button>
       )}
     </>

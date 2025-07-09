@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "Prouve que tu es le plus riche du monde",
-    "throwOneDollar": "Jette {ammount}",
-    "droppedToLeaveMark": "J'ai dépensé {ammount} juste pour marquer le coup",
-    "wastedBecauseICan": "J'ai gaspillé {ammount} parce que je peux",
+    "throwOneDollar": "Jette {amount}",
+    "droppedToLeaveMark": "J'ai dépensé {amount} juste pour marquer le coup",
+    "wastedBecauseICan": "J'ai gaspillé {amount} parce que je peux",
     "richestListTitle": "Ceux qui n’en ont vraiment pas besoin"
   },
   "PayPage": {
@@ -37,7 +37,7 @@
     "messagePlaceholder": "Laissez une phrase provocante en texte ou en audio (optionnel)",
     "generateNameButton": "Générer un nom",
     "generateMessageButton": "Générer une phrase",
-    "payButton": "Déboulonnez le dernier riche pour seulement {ammount}",
+    "payButton": "Déboulonnez le dernier riche pour seulement {amount}",
     "avatarAlt": "Votre avatar",
     "uploadAvatarButton": "Téléversez une image comme avatar",
     "generateAvatarButton": "Générez une image aléatoire comme avatar",

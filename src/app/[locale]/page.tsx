@@ -1,5 +1,5 @@
 import { KingRepository } from '@/lib/repositories/kingRepository'
-import { formatAmmount, splitByMarker } from '@/lib/utilsApp'
+import { formatAmount, splitByMarker } from '@/lib/utilsApp'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,7 +9,7 @@ export default async function HomePage() {
 
   const kings = await KingRepository.listAll()
 
-  const nextAmmount = await KingRepository.getNextAmount()
+  const nextAmount = await KingRepository.getNextAmount()
 
   if (!kings.length) {
     return (
@@ -19,7 +19,7 @@ export default async function HomePage() {
           href="/pay"
           className="inline-block bg-green-600 text-background px-6 py-2 rounded text-lg font-semibold hover:opacity-90 transition"
         >
-          {t('throwOneDollar', { ammount: nextAmmount.formatted })}
+          {t('throwOneDollar', { amount: nextAmount.formatted })}
         </Link>
       </div>
     )
@@ -29,8 +29,8 @@ export default async function HomePage() {
     (a, b) => b.amount - a.amount || b.createdAt.getTime() - a.createdAt.getTime()
   )
 
-  const pageTitle = splitByMarker(t('droppedToLeaveMark', { ammount: '|' }), '|')
-  const kingTitle = splitByMarker(t('wastedBecauseICan', { ammount: '|' }), '|')
+  const pageTitle = splitByMarker(t('droppedToLeaveMark', { amount: '|' }), '|')
+  const kingTitle = splitByMarker(t('wastedBecauseICan', { amount: '|' }), '|')
 
   return (
     <main className="max-w-4xl mx-auto p-8 space-y-8">
@@ -41,7 +41,7 @@ export default async function HomePage() {
             href="/pay"
             className="inline-block bg-green-600 text-background px-6 py-2 rounded text-2xl font-semibold hover:opacity-90 transition"
           >
-            {formatAmmount(topKing)}
+            {formatAmount(topKing)}
           </Link>{' '}
           {pageTitle.right}
         </h1>
@@ -88,7 +88,7 @@ export default async function HomePage() {
                   {king.name && <h3 className="font-semibold">{king.name}</h3>}
                   <p className="text-muted-foreground">
                     {kingTitle.left}{' '}
-                    <span className="text-xl text-green-600 font-bold">{formatAmmount(king)}</span>{' '}
+                    <span className="text-xl text-green-600 font-bold">{formatAmount(king)}</span>{' '}
                     {kingTitle.right}
                   </p>
                   {king.message && (

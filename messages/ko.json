@@ -26,9 +26,9 @@
   },
   "HomePage": {
     "proveRichest": "당신이 세상에서 제일 부자라는 걸 증명해봐",
-    "throwOneDollar": "{ammount}을 버려봐",
-    "droppedToLeaveMark": "내 흔적을 남기기 위해 {ammount}을 썼어",
-    "wastedBecauseICan": "{ammount}을 낭비한 건 그냥 내가 할 수 있으니까",
+    "throwOneDollar": "{amount}을 버려봐",
+    "droppedToLeaveMark": "내 흔적을 남기기 위해 {amount}을 썼어",
+    "wastedBecauseICan": "{amount}을 낭비한 건 그냥 내가 할 수 있으니까",
     "richestListTitle": "진짜 필요 없는 사람들",
     "audioNotSupported": "브라우저가 오디오 재생을 지원하지 않습니다."
   },
@@ -38,7 +38,7 @@
     "messagePlaceholder": "텍스트 또는 오디오로 도발적인 문구를 남겨주세요 (선택 사항)",
     "generateNameButton": "이름 생성",
     "generateMessageButton": "문장 생성",
-    "payButton": "{ammount}만 내면 마지막 부자를 몰아낼 수 있어요",
+    "payButton": "{amount}만 내면 마지막 부자를 몰아낼 수 있어요",
     "avatarAlt": "당신의 아바타",
     "uploadAvatarButton": "이미지를 업로드하여 아바타로 사용",
     "generateAvatarButton": "무작위 이미지로 아바타 생성",
