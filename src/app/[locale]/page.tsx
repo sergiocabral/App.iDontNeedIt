@@ -16,13 +16,27 @@ export default async function HomePage() {
   if (!kings.length) {
     return (
       <div className="p-8 text-center space-y-2">
-        <p className="text-lg font-medium">{t('proveRichest')}</p>
+        <header className="flex items-center justify-center py-4">
+          <Image
+            src="/img/logo.png"
+            alt={def('appName')}
+            width={256}
+            height={256}
+            className="h-64 w-auto"
+          />
+        </header>
+        <p className="text-lg font-medium">{t('title')}</p>
         <Link
           href="/pay"
-          className="inline-block bg-green-600 text-background px-6 py-2 rounded text-lg font-semibold hover:opacity-90 transition"
+          className="inline-block bg-green-600 hover:bg-green-500 active:scale-95 text-background px-6 py-2 rounded text-lg font-semibold transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
         >
-          {t('throwOneDollar', { amount: nextAmount.formatted })}
+          {t('payButton', { amount: nextAmount.formatted })}
         </Link>
+        <footer className="text-center text-sm text-muted-foreground mt-16 pb-4">
+          <a href={`mailto:${def('email')}`} className="underline">
+            {def('email')}
+          </a>
+        </footer>
       </div>
     )
   }
@@ -31,8 +45,8 @@ export default async function HomePage() {
     (a, b) => b.amount - a.amount || b.createdAt.getTime() - a.createdAt.getTime()
   )
 
-  const pageTitle = splitByMarker(t('droppedToLeaveMark', { amount: '|' }), '|')
-  const kingTitle = splitByMarker(t('wastedBecauseICan', { amount: '|' }), '|')
+  const pageTitle = splitByMarker(t('description', { amount: '|' }), '|')
+  const kingTitle = splitByMarker(t('description2', { amount: '|' }), '|')
 
   return (
     <>

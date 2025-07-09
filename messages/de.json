@@ -28,13 +28,13 @@
     "paymentError": "Ihre Zahlung konnte nicht verarbeitet werden. Falls erforderlich, laden Sie die Seite neu und versuchen Sie es erneut."
   },
   "LocaleLayout": {
-    "description": "Bist du reicher als ich? Beweise es."
+    "description": "Beweise, dass du der reichste Mensch der Welt bist"
   },
   "HomePage": {
-    "proveRichest": "Beweise, dass du der reichste Mensch der Welt bist",
-    "throwOneDollar": "Wirf {amount} weg",
-    "droppedToLeaveMark": "Ich habe {amount} ausgegeben, um ein Zeichen zu setzen",
-    "wastedBecauseICan": "Ich habe {amount} verschwendet, weil ich es kann",
+    "title": "Beweise, dass du der reichste Mensch der Welt bist",
+    "payButton": "Wirf {amount} weg",
+    "description": "Ich habe {amount} ausgegeben, um ein Zeichen zu setzen",
+    "description2": "Ich habe {amount} verschwendet, weil ich es kann",
     "richestListTitle": "Die, die es wirklich nicht brauchen",
     "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
   },

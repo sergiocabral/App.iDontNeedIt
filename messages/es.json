@@ -28,13 +28,13 @@
     "paymentError": "No se pudo procesar tu pago. Si es necesario, recarga la página e inténtalo de nuevo."
   },
   "LocaleLayout": {
-    "description": "¿Eres más rico que yo? Demuéstralo."
+    "description": "Demuestra que eres el más rico del mundo"
   },
   "HomePage": {
-    "proveRichest": "Demuestra que eres el más rico del mundo",
-    "throwOneDollar": "Lanza {amount} a la basura",
-    "droppedToLeaveMark": "Gasté {amount} solo para dejar mi huella",
-    "wastedBecauseICan": "Desperdicié {amount} porque puedo",
+    "title": "Demuestra que eres el más rico del mundo",
+    "payButton": "Lanza {amount} a la basura",
+    "description": "Gasté {amount} solo para dejar mi huella",
+    "description2": "Desperdicié {amount} porque puedo",
     "richestListTitle": "Los que realmente no lo necesitan",
     "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
   },

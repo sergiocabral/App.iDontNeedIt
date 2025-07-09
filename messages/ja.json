@@ -28,13 +28,13 @@
     "paymentError": "お支払いを処理できませんでした。必要に応じてページを再読み込みして、もう一度お試しください。"
   },
   "LocaleLayout": {
-    "description": "あなたは私より裕福ですか？証明してみて。"
+    "description": "自分が世界一の金持ちだと証明してみろ"
   },
   "HomePage": {
-    "proveRichest": "自分が世界一の金持ちだと証明してみろ",
-    "throwOneDollar": "{amount} を無駄にする",
-    "droppedToLeaveMark": "{amount} を使って存在感を示した",
-    "wastedBecauseICan": "できるから {amount} を無駄にした",
+    "title": "自分が世界一の金持ちだと証明してみろ",
+    "payButton": "{amount} を無駄にする",
+    "description": "{amount} を使って存在感を示した",
+    "description2": "できるから {amount} を無駄にした",
     "richestListTitle": "本当に必要としていない人たち",
     "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
   },

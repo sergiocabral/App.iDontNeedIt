@@ -28,13 +28,13 @@
     "paymentError": "我们无法处理您的付款。如有必要，请重新加载页面并重试。"
   },
   "LocaleLayout": {
-    "description": "你比我有钱？那就证明给我看。"
+    "description": "证明你是世界上最富有的人"
   },
   "HomePage": {
-    "proveRichest": "证明你是世界上最富有的人",
-    "throwOneDollar": "扔掉 {amount}",
-    "droppedToLeaveMark": "我花了 {amount} 只是为了留下我的印记",
-    "wastedBecauseICan": "我浪费了 {amount} 因为我可以",
+    "title": "证明你是世界上最富有的人",
+    "payButton": "扔掉 {amount}",
+    "description": "我花了 {amount} 只是为了留下我的印记",
+    "description2": "我浪费了 {amount} 因为我可以",
     "richestListTitle": "真正不需要它的人",
     "audioNotSupported": "你的浏览器不支持音频播放。"
   },
