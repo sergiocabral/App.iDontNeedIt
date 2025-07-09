@@ -15,6 +15,7 @@ import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
 import { fetchUrlAsFile, formatAmmount } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
+import { StripePayForm } from '@/components/app/StripePayForm'
 
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
@@ -305,15 +306,7 @@ export default function PayPage() {
         {/* Preview do áudio */}
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
-        {nextAmount && (
-          <Button
-            className="w-full mt-4 bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300"
-            disabled={loading}
-            onClick={handlePayClick}
-          >
-            {t('payButton', { ammount: formatAmmount(nextAmount) })}
-          </Button>
-        )}
+        {nextAmount && <StripePayForm></StripePayForm>}
       </div>
     </div>
   )
