@@ -14,6 +14,7 @@ import * as Sentry from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
 import { fetchUrlAsFile } from '@/lib/utils'
+import { useToast } from '@/components/ui/toaster'
 
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
@@ -39,6 +40,8 @@ export default function PayPage() {
   const [avatarUrl, setAvatarUrl] = useState('')
 
   const [loading, setLoading] = useState(false)
+
+  const { showToast } = useToast()
 
   // Gera a URL do avatar baseado no seed, ou usa a imagem customizada
   useEffect(() => {
@@ -138,14 +141,27 @@ export default function PayPage() {
     setLoading(true)
     try {
       let finalImageUrl: string
-      if (customAvatarFile) {
-        finalImageUrl = await uploadFile(customAvatarFile, 'avatar')
-      } else {
-        const dicebearFile = await fetchUrlAsFile(avatarUrl, 'dicebear.png')
-        finalImageUrl = await uploadFile(dicebearFile, 'avatar')
+      try {
+        if (customAvatarFile) {
+          finalImageUrl = await uploadFile(customAvatarFile, 'avatar')
+        } else {
+          const dicebearFile = await fetchUrlAsFile(avatarUrl, 'dicebear.png')
+          finalImageUrl = await uploadFile(dicebearFile, 'avatar')
+        }
+      } catch (error) {
+        showToast((error as Error).message || 'Failed to upload avatar image.', 'error')
+        setLoading(false)
+        return
       }
 
-      const finalAudioUrl = audioFile ? await uploadFile(audioFile, 'audio') : undefined
+      let finalAudioUrl: string | undefined
+      try {
+        finalAudioUrl = audioFile ? await uploadFile(audioFile, 'audio') : undefined
+      } catch (error) {
+        showToast((error as Error).message || 'Failed to upload audio file.', 'error')
+        setLoading(false)
+        return
+      }
 
       const response = await fetch('/api/king', {
         method: 'POST',
@@ -163,11 +179,11 @@ export default function PayPage() {
         throw new Error('Failed to save king data.')
       }
 
-      alert('Data saved successfully!')
+      showToast('Data saved successfully!', 'success')
     } catch (error) {
       console.error('Error during saving king data:', error)
       Sentry.captureException(error)
-      alert('An error occurred. Please try again.')
+      showToast('An error occurred. Please try again.', 'error')
     } finally {
       setLoading(false)
     }
