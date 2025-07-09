@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { getDefinitions } from '@/lib/definitions'
 import { ReactNode } from 'react'
+import { ToastProvider } from '@/components/ui/toaster'
 
 const copse = Copse({
   weight: '400',
@@ -79,7 +80,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           />
         )}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <ToastProvider>{children}</ToastProvider>
         </NextIntlClientProvider>
       </body>
     </html>
