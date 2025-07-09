@@ -100,6 +100,13 @@ export default function PayPage() {
   }, [messages, getNextMessage])
 
   async function uploadFile(file: File, folder: string): Promise<string> {
+    const maxSizeMB = 1
+    const maxSizeBytes = maxSizeMB * 1024 * 1024
+    if (file.size > maxSizeBytes) {
+      const actualMB = (file.size / 1024 / 1024).toFixed(2)
+      throw new Error(`File is ${actualMB}MB. Maximum allowed is ${maxSizeMB}MB.`)
+    }
+
     const res = await fetch('/api/upload', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
