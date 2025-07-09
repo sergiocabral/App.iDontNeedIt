@@ -23,3 +23,19 @@ export function slugify(text: string): string {
   const regexSpaces = /(^-+|-+$|(?<=-)-+)/g
   return removeAccents(text).toLowerCase().replace(regexDiscardChars, '-').replace(regexSpaces, '')
 }
+
+export async function fetchUrlAsFile(
+  url: string,
+  filename: string,
+  forcedContentType?: string
+): Promise<File> {
+  const response = await fetch(url)
+
+  if (!response.ok) throw new Error('Failed to fetch external avatar.')
+
+  const blob = await response.blob()
+
+  const contentType = forcedContentType || blob.type || 'application/octet-stream'
+
+  return new File([blob], filename, { type: contentType })
+}
