@@ -33,7 +33,7 @@
     "audioNotSupported": "Your browser does not support audio playback."
   },
   "PayPage": {
-    "title": "You're one {ammount} away from proving you're the richest in the world",
+    "title": "For just {amount}, the throne is yours. After all, that doesn't even scratch your account.",
     "namePlaceholder": "Your name or nickname (optional)",
     "messagePlaceholder": "Leave a provocative phrase in text or audio (optional)",
     "generateNameButton": "Generate name",

@@ -33,7 +33,7 @@
     "audioNotSupported": "你的浏览器不支持音频播放。"
   },
   "PayPage": {
-    "title": "你只需再花 {ammount} 就能证明你是世界上最富有的人",
+    "title": "只需 {amount}，王座就是你的。毕竟这对你的账户来说不算什么。",
     "namePlaceholder": "你的名字或昵称（可选）",
     "messagePlaceholder": "以文本或音频形式留下挑衅性短语（可选）",
     "generateNameButton": "生成名字",

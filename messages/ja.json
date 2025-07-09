@@ -33,7 +33,7 @@
     "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
   },
   "PayPage": {
-    "title": "{ammount} を払えば、あなたが世界一の金持ちだと証明できる",
+    "title": "{amount} だけで王座はあなたのもの。それくらいあなたの口座には痛くもないでしょう。",
     "namePlaceholder": "名前またはニックネーム（任意）",
     "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
     "generateNameButton": "名前を生成",

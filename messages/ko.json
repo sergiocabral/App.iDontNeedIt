@@ -33,7 +33,7 @@
     "audioNotSupported": "브라우저가 오디오 재생을 지원하지 않습니다."
   },
   "PayPage": {
-    "title": "{ammount}만 더 쓰면 당신이 세상에서 제일 부자라는 걸 증명할 수 있어요",
+    "title": "{amount}만으로 왕좌는 당신의 것. 어차피 당신 통장엔 티도 안 나잖아.",
     "namePlaceholder": "이름 또는 닉네임 (선택사항)",
     "messagePlaceholder": "텍스트 또는 오디오로 도발적인 문구를 남겨주세요 (선택 사항)",
     "generateNameButton": "이름 생성",
