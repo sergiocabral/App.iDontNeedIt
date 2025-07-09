@@ -46,3 +46,11 @@ model King {
   locale     String
   createdAt  DateTime @default(now())
 }
+
+model Payment {
+  id              String   @id @default(cuid())
+  stripeIntentId  String   @unique
+  amount          Float
+  currency        String
+  createdAt       DateTime @default(now())
+}
