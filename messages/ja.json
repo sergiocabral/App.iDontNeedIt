@@ -50,6 +50,7 @@
     "generateAvatarButton": "ランダム画像をアバターとして生成する",
     "fileLimit": "ファイルサイズは {actualMB}MB です。最大許容サイズは {maxSizeMB}MB です。より小さいファイルを選択してください。",
     "errorAndTryAgain": "エラーが発生しました。もう一度お試しください。",
-    "backToHome": "諦めます。気持ちはあっても、残高がついてこない。"
+    "backToHome": "諦めます。気持ちはあっても、残高がついてこない。",
+    "languageFromBrowser": "お使いのブラウザがあなたの国籍を示しました"
   }
 }

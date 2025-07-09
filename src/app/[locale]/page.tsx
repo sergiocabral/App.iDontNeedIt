@@ -1,6 +1,6 @@
 import { getDefinitions } from '@/lib/definitions'
 import { KingRepository } from '@/lib/repositories/kingRepository'
-import { formatAmount, splitByMarker } from '@/lib/utilsApp'
+import { formatAmount, getFlagImageUrl, splitByMarker } from '@/lib/utilsApp'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -68,6 +68,15 @@ export default async function HomePage() {
               className="rounded-full object-cover shadow-lg"
             />
           </div>
+          <div>
+            <Image
+              src={getFlagImageUrl(topKing.locale)}
+              width={24}
+              height={24}
+              alt="flag"
+              className="inline-block w-6 h-4 mr-2 rounded"
+            />
+          </div>
           {topKing.name && <h2 className="text-2xl font-semibold">{topKing.name}</h2>}
           {topKing.message && <p className="italic">&ldquo;{topKing.message}&rdquo;</p>}
           {topKing.audioUrl && (
@@ -99,6 +108,13 @@ export default async function HomePage() {
                   </div>
 
                   <div className="space-y-1">
+                    <Image
+                      src={getFlagImageUrl(king.locale)}
+                      width={24}
+                      height={24}
+                      alt="flag"
+                      className="inline-block w-6 h-4 mr-2 rounded"
+                    />
                     {king.name && <h3 className="font-semibold">{king.name}</h3>}
                     <p className="text-muted-foreground">
                       {kingTitle.left}{' '}

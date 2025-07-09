@@ -50,6 +50,7 @@
     "generateAvatarButton": "Générez une image aléatoire comme avatar",
     "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit.",
     "errorAndTryAgain": "Une erreur s'est produite. Veuillez réessayer.",
-    "backToHome": "J’abandonne. Je voulais, mais mon solde ne suit pas."
+    "backToHome": "J’abandonne. Je voulais, mais mon solde ne suit pas.",
+    "languageFromBrowser": "Votre navigateur a indiqué votre nationalité"
   }
 }

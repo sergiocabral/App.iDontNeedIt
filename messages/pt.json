@@ -50,6 +50,7 @@
     "generateAvatarButton": "Gerar imagem aleatória como seu avatar",
     "fileLimit": "O arquivo tem {actualMB}MB. O máximo permitido é {maxSizeMB}MB. Por favor, escolha um arquivo menor.",
     "errorAndTryAgain": "Ocorreu um erro. Por favor, tente novamente.",
-    "backToHome": "Desisto. Queria, mas meu saldo não colabora."
+    "backToHome": "Desisto. Queria, mas meu saldo não colabora.",
+    "languageFromBrowser": "Seu navegador indicou sua nacionalidade"
   }
 }

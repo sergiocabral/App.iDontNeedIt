@@ -17,7 +17,8 @@ import { fetchUrlAsFile } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
 import { StripePayForm } from '@/components/app/StripePayForm'
 import { AmountType } from '@/lib/repositories/kingRepository'
-import { splitByMarker } from '@/lib/utilsApp'
+import { getFlagImageUrl, splitByMarker } from '@/lib/utilsApp'
+import Image from 'next/image'
 
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
@@ -272,6 +273,14 @@ export default function PayPage() {
 
           {/* Nome com botão de geração */}
           <div className="flex items-center gap-2">
+            <Image
+              src={getFlagImageUrl(navigator.language)}
+              width={24}
+              height={24}
+              alt="flag"
+              title={t('languageFromBrowser')}
+              className="inline-block w-6 h-4 mr-2 rounded"
+            />
             <Input
               placeholder={t('namePlaceholder')}
               value={name}

@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { KingRepository } from '@/lib/repositories/kingRepository'
-import { formatAmount, splitByMarker } from '@/lib/utilsApp'
+import { formatAmount, getFlagImageUrl, splitByMarker } from '@/lib/utilsApp'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -41,6 +41,16 @@ export default async function KingPage({ params }: { params: { locale: string; i
             alt={king.name || 'King'}
             fill
             className="rounded-full object-cover shadow-lg"
+          />
+        </div>
+
+        <div>
+          <Image
+            src={getFlagImageUrl(king.locale)}
+            width={24}
+            height={24}
+            alt="flag"
+            className="inline-block w-6 h-4 mr-2 rounded"
           />
         </div>
 

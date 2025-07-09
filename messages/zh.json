@@ -50,6 +50,7 @@
     "generateAvatarButton": "随机生成一张头像图片",
     "fileLimit": "文件大小为 {actualMB}MB。最大允许为 {maxSizeMB}MB。请选择较小的文件。",
     "errorAndTryAgain": "发生错误。请重试。",
-    "backToHome": "我放弃了。我想试试，但我的余额不同意。"
+    "backToHome": "我放弃了。我想试试，但我的余额不同意。",
+    "languageFromBrowser": "您的浏览器指示了您的国籍"
   }
 }
