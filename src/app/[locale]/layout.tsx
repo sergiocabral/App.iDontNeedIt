@@ -70,7 +70,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang="en" className="light">
-      <body className={`${copse.variable} antialiased`}>
+      <body
+        className={`${copse.variable} antialiased bg-gradient-to-b from-[#f3e8ff] via-[#f9f5ff] to-[#fdfcfe]`}
+      >
         {process.env.NODE_ENV === 'production' && (
           <Script
             async

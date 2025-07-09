@@ -6,10 +6,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getDefinitions } from '@/lib/definitions'
 
-export default async function KingPage({ params }: { params: { locale: string; id: string } }) {
+export default async function KingPage({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>
+}) {
+  const { id, locale } = await params
+
   const t = await getTranslations('KingPage')
   const def = getDefinitions()
-  const king = await KingRepository.getById(params.id)
+  const king = await KingRepository.getById(id)
 
   if (!king) return notFound()
 
@@ -29,7 +35,7 @@ export default async function KingPage({ params }: { params: { locale: string; i
       </header>
       <main className="max-w-xl mx-auto p-8 space-y-8 text-center">
         <h1 className="text-3xl font-bold">
-          {title.left} {king.createdAt.toLocaleDateString(params.locale)} {title.right}
+          {title.left} {king.createdAt.toLocaleDateString(locale)} {title.right}
         </h1>
 
         <div
