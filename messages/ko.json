@@ -21,6 +21,12 @@
     "imagePreview": "이미지 미리보기",
     "notSupportedAudio": "브라우저에서 오디오를 지원하지 않습니다."
   },
+  "StripePayFormComponent": {
+    "payButton": "{amount}만으로 전 왕을 몰아내세요",
+    "paymentSending": "감사합니다! 결제를 처리 중입니다...",
+    "paymentSuccess": "결제가 완료되었습니다. 다시 한 번 감사합니다!",
+    "paymentError": "결제를 처리할 수 없습니다. 필요하다면 페이지를 새로고침하고 다시 시도해 주세요."
+  },
   "LocaleLayout": {
     "description": "나보다 부자라고? 증명해봐."
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "텍스트 또는 오디오로 도발적인 문구를 남겨주세요 (선택 사항)",
     "generateNameButton": "이름 생성",
     "generateMessageButton": "문장 생성",
-    "payButton": "{amount}만으로 전 왕을 몰아내세요",
     "avatarAlt": "당신의 아바타",
     "uploadAvatarButton": "이미지를 업로드하여 아바타로 사용",
     "generateAvatarButton": "무작위 이미지로 아바타 생성",

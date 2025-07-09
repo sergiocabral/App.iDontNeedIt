@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 import * as Sentry from '@sentry/nextjs'
 import { AmountType } from '@/lib/repositories/kingRepository'
 import { useRouter } from 'next/navigation'
+import { useToast } from '../ui/toaster'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
@@ -47,8 +48,9 @@ function Checkout({
   const stripe = useStripe()
   const elements = useElements()
   const [loading, setLoading] = useState(false)
-  const t = useTranslations('PayPage')
+  const t = useTranslations('StripePayFormComponent')
   const router = useRouter()
+  const { showToast } = useToast()
 
   const [nextAmount, setNextAmount] = useState<AmountType | null>(null)
   useEffect(() => {
@@ -68,6 +70,7 @@ function Checkout({
     setLoading(true)
 
     try {
+      showToast(t('paymentSending'), 'info')
       const result = await stripe.confirmPayment({
         elements,
         confirmParams: { return_url: window.location.origin },
@@ -75,7 +78,9 @@ function Checkout({
       })
 
       if (result.error) {
+        setLoading(false)
         console.error(result.error)
+        showToast(t('paymentError'), 'error')
         return
       }
 
@@ -84,11 +89,13 @@ function Checkout({
         redirect = (await onClick()) !== false
       }
 
-      if (redirect) router.push('/')
+      showToast(t('paymentSuccess'), 'success')
+      if (redirect) setTimeout(() => router.push('/'), 500)
     } catch (error) {
+      setLoading(false)
+      showToast(t('paymentError'), 'error')
       console.error('Payment confirmation error:', error)
       Sentry.captureException(error)
-      setLoading(false)
     }
   }
 

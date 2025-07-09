@@ -21,6 +21,12 @@
     "imagePreview": "Bildvorschau",
     "notSupportedAudio": "Ihr Browser unterstützt keine Audio-Wiedergabe."
   },
+  "StripePayFormComponent": {
+    "payButton": "Stürze den letzten König für nur {amount}",
+    "paymentSending": "Danke! Wir verarbeiten Ihre Zahlung...",
+    "paymentSuccess": "Zahlung erhalten. Nochmals vielen Dank!",
+    "paymentError": "Ihre Zahlung konnte nicht verarbeitet werden. Falls erforderlich, laden Sie die Seite neu und versuchen Sie es erneut."
+  },
   "LocaleLayout": {
     "description": "Bist du reicher als ich? Beweise es."
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "Hinterlasse eine provokante Aussage als Text oder Audio (optional)",
     "generateNameButton": "Name generieren",
     "generateMessageButton": "Nachricht generieren",
-    "payButton": "Stürze den letzten König für nur {amount}",
     "avatarAlt": "Dein Avatar",
     "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
     "generateAvatarButton": "Zufälliges Bild als Avatar generieren",

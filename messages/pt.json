@@ -21,6 +21,12 @@
     "imagePreview": "Prévia da imagem",
     "notSupportedAudio": "Seu navegador não suporta áudio."
   },
+  "StripePayFormComponent": {
+    "payButton": "Desbanque o último rei por apenas {amount}",
+    "paymentSending": "Obrigado! Estamos processando seu pagamento...",
+    "paymentSuccess": "Pagamento recebido. Mais uma vez, obrigado!",
+    "paymentError": "Não foi possível processar seu pagamento. Se necessário, recarregue a página e tente novamente."
+  },
   "LocaleLayout": {
     "description": "Você é mais rico que eu? Prove."
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "Deixe uma frase provocadora em texto ou áudio (opcional)",
     "generateNameButton": "Gerar nome",
     "generateMessageButton": "Gerar frase",
-    "payButton": "Desbanque o último rei por apenas {amount}",
     "avatarAlt": "Seu avatar",
     "uploadAvatarButton": "Carregar uma imagem como seu avatar",
     "generateAvatarButton": "Gerar imagem aleatória como seu avatar",

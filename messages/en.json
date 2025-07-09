@@ -21,6 +21,12 @@
     "imagePreview": "Image Preview",
     "notSupportedAudio": "Your browser does not support audio."
   },
+  "StripePayFormComponent": {
+    "payButton": "Dethrone the last king for just {amount}",
+    "paymentSending": "Thank you! We are processing your payment...",
+    "paymentSuccess": "Payment received. Thank you again!",
+    "paymentError": "We couldn't process your payment. If necessary, reload the page and try again."
+  },
   "LocaleLayout": {
     "description": "Are you richer than me? Prove it."
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "Leave a provocative phrase in text or audio (optional)",
     "generateNameButton": "Generate name",
     "generateMessageButton": "Generate message",
-    "payButton": "Dethrone the last king for just {amount}",
     "avatarAlt": "Your avatar",
     "uploadAvatarButton": "Upload an image as your avatar",
     "generateAvatarButton": "Generate a random image as your avatar",

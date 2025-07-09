@@ -43,7 +43,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
             'fixed bottom-4 right-4 px-5 py-3 rounded-lg shadow-lg z-50 flex items-center gap-3',
             variantClasses[variant as ToastVariants]
           )}
-          duration={3000}
+          duration={5000}
         >
           <Toast.Title className="text-sm font-medium flex-1">{message}</Toast.Title>
           <Toast.Close className="text-xl font-bold px-2 py-1 leading-none">

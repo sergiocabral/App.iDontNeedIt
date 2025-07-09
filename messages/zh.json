@@ -21,6 +21,12 @@
     "imagePreview": "图片预览",
     "notSupportedAudio": "您的浏览器不支持音频播放。"
   },
+  "StripePayFormComponent": {
+    "payButton": "只需 {amount} 即可废黜上任国王",
+    "paymentSending": "谢谢！我们正在处理您的付款...",
+    "paymentSuccess": "付款已收到。再次感谢！",
+    "paymentError": "我们无法处理您的付款。如有必要，请重新加载页面并重试。"
+  },
   "LocaleLayout": {
     "description": "你比我有钱？那就证明给我看。"
   },
@@ -44,7 +50,6 @@
     "messagePlaceholder": "以文本或音频形式留下挑衅性短语（可选）",
     "generateNameButton": "生成名字",
     "generateMessageButton": "生成句子",
-    "payButton": "只需 {amount} 即可废黜上任国王",
     "avatarAlt": "你的头像",
     "uploadAvatarButton": "上传一张图片作为你的头像",
     "generateAvatarButton": "随机生成一张头像图片",
