@@ -1,12 +1,24 @@
 import { prisma } from '@/lib/prisma'
+import { getDefinitions } from '../definitions'
+import { formatAmmount } from '../utils'
+
+const def = getDefinitions()
+
+export type AmountType = {
+  amount: number
+  currency: string
+  formatted: string
+}
 
 type CreateKingInput = {
   name?: string
   message?: string
-  imageUrl?: string
+  imageUrl: string
+  imageBgColor: string
   audioUrl?: string
   locale: string
   amount: number
+  currency: string
 }
 
 export const KingRepository = {
@@ -30,14 +42,21 @@ export const KingRepository = {
     })
   },
 
-  async getNextAmount(): Promise<number> {
+  async getNextAmount(): Promise<AmountType> {
     const result = await prisma.king.aggregate({
       _max: { amount: true },
     })
 
     const maxAmount = result._max.amount ?? 0
-    const oneDollar = 100
-    const tenCents = 10
-    return Number(maxAmount === 0 ? oneDollar : maxAmount + tenCents)
+    const paymentInitial = parseFloat(def('paymentInitial')) || 100
+    const paymentIncrement = parseFloat(def('paymentIncrement')) || 100
+    const value = {
+      amount: Number(maxAmount === 0 ? paymentInitial : maxAmount + paymentIncrement),
+      currency: def('paymentCurrency') || 'brl',
+    }
+    return {
+      ...value,
+      formatted: formatAmmount(value),
+    }
   },
 }

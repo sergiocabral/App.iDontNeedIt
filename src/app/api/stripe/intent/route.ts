@@ -1,12 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import { KingRepository } from '@/lib/repositories/kingRepository'
+import { getDefinitions } from '@/lib/definitions'
 
-export async function POST(req: NextRequest) {
+const def = getDefinitions()
+
+export async function POST() {
   const amount = await KingRepository.getNextAmount()
   const intent = await stripe.paymentIntents.create({
-    amount,
-    currency: 'brl',
+    amount: amount.amount,
+    currency: amount.currency,
     automatic_payment_methods: { enabled: true },
   })
 

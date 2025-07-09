@@ -3,5 +3,5 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   const nextAmount = await KingRepository.getNextAmount()
-  return NextResponse.json({ value: nextAmount })
+  return NextResponse.json(nextAmount)
 }

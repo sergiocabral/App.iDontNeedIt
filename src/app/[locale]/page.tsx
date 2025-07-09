@@ -20,7 +20,6 @@ export default async function HomePage() {
   const kings = await KingRepository.listAll()
 
   const nextAmmount = await KingRepository.getNextAmount()
-  const nextAmmountFormatted = formatAmmount(nextAmmount)
 
   if (!kings.length) {
     return (
@@ -30,7 +29,7 @@ export default async function HomePage() {
           href="/pay"
           className="inline-block bg-green-600 text-background px-6 py-2 rounded text-lg font-semibold hover:opacity-90 transition"
         >
-          {t('throwOneDollar', { ammount: nextAmmountFormatted })}
+          {t('throwOneDollar', { ammount: nextAmmount.formatted })}
         </Link>
       </div>
     )
@@ -52,11 +51,14 @@ export default async function HomePage() {
             href="/pay"
             className="inline-block bg-green-600 text-background px-6 py-2 rounded text-2xl font-semibold hover:opacity-90 transition"
           >
-            {formatAmmount(topKing.amount)}
+            {formatAmmount(topKing)}
           </Link>{' '}
           {pageTitle.right}
         </h1>
-        <div className="inline-block relative h-64 w-64 mx-auto">
+        <div
+          className="inline-block relative h-64 w-64 mx-auto rounded-full"
+          style={{ backgroundColor: topKing.imageBgColor }}
+        >
           <Image
             src={`/api/file?key=${topKing.imageUrl}`}
             alt={topKing.name || 'King atual'}
@@ -80,7 +82,10 @@ export default async function HomePage() {
           <ul className="space-y-4">
             {previousKings.map((king) => (
               <li key={king.id} className="flex items-center gap-4 border p-4 rounded">
-                <div className="relative h-20 w-20 flex-shrink-0 ring-2 ring-accent rounded-full">
+                <div
+                  className="relative h-20 w-20 flex-shrink-0 ring-2 ring-accent rounded-full"
+                  style={{ backgroundColor: king.imageBgColor }}
+                >
                   <Image
                     src={`/api/file?key=${king.imageUrl}`}
                     alt={king.name || 'King anterior'}
@@ -93,9 +98,7 @@ export default async function HomePage() {
                   {king.name && <h3 className="font-semibold">{king.name}</h3>}
                   <p className="text-muted-foreground">
                     {kingTitle.left}{' '}
-                    <span className="text-xl text-green-600 font-bold">
-                      {formatAmmount(king.amount)}
-                    </span>{' '}
+                    <span className="text-xl text-green-600 font-bold">{formatAmmount(king)}</span>{' '}
                     {kingTitle.right}
                   </p>
                   {king.message && (

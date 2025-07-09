@@ -13,9 +13,10 @@ import { AvatarUpload } from '@/components/app/AvatarUpload'
 import * as Sentry from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
-import { fetchUrlAsFile, formatAmmount } from '@/lib/utils'
+import { fetchUrlAsFile } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
 import { StripePayForm } from '@/components/app/StripePayForm'
+import { AmountType } from '@/lib/repositories/kingRepository'
 
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
@@ -33,12 +34,12 @@ export default function PayPage() {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
 
-  const [nextAmount, setNextAmount] = useState<number | null>(null)
+  const [nextAmount, setNextAmount] = useState<AmountType | null>(null)
   useEffect(() => {
     fetch('/api/king/next')
       .then((res) => res.json())
       .then((data) => {
-        setNextAmount(data.value)
+        setNextAmount(data)
       })
       .catch((error) => {
         console.error('Error fetching next amount:', error)
@@ -199,10 +200,12 @@ export default function PayPage() {
         body: JSON.stringify({
           name,
           message,
+          imageBgColor: avatarBg,
           imageUrl: finalImageUrl,
           audioUrl: finalAudioUrl,
           locale: userLocale || locale,
-          amount: nextAmount,
+          amount: nextAmount.amount,
+          currency: nextAmount.currency,
         }),
       })
 
@@ -223,7 +226,7 @@ export default function PayPage() {
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
       <div className="w-full max-w-md p-6 space-y-4">
         <h1 className="text-2xl font-bold text-center">
-          {t('title', { ammount: nextAmount ? formatAmmount(nextAmount) : '$$$' })}
+          {t('title', { ammount: nextAmount ? nextAmount.formatted : '$$$' })}
         </h1>
 
         {/* Avatar com botões sobrepostos */}
@@ -306,7 +309,7 @@ export default function PayPage() {
         {/* Preview do áudio */}
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
-        {nextAmount && <StripePayForm></StripePayForm>}
+        {nextAmount && <StripePayForm onClick={handlePayClick}></StripePayForm>}
       </div>
     </div>
   )

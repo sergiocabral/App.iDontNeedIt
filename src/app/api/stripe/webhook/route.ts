@@ -1,12 +1,9 @@
 import { headers } from 'next/headers'
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
-import { savePayment } from '@/lib/repositories/paymentRepository'
+import { PaymentRepository } from '@/lib/repositories/paymentRepository'
 import Stripe from 'stripe'
 
-/**
- * Webhook Stripe. Lida apenas com pagamento confirmado.
- */
 export async function POST(req: NextRequest) {
   const sig = (await headers()).get('stripe-signature') as string
   const body = await req.arrayBuffer()
@@ -25,10 +22,10 @@ export async function POST(req: NextRequest) {
   if (event.type === 'payment_intent.succeeded') {
     const intent = event.data.object as Stripe.PaymentIntent
 
-    await savePayment({
+    await PaymentRepository.create({
       stripeIntentId: intent.id,
-      amount: intent.amount / 100,
-      type: intent.metadata.type as 'KING' | 'SEAT',
+      amount: intent.amount,
+      currency: intent.currency,
     })
   }
 

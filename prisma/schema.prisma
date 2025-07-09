@@ -37,14 +37,16 @@ model AiSuggestion {
 }
 
 model King {
-  id         String   @id @default(cuid())
-  name       String?
-  message    String?
-  imageUrl   String?
-  audioUrl   String?
-  amount     Int
-  locale     String
-  createdAt  DateTime @default(now())
+  id            String   @id @default(cuid())
+  name          String?
+  message       String?
+  imageUrl      String
+  imageBgColor  String
+  audioUrl      String?
+  amount        Int
+  currency      String
+  locale        String
+  createdAt     DateTime @default(now())
 }
 
 model Payment {

@@ -74,14 +74,22 @@ export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProp
       </p>
 
       <div className="flex gap-2">
-        <Button onClick={startRecording} disabled={status === 'recording'}>
+        <Button
+          className="cursor-pointer"
+          onClick={startRecording}
+          disabled={status === 'recording'}
+        >
           {t('startRecording')}
         </Button>
-        <Button onClick={stopRecording} disabled={status !== 'recording'}>
+        <Button
+          className="cursor-pointer"
+          onClick={stopRecording}
+          disabled={status !== 'recording'}
+        >
           {t('stopRecording')}
         </Button>
         {previewUrl && (
-          <Button variant="destructive" onClick={handleDiscard}>
+          <Button className="cursor-pointer" variant="destructive" onClick={handleDiscard}>
             {t('discardRecording')}
           </Button>
         )}

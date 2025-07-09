@@ -3,5 +3,8 @@
   "appName": "I Don't Need It",
   "website": "https://idontneedit.org",
   "twitterCreator": "@qynea",
-  "dicerbearAvatarGeneratorUrl": "https://api.dicebear.com/6.x/notionists/svg?seed={seed}&backgroundColor=transparent&backgroundType=gradientLinear&backgroundGradientColor1=transparent&backgroundGradientColor2=transparent&backgroundGradientRotation=0&size=100"
+  "dicerbearAvatarGeneratorUrl": "https://api.dicebear.com/6.x/notionists/svg?seed={seed}&backgroundColor=transparent&backgroundType=gradientLinear&backgroundGradientColor1=transparent&backgroundGradientColor2=transparent&backgroundGradientRotation=0&size=100",
+  "paymentCurrency": "brl",
+  "paymentInitial": 100,
+  "paymentIncrement": 100
 }
