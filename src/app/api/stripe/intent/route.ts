@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import { KingRepository } from '@/lib/repositories/kingRepository'
-import { getDefinitions } from '@/lib/definitions'
-
-const def = getDefinitions()
 
 export async function POST() {
   const amount = await KingRepository.getNextAmount()

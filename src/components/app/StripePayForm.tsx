@@ -13,8 +13,10 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
 
 export function StripePayForm({
   onClick,
+  isLoading,
 }: {
   onClick?: () => void | boolean | Promise<void | boolean>
+  isLoading?: boolean
 }) {
   const [clientSecret, setClientSecret] = useState<string>()
 
@@ -30,12 +32,18 @@ export function StripePayForm({
 
   return (
     <Elements stripe={stripePromise} options={{ clientSecret }}>
-      <Checkout onClick={onClick} />
+      <Checkout onClick={onClick} isLoading={isLoading} />
     </Elements>
   )
 }
 
-function Checkout({ onClick }: { onClick?: () => void | boolean | Promise<void | boolean> }) {
+function Checkout({
+  onClick,
+  isLoading,
+}: {
+  onClick?: () => void | boolean | Promise<void | boolean>
+  isLoading?: boolean
+}) {
   const stripe = useStripe()
   const elements = useElements()
   const [loading, setLoading] = useState(false)
@@ -90,7 +98,7 @@ function Checkout({ onClick }: { onClick?: () => void | boolean | Promise<void |
       {nextAmount && (
         <Button
           className="w-full mt-4 cursor-pointer bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300"
-          disabled={loading}
+          disabled={loading || isLoading}
           onClick={handleSubmit}
         >
           {t('payButton', { amount: nextAmount.formatted })}
