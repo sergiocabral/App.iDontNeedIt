@@ -32,13 +32,19 @@
     "richestListTitle": "जिन्हें सच में इसकी ज़रूरत नहीं",
     "audioNotSupported": "आपका ब्राउज़र ऑडियो प्लेबैक को सपोर्ट नहीं करता।"
   },
+  "KingPage": {
+    "title": "{date} को संपत्ति की चरम सीमा पर था",
+    "description": "मैंने {amount} को बिना परवाह किए फेंक दिया",
+    "backHome": "शाही हॉल में वापस जाएं",
+    "audioNotSupported": "आपका ब्राउज़र ऑडियो प्लेबैक का समर्थन नहीं करता है।"
+  },
   "PayPage": {
     "title": "सिर्फ {amount} में सिंहासन आपका है। आखिरकार, यह आपके खाते को छूता भी नहीं।",
     "namePlaceholder": "आपका नाम या उपनाम (वैकल्पिक)",
     "messagePlaceholder": "टेक्स्ट या ऑडियो में एक उत्तेजक वाक्य छोड़ें (वैकल्पिक)",
     "generateNameButton": "नाम बनाएं",
     "generateMessageButton": "वाक्य बनाएं",
-    "payButton": "सिर्फ {amount} में अमीर को हटाकर राजा बनें",
+    "payButton": "सिर्फ {amount} में पिछले राजा को हटाएँ",
     "avatarAlt": "आपका अवतार",
     "uploadAvatarButton": "अपनी छवि को अवतार के रूप में अपलोड करें",
     "generateAvatarButton": "एक यादृच्छिक छवि को अपने अवतार के रूप में जनरेट करें",

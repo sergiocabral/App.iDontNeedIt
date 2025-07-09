@@ -29,7 +29,14 @@
     "throwOneDollar": "Lanza {amount} a la basura",
     "droppedToLeaveMark": "Gasté {amount} solo para dejar mi huella",
     "wastedBecauseICan": "Desperdicié {amount} porque puedo",
-    "richestListTitle": "Los que realmente no lo necesitan"
+    "richestListTitle": "Los que realmente no lo necesitan",
+    "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
+  },
+  "KingPage": {
+    "title": "En la cumbre de la fortuna el {date}",
+    "description": "Dejé ir {amount} al viento sin cuidado",
+    "backHome": "Volver al salón de la realeza",
+    "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
   },
   "PayPage": {
     "title": "Por solo {amount}, el trono es tuyo. Al fin y al cabo, eso ni roza tu cuenta.",
@@ -37,7 +44,7 @@
     "messagePlaceholder": "Deja una frase provocadora en texto o audio (opcional)",
     "generateNameButton": "Generar nombre",
     "generateMessageButton": "Generar frase",
-    "payButton": "¡Desbanca al último rico por solo {amount}",
+    "payButton": "Derroca al último rey por solo {amount}",
     "avatarAlt": "Tu avatar",
     "uploadAvatarButton": "Sube una imagen como tu avatar",
     "generateAvatarButton": "Genera una imagen aleatoria como tu avatar",

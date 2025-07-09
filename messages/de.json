@@ -32,13 +32,19 @@
     "richestListTitle": "Die, die es wirklich nicht brauchen",
     "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
   },
+  "KingPage": {
+    "title": "Am Höhepunkt des Reichtums am {date}",
+    "description": "Ich habe {amount} achtlos weggeworfen",
+    "backHome": "Zurück in die Halle der Könige",
+    "audioNotSupported": "Ihr Browser unterstützt keine Audiowiedergabe."
+  },
   "PayPage": {
     "title": "Für nur {amount} gehört dir der Thron. Das kratzt dein Konto ja nicht einmal.",
     "namePlaceholder": "Dein Name oder Spitzname (optional)",
     "messagePlaceholder": "Hinterlasse eine provokante Aussage als Text oder Audio (optional)",
     "generateNameButton": "Name generieren",
     "generateMessageButton": "Nachricht generieren",
-    "payButton": "Stürze den letzten Reichen für nur {amount}",
+    "payButton": "Stürze den letzten König für nur {amount}",
     "avatarAlt": "Dein Avatar",
     "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
     "generateAvatarButton": "Zufälliges Bild als Avatar generieren",

@@ -32,13 +32,19 @@
     "richestListTitle": "Os que realmente não precisam",
     "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
   },
+  "KingPage": {
+    "title": "No auge da fortuna em {date}",
+    "description": "Larguei {amount} no vento sem dó",
+    "backHome": "Voltar para o hall da realeza",
+    "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
+  },
   "PayPage": {
     "title": "Por apenas {amount}, o trono é seu. Afinal, isso nem arranha sua conta.",
     "namePlaceholder": "Seu nome ou nickname (opcional)",
     "messagePlaceholder": "Deixe uma frase provocadora em texto ou áudio (opcional)",
     "generateNameButton": "Gerar nome",
     "generateMessageButton": "Gerar frase",
-    "payButton": "Desbanque o último rico por apenas {amount}",
+    "payButton": "Desbanque o último rei por apenas {amount}",
     "avatarAlt": "Seu avatar",
     "uploadAvatarButton": "Carregar uma imagem como seu avatar",
     "generateAvatarButton": "Gerar imagem aleatória como seu avatar",

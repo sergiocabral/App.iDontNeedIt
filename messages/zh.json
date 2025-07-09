@@ -32,13 +32,19 @@
     "richestListTitle": "真正不需要它的人",
     "audioNotSupported": "你的浏览器不支持音频播放。"
   },
+  "KingPage": {
+    "title": "{date}财富巅峰时",
+    "description": "我无所谓地扔掉了{amount}",
+    "backHome": "返回王室大厅",
+    "audioNotSupported": "您的浏览器不支持音频播放。"
+  },
   "PayPage": {
     "title": "只需 {amount}，王座就是你的。毕竟这对你的账户来说不算什么。",
     "namePlaceholder": "你的名字或昵称（可选）",
     "messagePlaceholder": "以文本或音频形式留下挑衅性短语（可选）",
     "generateNameButton": "生成名字",
     "generateMessageButton": "生成句子",
-    "payButton": "只需 {amount} 元，赶下上一个富豪",
+    "payButton": "只需 {amount} 即可废黜上任国王",
     "avatarAlt": "你的头像",
     "uploadAvatarButton": "上传一张图片作为你的头像",
     "generateAvatarButton": "随机生成一张头像图片",

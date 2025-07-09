@@ -88,12 +88,14 @@ export default async function HomePage() {
                     className="relative h-20 w-20 flex-shrink-0 ring-2 ring-accent rounded-full"
                     style={{ backgroundColor: king.imageBgColor }}
                   >
-                    <Image
-                      src={`/api/file?key=${king.imageUrl}`}
-                      alt={king.name || 'King anterior'}
-                      fill
-                      className="rounded-full object-cover"
-                    />
+                    <Link href={`/king/${king.id}`}>
+                      <Image
+                        src={`/api/file?key=${king.imageUrl}`}
+                        alt={king.name || 'King anterior'}
+                        fill
+                        className="rounded-full object-cover"
+                      />
+                    </Link>
                   </div>
 
                   <div className="space-y-1">

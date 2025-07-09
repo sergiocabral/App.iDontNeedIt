@@ -32,13 +32,19 @@
     "richestListTitle": "The Ones Who Really Don’t Need It",
     "audioNotSupported": "Your browser does not support audio playback."
   },
+  "KingPage": {
+    "title": "At the height of fortune on {date}",
+    "description": "I threw away {amount} without a care",
+    "backHome": "Return to the hall of royalty",
+    "audioNotSupported": "Your browser does not support audio playback."
+  },
   "PayPage": {
     "title": "For just {amount}, the throne is yours. After all, that doesn't even scratch your account.",
     "namePlaceholder": "Your name or nickname (optional)",
     "messagePlaceholder": "Leave a provocative phrase in text or audio (optional)",
     "generateNameButton": "Generate name",
     "generateMessageButton": "Generate message",
-    "payButton": "Dethrone the last rich one for just {amount}",
+    "payButton": "Dethrone the last king for just {amount}",
     "avatarAlt": "Your avatar",
     "uploadAvatarButton": "Upload an image as your avatar",
     "generateAvatarButton": "Generate a random image as your avatar",

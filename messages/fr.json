@@ -29,7 +29,14 @@
     "throwOneDollar": "Jette {amount}",
     "droppedToLeaveMark": "J'ai dépensé {amount} juste pour marquer le coup",
     "wastedBecauseICan": "J'ai gaspillé {amount} parce que je peux",
-    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin"
+    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin",
+    "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
+  },
+  "KingPage": {
+    "title": "Au sommet de la fortune le {date}",
+    "description": "J’ai jeté {amount} au vent sans souci",
+    "backHome": "Retourner dans le hall de la royauté",
+    "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
   },
   "PayPage": {
     "title": "Pour seulement {amount}, le trône est à vous. Après tout, cela ne touche même pas à votre compte.",
@@ -37,7 +44,7 @@
     "messagePlaceholder": "Laissez une phrase provocante en texte ou en audio (optionnel)",
     "generateNameButton": "Générer un nom",
     "generateMessageButton": "Générer une phrase",
-    "payButton": "Déboulonnez le dernier riche pour seulement {amount}",
+    "payButton": "Défie le dernier roi pour seulement {amount}",
     "avatarAlt": "Votre avatar",
     "uploadAvatarButton": "Téléversez une image comme avatar",
     "generateAvatarButton": "Générez une image aléatoire comme avatar",

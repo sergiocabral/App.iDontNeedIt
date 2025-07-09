@@ -32,13 +32,19 @@
     "richestListTitle": "本当に必要としていない人たち",
     "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
   },
+  "KingPage": {
+    "title": "{date}に財産の絶頂にいた",
+    "description": "何も気にせず{amount}を投げ捨てた",
+    "backHome": "王室のホールに戻る",
+    "audioNotSupported": "お使いのブラウザはオーディオの再生をサポートしていません。"
+  },
   "PayPage": {
     "title": "{amount} だけで王座はあなたのもの。それくらいあなたの口座には痛くもないでしょう。",
     "namePlaceholder": "名前またはニックネーム（任意）",
     "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
     "generateNameButton": "名前を生成",
     "generateMessageButton": "フレーズを生成",
-    "payButton": "{amount} 円で前の金持ちを王座から引きずり下ろせ",
+    "payButton": "たった {amount} で前の王を退位させよう",
     "avatarAlt": "あなたのアバター",
     "uploadAvatarButton": "画像をアップロードしてアバターにする",
     "generateAvatarButton": "ランダム画像をアバターとして生成する",
