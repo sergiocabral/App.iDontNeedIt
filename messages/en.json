@@ -25,7 +25,12 @@
     "description": "Are you richer than me? Prove it."
   },
   "HomePage": {
-    "comingSoon": "Something insane is coming..."
+    "proveRichest": "Prove you're the richest in the world",
+    "throwOneDollar": "Throw {ammount} away",
+    "droppedToLeaveMark": "Dropped {ammount} just to leave my mark",
+    "wastedBecauseICan": "Wasted {ammount} because I can",
+    "richestListTitle": "The Ones Who Really Don’t Need It",
+    "audioNotSupported": "Your browser does not support audio playback."
   },
   "PayPage": {
     "title": "You're one click away from showing you're the richest!",

@@ -25,7 +25,12 @@
     "description": "Es-tu plus riche que moi ? Prouve-le."
   },
   "HomePage": {
-    "comingSoon": "Quelque chose de fou arrive..."
+    "proveRichest": "Prouve que tu es le plus riche du monde",
+    "throwOneDollar": "Jette {ammount}",
+    "droppedToLeaveMark": "J'ai dépensé {ammount} juste pour marquer le coup",
+    "wastedBecauseICan": "J'ai gaspillé {ammount} parce que je peux",
+    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin",
+    "audioNotSupported": "Votre navigateur ne prend pas en charge la lecture audio."
   },
   "PayPage": {
     "title": "Vous êtes à un clic de montrer que vous êtes le plus riche !",

@@ -25,7 +25,12 @@
     "description": "나보다 부자라고? 증명해봐."
   },
   "HomePage": {
-    "comingSoon": "무언가 미친 일이 다가오고 있어요..."
+    "proveRichest": "당신이 세상에서 제일 부자라는 걸 증명해봐",
+    "throwOneDollar": "{ammount}을 버려봐",
+    "droppedToLeaveMark": "내 흔적을 남기기 위해 {ammount}을 썼어",
+    "wastedBecauseICan": "{ammount}을 낭비한 건 그냥 내가 할 수 있으니까",
+    "richestListTitle": "진짜 필요 없는 사람들",
+    "audioNotSupported": "브라우저가 오디오 재생을 지원하지 않습니다."
   },
   "PayPage": {
     "title": "당신은 단 한 번의 클릭으로 가장 부유함을 보여줄 수 있습니다!",

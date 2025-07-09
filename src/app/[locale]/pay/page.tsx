@@ -43,6 +43,19 @@ export default function PayPage() {
 
   const { showToast } = useToast()
 
+  useEffect(() => {
+    fetch('/api/ping', {
+      method: 'POST',
+      body: JSON.stringify({
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }, [])
+
   // Gera a URL do avatar baseado no seed, ou usa a imagem customizada
   useEffect(() => {
     if (!customAvatarFile) {

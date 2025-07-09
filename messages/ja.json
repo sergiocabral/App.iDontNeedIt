@@ -25,7 +25,12 @@
     "description": "あなたは私より裕福ですか？証明してみて。"
   },
   "HomePage": {
-    "comingSoon": "とんでもないことがやってくる……"
+    "proveRichest": "自分が世界一の金持ちだと証明してみろ",
+    "throwOneDollar": "{ammount} を無駄にする",
+    "droppedToLeaveMark": "{ammount} を使って存在感を示した",
+    "wastedBecauseICan": "できるから {ammount} を無駄にした",
+    "richestListTitle": "本当に必要としていない人たち",
+    "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
   },
   "PayPage": {
     "title": "あなたは一クリックで一番裕福だと示せます！",

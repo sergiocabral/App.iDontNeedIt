@@ -25,7 +25,12 @@
     "description": "Bist du reicher als ich? Beweise es."
   },
   "HomePage": {
-    "comingSoon": "Etwas Verrücktes kommt bald..."
+    "proveRichest": "Beweise, dass du der reichste Mensch der Welt bist",
+    "throwOneDollar": "Wirf {ammount} weg",
+    "droppedToLeaveMark": "Ich habe {ammount} ausgegeben, um ein Zeichen zu setzen",
+    "wastedBecauseICan": "Ich habe {ammount} verschwendet, weil ich es kann",
+    "richestListTitle": "Die, die es wirklich nicht brauchen",
+    "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
   },
   "PayPage": {
     "title": "Du bist nur einen Klick davon entfernt, zu zeigen, dass du der Reichste bist!",

@@ -25,7 +25,12 @@
     "description": "你比我有钱？那就证明给我看。"
   },
   "HomePage": {
-    "comingSoon": "有疯狂的事情即将发生……"
+    "proveRichest": "证明你是世界上最富有的人",
+    "throwOneDollar": "扔掉 {ammount}",
+    "droppedToLeaveMark": "我花了 {ammount} 只是为了留下我的印记",
+    "wastedBecauseICan": "我浪费了 {ammount} 因为我可以",
+    "richestListTitle": "真正不需要它的人",
+    "audioNotSupported": "你的浏览器不支持音频播放。"
   },
   "PayPage": {
     "title": "只需一键，证明你是最富有的人！",

@@ -25,7 +25,12 @@
     "description": "Você é mais rico que eu? Prove."
   },
   "HomePage": {
-    "comingSoon": "Algo insano está chegando..."
+    "proveRichest": "Prove que você é o mais rico do mundo",
+    "throwOneDollar": "Jogue {ammount} fora",
+    "droppedToLeaveMark": "Gastei {ammount} só para deixar minha marca",
+    "wastedBecauseICan": "Desperdicei {ammount} porque eu posso",
+    "richestListTitle": "Os que realmente não precisam",
+    "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
   },
   "PayPage": {
     "title": "Você está a um clique de mostrar que é o mais rico!",

@@ -25,7 +25,12 @@
     "description": "¿Eres más rico que yo? Demuéstralo."
   },
   "HomePage": {
-    "comingSoon": "Algo insano está por llegar..."
+    "proveRichest": "Demuestra que eres el más rico del mundo",
+    "throwOneDollar": "Lanza {ammount} a la basura",
+    "droppedToLeaveMark": "Gasté {ammount} solo para dejar mi huella",
+    "wastedBecauseICan": "Desperdicié {ammount} porque puedo",
+    "richestListTitle": "Los que realmente no lo necesitan",
+    "audioNotSupported": "Tu navegador no admite la reproducción de audio."
   },
   "PayPage": {
     "title": "¡Estás a un clic de mostrar que eres el más rico!",
