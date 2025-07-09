@@ -25,6 +25,7 @@ export default function PayPage() {
   const def = getDefinitions()
   const t = useTranslations('PayPage')
   const { locale } = useParams<{ locale: string }>()
+  const userLocale = navigator.language
 
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
@@ -184,6 +185,7 @@ export default function PayPage() {
           message,
           imageUrl: finalImageUrl,
           audioUrl: finalAudioUrl,
+          locale: userLocale || locale,
           amount: 1,
         }),
       })

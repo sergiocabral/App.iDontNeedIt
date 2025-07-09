@@ -5,6 +5,7 @@ type CreateKingInput = {
   message?: string
   imageUrl?: string
   audioUrl?: string
+  locale: string
   amount: number
 }
 
