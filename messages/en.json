@@ -36,6 +36,7 @@
     "payButton": "Dethrone the last rich one for just {ammount}",
     "avatarAlt": "Your avatar",
     "uploadAvatarButton": "Upload an image as your avatar",
-    "generateAvatarButton": "Generate a random image as your avatar"
+    "generateAvatarButton": "Generate a random image as your avatar",
+    "fileLimit": "File is {actualMB}MB. Maximum allowed is {maxSizeMB}MB. Please choose a smaller file."
   }
 }

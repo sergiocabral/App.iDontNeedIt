@@ -36,6 +36,7 @@
     "payButton": "只需 {ammount} 元，赶下上一个富豪",
     "avatarAlt": "你的头像",
     "uploadAvatarButton": "上传一张图片作为你的头像",
-    "generateAvatarButton": "随机生成一张头像图片"
+    "generateAvatarButton": "随机生成一张头像图片",
+    "fileLimit": "文件大小为 {actualMB}MB。最大允许为 {maxSizeMB}MB。请选择较小的文件。"
   }
 }

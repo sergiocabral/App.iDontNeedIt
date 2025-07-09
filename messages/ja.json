@@ -36,6 +36,7 @@
     "payButton": "{ammount} 円で前の金持ちを王座から引きずり下ろせ",
     "avatarAlt": "あなたのアバター",
     "uploadAvatarButton": "画像をアップロードしてアバターにする",
-    "generateAvatarButton": "ランダム画像をアバターとして生成する"
+    "generateAvatarButton": "ランダム画像をアバターとして生成する",
+    "fileLimit": "ファイルサイズは {actualMB}MB です。最大許容サイズは {maxSizeMB}MB です。より小さいファイルを選択してください。"
   }
 }

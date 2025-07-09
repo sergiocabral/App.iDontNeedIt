@@ -107,7 +107,7 @@ export default function PayPage() {
     const maxSizeBytes = maxSizeMB * 1024 * 1024
     if (file.size > maxSizeBytes) {
       const actualMB = (file.size / 1024 / 1024).toFixed(2)
-      throw new Error(`File is ${actualMB}MB. Maximum allowed is ${maxSizeMB}MB.`)
+      throw new Error(t('fileLimit', { actualMB, maxSizeMB }))
     }
 
     const res = await fetch('/api/upload', {
@@ -149,7 +149,7 @@ export default function PayPage() {
           finalImageUrl = await uploadFile(dicebearFile, 'avatar')
         }
       } catch (error) {
-        showToast((error as Error).message || 'Failed to upload avatar image.', 'error')
+        showToast((error as Error).message, 'error')
         setLoading(false)
         return
       }
@@ -158,7 +158,7 @@ export default function PayPage() {
       try {
         finalAudioUrl = audioFile ? await uploadFile(audioFile, 'audio') : undefined
       } catch (error) {
-        showToast((error as Error).message || 'Failed to upload audio file.', 'error')
+        showToast((error as Error).message, 'error')
         setLoading(false)
         return
       }

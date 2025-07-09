@@ -36,6 +36,7 @@
     "payButton": "Déboulonnez le dernier riche pour seulement {ammount}",
     "avatarAlt": "Votre avatar",
     "uploadAvatarButton": "Téléversez une image comme avatar",
-    "generateAvatarButton": "Générez une image aléatoire comme avatar"
+    "generateAvatarButton": "Générez une image aléatoire comme avatar",
+    "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit."
   }
 }

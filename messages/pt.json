@@ -36,6 +36,7 @@
     "payButton": "Desbanque o último rico por apenas {ammount}",
     "avatarAlt": "Seu avatar",
     "uploadAvatarButton": "Carregar uma imagem como seu avatar",
-    "generateAvatarButton": "Gerar imagem aleatória como seu avatar"
+    "generateAvatarButton": "Gerar imagem aleatória como seu avatar",
+    "fileLimit": "O arquivo tem {actualMB}MB. O máximo permitido é {maxSizeMB}MB. Por favor, escolha um arquivo menor."
   }
 }
