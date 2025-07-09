@@ -33,7 +33,7 @@
     "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
   },
   "PayPage": {
-    "title": "Du bist nur einen Klick davon entfernt, zu zeigen, dass du der Reichste bist!",
+    "title": "Du bist nur {ammount} davon entfernt, zu beweisen, dass du der reichste der Welt bist",
     "namePlaceholder": "Dein Name oder Spitzname (optional)",
     "messagePlaceholder": "Hinterlasse eine provokante Aussage als Text oder Audio (optional)",
     "generateNameButton": "Name generieren",

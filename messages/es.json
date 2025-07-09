@@ -32,7 +32,7 @@
     "richestListTitle": "Los que realmente no lo necesitan"
   },
   "PayPage": {
-    "title": "¡Estás a un clic de mostrar que eres el más rico!",
+    "title": "Estás a solo {ammount} de demostrar que eres el más rico del mundo",
     "namePlaceholder": "Tu nombre o apodo (opcional)",
     "messagePlaceholder": "Deja una frase provocadora en texto o audio (opcional)",
     "generateNameButton": "Generar nombre",

@@ -33,7 +33,7 @@
     "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
   },
   "PayPage": {
-    "title": "Você está a um clique de mostrar que é o mais rico!",
+    "title": "Você está a um {ammount} de mostrar que é o mais rico do mundo",
     "namePlaceholder": "Seu nome ou nickname (opcional)",
     "messagePlaceholder": "Deixe uma frase provocadora em texto ou áudio (opcional)",
     "generateNameButton": "Gerar nome",
