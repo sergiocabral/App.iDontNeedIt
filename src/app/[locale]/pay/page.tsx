@@ -226,105 +226,114 @@ export default function PayPage() {
   const pageTitle = splitByMarker(t('title', { amount: '|' }), '|')
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
-      <div className="w-full max-w-md p-6 space-y-4">
-        <h1 className="text-2xl font-bold text-center">
-          {pageTitle.left}{' '}
-          <span className="inline-block bg-green-600 text-background px-4 py-1 rounded">
-            {nextAmount ? nextAmount.formatted : '$$$'}
-          </span>{' '}
-          {pageTitle.right}
-        </h1>
+    <>
+      <main className="min-h-screen bg-background text-foreground flex items-center justify-center">
+        <div className="w-full max-w-md p-6 space-y-4">
+          <h1 className="text-2xl font-bold text-center">
+            {pageTitle.left}{' '}
+            <span className="inline-block bg-green-600 text-background px-4 py-1 rounded">
+              {nextAmount ? nextAmount.formatted : '$$$'}
+            </span>{' '}
+            {pageTitle.right}
+          </h1>
 
-        {/* Avatar com botões sobrepostos */}
-        <div className="relative w-28 h-28 mx-auto">
-          <Avatar className="w-28 h-28" style={{ backgroundColor: avatarBg }}>
-            <AvatarImage src={avatarUrl} alt={t('avatarAlt')} />
-            <AvatarFallback className="flex items-center justify-center bg-purple-200">
-              <CircleUserRound className="w-16 h-16 text-purple-800" />
-            </AvatarFallback>
-          </Avatar>
+          {/* Avatar com botões sobrepostos */}
+          <div className="relative w-28 h-28 mx-auto">
+            <Avatar className="w-28 h-28" style={{ backgroundColor: avatarBg }}>
+              <AvatarImage src={avatarUrl} alt={t('avatarAlt')} />
+              <AvatarFallback className="flex items-center justify-center bg-purple-200">
+                <CircleUserRound className="w-16 h-16 text-purple-800" />
+              </AvatarFallback>
+            </Avatar>
 
-          {/* Upload de avatar (esquerda) */}
-          <AvatarUpload
-            title={t('generateAvatarButton')}
-            onImageSelected={(file, preview) => {
-              setCustomAvatarFile(file)
-              setAvatarUrl(preview)
-              setAvatarBg('transparent')
-              setAvatarSeed('') // para pausar avatar gerado
+            {/* Upload de avatar (esquerda) */}
+            <AvatarUpload
+              title={t('generateAvatarButton')}
+              onImageSelected={(file, preview) => {
+                setCustomAvatarFile(file)
+                setAvatarUrl(preview)
+                setAvatarBg('transparent')
+                setAvatarSeed('') // para pausar avatar gerado
+              }}
+            />
+
+            {/* Botão refresh (direita) */}
+            <Button
+              type="button"
+              size="icon"
+              variant="secondary"
+              className="absolute bottom-0 right-0 w-7 h-7"
+              title={t('uploadAvatarButton')}
+              onClick={refreshAvatar}
+            >
+              <RefreshCwIcon className="w-3 h-3" />
+            </Button>
+          </div>
+
+          {/* Nome com botão de geração */}
+          <div className="flex items-center gap-2">
+            <Input
+              placeholder={t('namePlaceholder')}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <Button
+              type="button"
+              size="icon"
+              variant="ghost"
+              title={t('generateNameButton')}
+              onClick={handleGenerateName}
+            >
+              <SparklesIcon className="w-4 h-4" />
+            </Button>
+          </div>
+
+          {/* Frase com botão de geração */}
+          <div className="flex items-center gap-2">
+            <Textarea
+              placeholder={t('messagePlaceholder')}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <Button
+              type="button"
+              size="icon"
+              variant="ghost"
+              title={t('generateMessageButton')}
+              onClick={handleGenerateMessage}
+            >
+              <MessageSquareQuoteIcon className="w-4 h-4" />
+            </Button>
+          </div>
+
+          {/* Upload de áudio */}
+          <AudioRecorder
+            onRecordingComplete={(file, url) => {
+              setAudioFile(file)
+              setAudioPreview(url)
             }}
           />
 
-          {/* Botão refresh (direita) */}
+          {/* Preview do áudio */}
+          {audioPreview && <audio controls src={audioPreview} className="w-full" />}
+
+          {nextAmount && (
+            <StripePayForm onClick={handlePayClick} isLoading={loading}></StripePayForm>
+          )}
           <Button
-            type="button"
-            size="icon"
-            variant="secondary"
-            className="absolute bottom-0 right-0 w-7 h-7"
-            title={t('uploadAvatarButton')}
-            onClick={refreshAvatar}
+            className="w-full mt-4 cursor-pointer bg-gray-400 text-white font-semibold py-3 rounded-lg shadow-md transition hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-400"
+            disabled={loading}
+            onClick={() => router.push('/')}
           >
-            <RefreshCwIcon className="w-3 h-3" />
+            {t('backToHome')}
           </Button>
         </div>
-
-        {/* Nome com botão de geração */}
-        <div className="flex items-center gap-2">
-          <Input
-            placeholder={t('namePlaceholder')}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <Button
-            type="button"
-            size="icon"
-            variant="ghost"
-            title={t('generateNameButton')}
-            onClick={handleGenerateName}
-          >
-            <SparklesIcon className="w-4 h-4" />
-          </Button>
-        </div>
-
-        {/* Frase com botão de geração */}
-        <div className="flex items-center gap-2">
-          <Textarea
-            placeholder={t('messagePlaceholder')}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <Button
-            type="button"
-            size="icon"
-            variant="ghost"
-            title={t('generateMessageButton')}
-            onClick={handleGenerateMessage}
-          >
-            <MessageSquareQuoteIcon className="w-4 h-4" />
-          </Button>
-        </div>
-
-        {/* Upload de áudio */}
-        <AudioRecorder
-          onRecordingComplete={(file, url) => {
-            setAudioFile(file)
-            setAudioPreview(url)
-          }}
-        />
-
-        {/* Preview do áudio */}
-        {audioPreview && <audio controls src={audioPreview} className="w-full" />}
-
-        {nextAmount && <StripePayForm onClick={handlePayClick} isLoading={loading}></StripePayForm>}
-        <Button
-          className="w-full mt-4 cursor-pointer bg-gray-400 text-white font-semibold py-3 rounded-lg shadow-md transition hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-400"
-          disabled={loading}
-          onClick={() => router.push('/')}
-        >
-          {t('backToHome')}
-        </Button>
-      </div>
-    </div>
+      </main>
+      <footer className="text-center text-sm text-muted-foreground mt-16 pb-4">
+        <a href={`mailto:${def('email')}`} className="underline">
+          {def('email')}
+        </a>
+      </footer>
+    </>
   )
 }

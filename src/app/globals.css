@@ -118,3 +118,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-gradient {
+    background: linear-gradient(270deg, #6a0dad, #b5179e, #f72585);
+    background-size: 400% 400%; /* espaço pra deslizar */
+    -webkit-background-clip: text; /* se for texto */
+    color: transparent; /* se for texto */
+    animation: gradientMove 6s ease infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
