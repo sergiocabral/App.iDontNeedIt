@@ -42,6 +42,7 @@
     "avatarAlt": "あなたのアバター",
     "uploadAvatarButton": "画像をアップロードしてアバターにする",
     "generateAvatarButton": "ランダム画像をアバターとして生成する",
-    "fileLimit": "ファイルサイズは {actualMB}MB です。最大許容サイズは {maxSizeMB}MB です。より小さいファイルを選択してください。"
+    "fileLimit": "ファイルサイズは {actualMB}MB です。最大許容サイズは {maxSizeMB}MB です。より小さいファイルを選択してください。",
+    "errorAndTryAgain": "エラーが発生しました。もう一度お試しください。"
   }
 }

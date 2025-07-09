@@ -29,8 +29,7 @@
     "throwOneDollar": "Jette {ammount}",
     "droppedToLeaveMark": "J'ai dépensé {ammount} juste pour marquer le coup",
     "wastedBecauseICan": "J'ai gaspillé {ammount} parce que je peux",
-    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin",
-    "audioNotSupported": "Votre navigateur ne prend pas en charge la lecture audio."
+    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin"
   },
   "PayPage": {
     "title": "Vous êtes à un clic de montrer que vous êtes le plus riche !",
@@ -42,6 +41,7 @@
     "avatarAlt": "Votre avatar",
     "uploadAvatarButton": "Téléversez une image comme avatar",
     "generateAvatarButton": "Générez une image aléatoire comme avatar",
-    "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit."
+    "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit.",
+    "errorAndTryAgain": "Une erreur s'est produite. Veuillez réessayer."
   }
 }

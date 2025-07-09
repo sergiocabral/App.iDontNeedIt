@@ -42,6 +42,7 @@
     "avatarAlt": "Dein Avatar",
     "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
     "generateAvatarButton": "Zufälliges Bild als Avatar generieren",
-    "fileLimit": "Die Datei ist {actualMB} MB groß. Maximal erlaubt sind {maxSizeMB} MB. Bitte wählen Sie eine kleinere Datei aus."
+    "fileLimit": "Die Datei ist {actualMB} MB groß. Maximal erlaubt sind {maxSizeMB} MB. Bitte wählen Sie eine kleinere Datei aus.",
+    "errorAndTryAgain": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut."
   }
 }

@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { RefreshCwIcon, SparklesIcon, MessageSquareQuoteIcon, CircleUserRound } from 'lucide-react'
 import { getDefinitions } from '@/lib/definitions'
 import { useRotatingValues } from '@/hooks/useRotatingValues'
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { AvatarUpload } from '@/components/app/AvatarUpload'
 import * as Sentry from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
@@ -24,6 +24,8 @@ const AudioRecorder = dynamic(
 export default function PayPage() {
   const def = getDefinitions()
   const t = useTranslations('PayPage')
+  const router = useRouter()
+
   const { locale } = useParams<{ locale: string }>()
   const userLocale = navigator.language
 
@@ -194,12 +196,11 @@ export default function PayPage() {
         throw new Error('Failed to save king data.')
       }
 
-      showToast('Data saved successfully!', 'success')
+      router.push('/')
     } catch (error) {
       console.error('Error during saving king data:', error)
       Sentry.captureException(error)
-      showToast('An error occurred. Please try again.', 'error')
-    } finally {
+      showToast(t('errorAndTryAgain'), 'error')
       setLoading(false)
     }
   }
