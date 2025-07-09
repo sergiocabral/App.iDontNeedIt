@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import { PaymentRepository } from '@/lib/repositories/paymentRepository'
 import Stripe from 'stripe'
+import * as Sentry from '@sentry/nextjs'
 
 export async function POST(req: NextRequest) {
   const sig = (await headers()).get('stripe-signature') as string
@@ -21,6 +22,11 @@ export async function POST(req: NextRequest) {
 
   if (event.type === 'payment_intent.succeeded') {
     const intent = event.data.object as Stripe.PaymentIntent
+
+    Sentry.captureMessage(
+      `Payment received: ${intent.id} - ${intent.amount} ${intent.currency}`,
+      'info'
+    )
 
     await PaymentRepository.create({
       stripeIntentId: intent.id,
