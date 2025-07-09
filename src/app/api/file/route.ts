@@ -26,7 +26,7 @@ export async function GET(request: Request) {
       status: 200,
       headers,
     })
-  } catch (error) {
+  } catch {
     return new Response('Internal Server Error', { status: 500 })
   }
 }

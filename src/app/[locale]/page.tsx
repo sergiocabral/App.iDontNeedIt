@@ -9,7 +9,9 @@ export default async function HomePage() {
 
   const splitByMarker = (text: string, marker: string = 'ammount') => {
     const mark = '|'
-    text = t(text, { ammount: '|' })
+    const values: Record<string, string> = {}
+    values[marker] = mark
+    text = t(text, values)
     const left = text.substring(0, text.indexOf(mark))
     const right = text === left ? '' : text.substring(text.indexOf(mark) + mark.length)
     return { left, right }

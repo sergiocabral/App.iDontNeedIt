@@ -53,7 +53,7 @@ export async function generateStaticParams() {
 
 interface Props {
   children: ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
