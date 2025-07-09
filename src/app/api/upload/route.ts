@@ -1,23 +1,22 @@
-// src/app/api/upload-url/route.ts
 import { NextResponse } from 'next/server'
-import { generateUploadUrl } from '@/lib/r2'
+import { generateUploadUrl } from '@/lib/storage-s3'
+import { slugify, uuid } from '@/lib/utils'
 
-export async function GET(req: Request) {
-  const { filename, contentType } = Object.fromEntries(new URL(req.url).searchParams)
-  if (!filename || !contentType)
-    return NextResponse.json({ error: 'Missing params' }, { status: 400 })
+export async function POST(req: Request) {
+  const { contentType, folder } = await req.json()
 
-  const safeKey = `kings/${Date.now()}-${filename.replace(/[^a-zA-Z0-9._-]/g, '_')}`
-  const url = await generateUploadUrl(safeKey, contentType as string)
-  return NextResponse.json({ url, key: safeKey })
+  if (!contentType) {
+    return NextResponse.json({ error: 'The contentType is required.' }, { status: 400 })
+  }
+
+  const safeFolder = slugify(folder || 'general')
+  const safeKey = `${safeFolder}/${uuid()}`
+
+  try {
+    const url = await generateUploadUrl(safeKey, contentType)
+    return NextResponse.json({ url, key: safeKey })
+  } catch (error) {
+    console.error('Error generating upload URL:', error)
+    return NextResponse.json({ error: 'Failed to generate upload URL.' }, { status: 500 })
+  }
 }
-
-/**
- * // Upload no frontend
- * async function uploadFile(file: File) {
- *   const res = await fetch(`/api/upload-url?filename=${file.name}&contentType=${file.type}`);
- *   const { url, key } = await res.json();
- *   await fetch(url, { method: "PUT", body: file, headers: { "Content-Type": file.type } });
- *   return key; // Salvar no banco associando ao King
- * }
- */
