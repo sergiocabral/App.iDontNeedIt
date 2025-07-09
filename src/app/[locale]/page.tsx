@@ -1,4 +1,5 @@
 import { KingRepository } from '@/lib/repositories/kingRepository'
+import { formatAmmount } from '@/lib/utils'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,6 +17,9 @@ export default async function HomePage() {
 
   const kings = await KingRepository.listAll()
 
+  const nextAmmount = await KingRepository.getNextAmount()
+  const nextAmmountFormatted = formatAmmount(nextAmmount)
+
   if (!kings.length) {
     return (
       <div className="p-8 text-center space-y-2">
@@ -24,7 +28,7 @@ export default async function HomePage() {
           href="/pay"
           className="inline-block bg-green-600 text-background px-6 py-2 rounded text-lg font-semibold hover:opacity-90 transition"
         >
-          {t('throwOneDollar', { ammount: '$1' })}
+          {t('throwOneDollar', { ammount: nextAmmountFormatted })}
         </Link>
       </div>
     )
@@ -46,7 +50,7 @@ export default async function HomePage() {
             href="/pay"
             className="inline-block bg-green-600 text-background px-6 py-2 rounded text-2xl font-semibold hover:opacity-90 transition"
           >
-            ${topKing.amount}
+            {formatAmmount(topKing.amount)}
           </Link>{' '}
           {pageTitle.right}
         </h1>
@@ -87,7 +91,9 @@ export default async function HomePage() {
                   {king.name && <h3 className="font-semibold">{king.name}</h3>}
                   <p className="text-muted-foreground">
                     {kingTitle.left}{' '}
-                    <span className="text-xl text-green-600 font-bold">${king.amount}</span>{' '}
+                    <span className="text-xl text-green-600 font-bold">
+                      {formatAmmount(king.amount)}
+                    </span>{' '}
                     {kingTitle.right}
                   </p>
                   {king.message && (

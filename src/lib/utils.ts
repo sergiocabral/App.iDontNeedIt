@@ -39,3 +39,7 @@ export async function fetchUrlAsFile(
 
   return new File([blob], filename, { type: contentType })
 }
+
+export function formatAmmount(ammount: number): string {
+  return `$ ${(ammount / 100).toFixed(2)}`
+}

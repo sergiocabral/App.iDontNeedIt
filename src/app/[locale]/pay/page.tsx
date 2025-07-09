@@ -13,7 +13,7 @@ import { AvatarUpload } from '@/components/app/AvatarUpload'
 import * as Sentry from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
-import { fetchUrlAsFile } from '@/lib/utils'
+import { fetchUrlAsFile, formatAmmount } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
 
 const AudioRecorder = dynamic(
@@ -32,10 +32,21 @@ export default function PayPage() {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
 
+  const [nextAmount, setNextAmount] = useState<number | null>(null)
+  useEffect(() => {
+    fetch('/api/king/next')
+      .then((res) => res.json())
+      .then((data) => {
+        setNextAmount(data.value)
+      })
+      .catch((error) => {
+        console.error('Error fetching next amount:', error)
+        Sentry.captureException(error)
+      })
+  }, [])
+
   const [audioFile, setAudioFile] = useState<File | null>(null)
   const [audioPreview, setAudioPreview] = useState<string | null>(null)
-
-  audioFile?.toString() // Para evitar erro de linting, não é usado diretamente
 
   const [avatarSeed, setAvatarSeed] = useState(() => Math.random().toString(36).substring(7))
   const [avatarBg, setAvatarBg] = useState('')
@@ -154,6 +165,8 @@ export default function PayPage() {
   }
 
   const handlePayClick = async () => {
+    if (nextAmount === null) return
+
     setLoading(true)
     try {
       let finalImageUrl: string
@@ -188,7 +201,7 @@ export default function PayPage() {
           imageUrl: finalImageUrl,
           audioUrl: finalAudioUrl,
           locale: userLocale || locale,
-          amount: 1,
+          amount: nextAmount,
         }),
       })
 
@@ -208,7 +221,9 @@ export default function PayPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
       <div className="w-full max-w-md p-6 space-y-4">
-        <h1 className="text-2xl font-bold text-center">{t('title', { ammount: '$1' })}</h1>
+        <h1 className="text-2xl font-bold text-center">
+          {t('title', { ammount: nextAmount ? formatAmmount(nextAmount) : '$$$' })}
+        </h1>
 
         {/* Avatar com botões sobrepostos */}
         <div className="relative w-28 h-28 mx-auto">
@@ -290,13 +305,15 @@ export default function PayPage() {
         {/* Preview do áudio */}
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
-        <Button
-          className="w-full mt-4 bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300"
-          disabled={loading}
-          onClick={handlePayClick}
-        >
-          {t('payButton', { ammount: '$1' })}
-        </Button>
+        {nextAmount && (
+          <Button
+            className="w-full mt-4 bg-purple-600 text-white font-bold py-3 rounded-lg shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300"
+            disabled={loading}
+            onClick={handlePayClick}
+          >
+            {t('payButton', { ammount: formatAmmount(nextAmount) })}
+          </Button>
+        )}
       </div>
     </div>
   )

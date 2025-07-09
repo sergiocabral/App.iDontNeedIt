@@ -29,4 +29,15 @@ export const KingRepository = {
       orderBy: { createdAt: 'desc' },
     })
   },
+
+  async getNextAmount(): Promise<number> {
+    const result = await prisma.king.aggregate({
+      _max: { amount: true },
+    })
+
+    const maxAmount = result._max.amount ?? 0
+    const oneDollar = 100
+    const tenCents = 10
+    return Number(maxAmount === 0 ? oneDollar : maxAmount + tenCents)
+  },
 }
