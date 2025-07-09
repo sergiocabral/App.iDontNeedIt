@@ -51,6 +51,7 @@
     "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit.",
     "errorAndTryAgain": "Une erreur s'est produite. Veuillez réessayer.",
     "backToHome": "J’abandonne. Je voulais, mais mon solde ne suit pas.",
-    "languageFromBrowser": "Votre navigateur a indiqué votre nationalité"
+    "languageFromBrowser": "Votre navigateur a indiqué votre nationalité",
+    "disclaimerPublicInfo": "Toute information publiée ici sera <em>publique</em> et <em>permanente</em>. Réfléchissez bien avant de soumettre. Vous laissez une marque <strong>indélébile</strong> pour les temps à venir."
   }
 }

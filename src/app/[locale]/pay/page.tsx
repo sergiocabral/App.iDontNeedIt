@@ -35,6 +35,7 @@ export default function PayPage() {
 
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
+  const [flagUrl, setFlagUrl] = useState<string | null>(null)
 
   const [nextAmount, setNextAmount] = useState<AmountType | null>(null)
   useEffect(() => {
@@ -62,6 +63,7 @@ export default function PayPage() {
   const { showToast } = useToast()
 
   useEffect(() => {
+    setFlagUrl(getFlagImageUrl(navigator.language))
     fetch('/api/ping', {
       method: 'POST',
       body: JSON.stringify({
@@ -273,14 +275,16 @@ export default function PayPage() {
 
           {/* Nome com botão de geração */}
           <div className="flex items-center gap-2">
-            <Image
-              src={getFlagImageUrl(navigator.language)}
-              width={24}
-              height={24}
-              alt="flag"
-              title={t('languageFromBrowser')}
-              className="inline-block w-6 h-4 mr-2 rounded"
-            />
+            {flagUrl && (
+              <Image
+                src={flagUrl}
+                width={24}
+                height={24}
+                alt="flag"
+                title={t('languageFromBrowser')}
+                className="inline-block w-6 h-4 mr-2 rounded"
+              />
+            )}
             <Input
               placeholder={t('namePlaceholder')}
               value={name}
@@ -329,6 +333,12 @@ export default function PayPage() {
           {nextAmount && (
             <StripePayForm onClick={handlePayClick} isLoading={loading}></StripePayForm>
           )}
+          <p className="text-sm text-center text-muted-foreground italic px-2">
+            {t.rich('disclaimerPublicInfo', {
+              em: (chunks) => <em className="text-gray-700 font-semibold not-italic">{chunks}</em>,
+              strong: (chunks) => <strong className="text-purple-700 font-bold">{chunks}</strong>,
+            })}
+          </p>
           <Button
             className="w-full mt-4 cursor-pointer bg-gray-400 text-white font-semibold py-3 rounded-lg shadow-md transition hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-400"
             disabled={loading}

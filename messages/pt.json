@@ -51,6 +51,7 @@
     "fileLimit": "O arquivo tem {actualMB}MB. O máximo permitido é {maxSizeMB}MB. Por favor, escolha um arquivo menor.",
     "errorAndTryAgain": "Ocorreu um erro. Por favor, tente novamente.",
     "backToHome": "Desisto. Queria, mas meu saldo não colabora.",
-    "languageFromBrowser": "Seu navegador indicou sua nacionalidade"
+    "languageFromBrowser": "Seu navegador indicou sua nacionalidade",
+    "disclaimerPublicInfo": "Toda informação publicada aqui será <em>pública</em> e <em>permanente</em>. Pense bem antes de enviar. Você está deixando uma marca <strong>indelével</strong> para os tempos futuros."
   }
 }
