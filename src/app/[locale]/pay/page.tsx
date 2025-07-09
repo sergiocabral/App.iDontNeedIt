@@ -317,6 +317,12 @@ export default function PayPage() {
         {audioPreview && <audio controls src={audioPreview} className="w-full" />}
 
         {nextAmount && <StripePayForm onClick={handlePayClick}></StripePayForm>}
+        <Button
+          className="w-full mt-4 cursor-pointer bg-gray-400 text-white font-semibold py-3 rounded-lg shadow-md transition hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-400"
+          onClick={() => router.push('/')}
+        >
+          {t('backToHome')}
+        </Button>
       </div>
     </div>
   )

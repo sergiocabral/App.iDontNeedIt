@@ -11,7 +11,11 @@ import { useRouter } from 'next/navigation'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
-export function StripePayForm({ onClick }: { onClick?: () => void | boolean }) {
+export function StripePayForm({
+  onClick,
+}: {
+  onClick?: () => void | boolean | Promise<void | boolean>
+}) {
   const [clientSecret, setClientSecret] = useState<string>()
 
   useEffect(() => {
@@ -31,7 +35,7 @@ export function StripePayForm({ onClick }: { onClick?: () => void | boolean }) {
   )
 }
 
-function Checkout({ onClick }: { onClick?: () => void | boolean }) {
+function Checkout({ onClick }: { onClick?: () => void | boolean | Promise<void | boolean> }) {
   const stripe = useStripe()
   const elements = useElements()
   const [loading, setLoading] = useState(false)
