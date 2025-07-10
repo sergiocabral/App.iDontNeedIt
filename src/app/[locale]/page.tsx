@@ -28,7 +28,7 @@ export default async function HomePage() {
         <p className="text-lg font-medium">{t('title')}</p>
         <Link
           href="/pay"
-          className="inline-block bg-green-600 hover:bg-green-500 active:scale-95 text-background px-6 py-2 rounded text-lg font-semibold transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+          className="animate-bounce inline-block bg-green-600 hover:bg-green-500 active:scale-95 text-background px-6 py-2 rounded text-lg font-semibold transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
         >
           {t('payButton', { amount: nextAmount.formatted })}
         </Link>
@@ -65,7 +65,7 @@ export default async function HomePage() {
             {pageTitle.left}{' '}
             <Link
               href="/pay"
-              className="inline-block bg-green-600 hover:bg-green-500 active:scale-95 text-background px-6 py-2 rounded text-lg font-semibold transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="animate-bounce inline-block bg-green-600 hover:bg-green-500 active:scale-95 text-background px-6 py-2 rounded text-lg font-semibold transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
               {formatAmount(topKing)}
             </Link>{' '}
@@ -121,7 +121,7 @@ export default async function HomePage() {
                     </Link>
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-1 w-full">
                     <Image
                       src={getFlagImageUrl(king.locale)}
                       width={24}

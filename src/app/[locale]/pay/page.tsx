@@ -135,7 +135,7 @@ export default function PayPage() {
   }, [messages, getNextMessage])
 
   async function uploadFile(file: File, folder: string): Promise<string> {
-    const maxSizeMB = 1
+    const maxSizeMB = 5
     const maxSizeBytes = maxSizeMB * 1024 * 1024
     if (file.size > maxSizeBytes) {
       const actualMB = (file.size / 1024 / 1024).toFixed(2)
@@ -169,8 +169,8 @@ export default function PayPage() {
     return publicUrl
   }
 
-  const handlePayClick = async () => {
-    if (nextAmount === null) return
+  const handlePayClick: () => Promise<false | (() => Promise<void>)> = async () => {
+    if (nextAmount === null) return false
 
     setLoading(true)
     try {
@@ -185,7 +185,7 @@ export default function PayPage() {
       } catch (error) {
         showToast((error as Error).message, 'error')
         setLoading(false)
-        return
+        return false
       }
 
       let finalAudioUrl: string | undefined
@@ -194,35 +194,38 @@ export default function PayPage() {
       } catch (error) {
         showToast((error as Error).message, 'error')
         setLoading(false)
-        return
+        return false
       }
 
-      const response = await fetch('/api/king', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          message,
-          imageBgColor: avatarBg,
-          imageUrl: finalImageUrl,
-          audioUrl: finalAudioUrl,
-          locale: userLocale || locale,
-          amount: nextAmount.amount,
-          currency: nextAmount.currency,
-        }),
-      })
+      return async function save() {
+        const response = await fetch('/api/king', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            message,
+            imageBgColor: avatarBg,
+            imageUrl: finalImageUrl,
+            audioUrl: finalAudioUrl,
+            locale: userLocale || locale,
+            amount: nextAmount.amount,
+            currency: nextAmount.currency,
+          }),
+        })
 
-      if (!response.ok) {
-        throw new Error('Failed to save king data.')
+        if (!response.ok) {
+          throw new Error('Failed to save king data.')
+        }
+
+        router.push('/')
       }
-
-      router.push('/')
     } catch (error) {
       console.error('Error during saving king data:', error)
       Sentry.captureException(error)
       showToast(t('errorAndTryAgain'), 'error')
       setLoading(false)
     }
+    return false
   }
 
   const pageTitle = splitByMarker(t('title', { amount: '|' }), '|')
@@ -351,7 +354,7 @@ export default function PayPage() {
           </div>
 
           {nextAmount && (
-            <StripePayForm onClick={handlePayClick} isLoading={loading}></StripePayForm>
+            <StripePayForm canPay={handlePayClick} isLoading={loading}></StripePayForm>
           )}
 
           <Button

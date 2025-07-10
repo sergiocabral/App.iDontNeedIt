@@ -13,10 +13,10 @@ import { useToast } from '../ui/toaster'
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
 export function StripePayForm({
-  onClick,
+  canPay,
   isLoading,
 }: {
-  onClick?: () => void | boolean | Promise<void | boolean>
+  canPay: () => Promise<false | (() => Promise<void>)>
   isLoading?: boolean
 }) {
   const [clientSecret, setClientSecret] = useState<string>()
@@ -33,16 +33,16 @@ export function StripePayForm({
 
   return (
     <Elements stripe={stripePromise} options={{ clientSecret }}>
-      <Checkout onClick={onClick} isLoading={isLoading} />
+      <Checkout canPay={canPay} isLoading={isLoading} />
     </Elements>
   )
 }
 
 function Checkout({
-  onClick,
+  canPay,
   isLoading,
 }: {
-  onClick?: () => void | boolean | Promise<void | boolean>
+  canPay: () => Promise<false | (() => Promise<void>)>
   isLoading?: boolean
 }) {
   const stripe = useStripe()
@@ -70,27 +70,33 @@ function Checkout({
     setLoading(true)
 
     try {
-      showToast(t('paymentSending'), 'info')
-      const result = await stripe.confirmPayment({
-        elements,
-        confirmParams: { return_url: window.location.origin },
-        redirect: 'if_required',
-      })
+      const canPayHandle = await canPay()
+      if (canPayHandle !== false) {
+        showToast(t('paymentSending'), 'info')
+        const result = await stripe.confirmPayment({
+          elements,
+          confirmParams: { return_url: window.location.origin },
+          redirect: 'if_required',
+        })
 
-      if (result.error) {
+        if (result.error) {
+          setLoading(false)
+          console.error(result.error)
+          showToast(t('paymentError'), 'error')
+          return
+        }
+
+        let redirect = true
+        if (canPay) {
+          redirect = (await canPay()) !== false
+        }
+
+        showToast(t('paymentSuccess'), 'success')
+        await canPayHandle()
+        if (redirect) router.push('/')
+      } else {
         setLoading(false)
-        console.error(result.error)
-        showToast(t('paymentError'), 'error')
-        return
       }
-
-      let redirect = true
-      if (onClick) {
-        redirect = (await onClick()) !== false
-      }
-
-      showToast(t('paymentSuccess'), 'success')
-      if (redirect) setTimeout(() => router.push('/'), 500)
     } catch (error) {
       setLoading(false)
       showToast(t('paymentError'), 'error')
