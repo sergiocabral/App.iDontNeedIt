@@ -51,7 +51,6 @@ export default function PayPage() {
   }, [])
 
   const [audioFile, setAudioFile] = useState<File | null>(null)
-  const [audioPreview, setAudioPreview] = useState<string | null>(null)
 
   const [avatarSeed, setAvatarSeed] = useState(() => Math.random().toString(36).substring(7))
   const [avatarBg, setAvatarBg] = useState('')
@@ -230,8 +229,8 @@ export default function PayPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-background text-foreground flex items-center justify-center">
-        <div className="w-full max-w-md p-6 space-y-4">
+      <main className="min-h-screen flex items-center justify-center">
+        <div className="w-full max-w-md p-6 space-y-4 bg-background rounded-2xl mt-8">
           <h1 className="text-2xl font-bold text-center">
             {pageTitle.left}{' '}
             <span className="inline-block bg-green-600 text-background px-4 py-1 rounded">
@@ -271,6 +270,17 @@ export default function PayPage() {
             >
               <RefreshCwIcon className="w-3 h-3" />
             </Button>
+          </div>
+
+          <div>
+            <p className="text-sm text-center text-muted-foreground italic px-2">
+              {t.rich('disclaimerPublicInfo', {
+                em: (chunks) => (
+                  <em className="text-gray-700 font-semibold not-italic">{chunks}</em>
+                ),
+                strong: (chunks) => <strong className="text-purple-700 font-bold">{chunks}</strong>,
+              })}
+            </p>
           </div>
 
           {/* Nome com botão de geração */}
@@ -321,24 +331,29 @@ export default function PayPage() {
 
           {/* Upload de áudio */}
           <AudioRecorder
-            onRecordingComplete={(file, url) => {
+            showAudioPreview={true}
+            onRecordingComplete={(file) => {
               setAudioFile(file)
-              setAudioPreview(url)
             }}
           />
 
-          {/* Preview do áudio */}
-          {audioPreview && <audio controls src={audioPreview} className="w-full" />}
+          <hr className="my-4 border-t border-gray-300" />
+
+          <div>
+            <p className="text-sm text-center text-muted-foreground italic px-2">
+              {t.rich('disclaimerPayment', {
+                em: (chunks) => (
+                  <em className="text-gray-700 font-semibold not-italic">{chunks}</em>
+                ),
+                strong: (chunks) => <strong className="text-purple-700 font-bold">{chunks}</strong>,
+              })}
+            </p>
+          </div>
 
           {nextAmount && (
             <StripePayForm onClick={handlePayClick} isLoading={loading}></StripePayForm>
           )}
-          <p className="text-sm text-center text-muted-foreground italic px-2">
-            {t.rich('disclaimerPublicInfo', {
-              em: (chunks) => <em className="text-gray-700 font-semibold not-italic">{chunks}</em>,
-              strong: (chunks) => <strong className="text-purple-700 font-bold">{chunks}</strong>,
-            })}
-          </p>
+
           <Button
             className="w-full mt-4 cursor-pointer bg-gray-400 text-white font-semibold py-3 rounded-lg shadow-md transition hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-400"
             disabled={loading}

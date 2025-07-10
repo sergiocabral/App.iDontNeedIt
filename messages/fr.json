@@ -4,7 +4,7 @@
     "startRecording": "Enregistrer l'audio",
     "stopRecording": "Arrêter l'enregistrement",
     "discardRecording": "Annuler l'enregistrement",
-    "status-idle": "En attente d'enregistrement",
+    "status-idle": "Cliquez ici pour enregistrer votre message vocal",
     "status-recording": "Enregistrement",
     "status-stopping": "Arrêt en cours",
     "status-stopped": "Enregistré",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "Une erreur s'est produite. Veuillez réessayer.",
     "backToHome": "J’abandonne. Je voulais, mais mon solde ne suit pas.",
     "languageFromBrowser": "Votre navigateur a indiqué votre nationalité",
-    "disclaimerPublicInfo": "Toute information publiée ici sera <em>publique</em> et <em>permanente</em>. Réfléchissez bien avant de soumettre. Vous laissez une marque <strong>indélébile</strong> pour les temps à venir."
+    "disclaimerPublicInfo": "Toute information publiée ici sera <em>publique</em> et <em>permanente</em>. Réfléchissez bien avant de soumettre. Vous laissez une marque <strong>indélébile</strong> pour les temps à venir.",
+    "disclaimerPayment": "Les paiements sont traités <strong>en dehors de ce site</strong> via les services de <strong>Stripe</strong>, une plateforme de paiement <em>fiable</em> et <em>reconnue dans le monde entier</em>. Aucune information sensible de paiement n'est stockée par nous. Seules les données renseignées dans les champs ci-dessus (nom, message, etc.) sont conservées."
   }
 }

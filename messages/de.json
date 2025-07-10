@@ -4,7 +4,7 @@
     "startRecording": "Audio aufnehmen",
     "stopRecording": "Aufnahme stoppen",
     "discardRecording": "Aufnahme verwerfen",
-    "status-idle": "Warten auf Aufnahme",
+    "status-idle": "Klicken Sie hier, um Ihre Sprachnachricht aufzunehmen",
     "status-recording": "Aufnahme läuft",
     "status-stopping": "Wird gestoppt",
     "status-stopped": "Aufgenommen",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
     "backToHome": "Ich gebe auf. Ich wollte, aber mein Kontostand spielt nicht mit.",
     "languageFromBrowser": "Ihr Browser hat Ihre Nationalität angegeben",
-    "disclaimerPublicInfo": "Alle hier veröffentlichten Informationen sind <em>öffentlich</em> und <em>dauerhaft</em>. Überlege gut, bevor du etwas absendest. Du hinterlässt eine <strong>unauslöschliche</strong> Spur für die Zukunft."
+    "disclaimerPublicInfo": "Alle hier veröffentlichten Informationen sind <em>öffentlich</em> und <em>dauerhaft</em>. Überlege gut, bevor du etwas absendest. Du hinterlässt eine <strong>unauslöschliche</strong> Spur für die Zukunft.",
+    "disclaimerPayment": "Zahlungen werden <strong>außerhalb dieser Website</strong> über den Dienst <strong>Stripe</strong> verarbeitet, eine <em>vertrauenswürdige</em> und <em>weltweit anerkannte</em> Zahlungsplattform. Wir speichern keine sensiblen Zahlungsinformationen. Nur die in den obigen Feldern eingegebenen Daten (Name, Nachricht usw.) werden in unserem System gespeichert."
   }
 }
