@@ -4,7 +4,7 @@
     "startRecording": "Record Audio",
     "stopRecording": "Stop Recording",
     "discardRecording": "Discard Recording",
-    "status-idle": "Waiting to record",
+    "status-idle": "Click here to record your voice message",
     "status-recording": "Recording",
     "status-stopping": "Stopping",
     "status-stopped": "Recorded",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "An error occurred. Please try again.",
     "backToHome": "I give up. I wanted to, but my balance doesn’t agree.",
     "languageFromBrowser": "Your browser indicated your nationality",
-    "disclaimerPublicInfo": "All information posted here will be <em>public</em> and <em>permanent</em>. Think carefully before submitting. You are leaving an <strong>indelible</strong> mark for the times to come."
+    "disclaimerPublicInfo": "All information posted here will be <em>public</em> and <em>permanent</em>. Think carefully before submitting. You are leaving an <strong>indelible</strong> mark for the times to come.",
+    "disclaimerPayment": "Payments are processed <strong>outside this site</strong> via <strong>Stripe</strong>, a <em>trusted</em> and <em>world-renowned</em> payment platform. No sensitive payment information is stored by us. Only the data filled in the fields above (name, message, etc.) is kept in our system."
   }
 }

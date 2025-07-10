@@ -4,12 +4,17 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useReactMediaRecorder } from 'react-media-recorder'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
+import { AudioLines, OctagonX, Pause } from 'lucide-react'
 
 export interface AudioRecorderProps {
+  showAudioPreview?: boolean
   onRecordingComplete: (file: File | null, url: string) => void
 }
 
-export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProps) {
+export default function AudioRecorder({
+  showAudioPreview,
+  onRecordingComplete,
+}: AudioRecorderProps) {
   const t = useTranslations('AudioRecorderComponent')
   const { status, startRecording, stopRecording, mediaBlobUrl, clearBlobUrl } =
     useReactMediaRecorder({ audio: true })
@@ -65,37 +70,41 @@ export default function AudioRecorder({ onRecordingComplete }: AudioRecorderProp
   }, [clearBlobUrl])
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <p className="text-xs text-gray-500 dark:text-gray-400">
-        {t('status')}:{' '}
-        <span className="font-medium text-gray-600 dark:text-gray-300">
-          {t(`status-${status}`)}
-        </span>
-      </p>
+    <div className="flex flex-row items-center gap-2 h-12">
+      {status !== 'recording' && status !== 'stopped' && (
+        <Button className="cursor-pointer" onClick={startRecording} title={t('startRecording')}>
+          <AudioLines />
+        </Button>
+      )}
 
-      <div className="flex gap-2">
+      {status == 'recording' && (
+        <Button className="cursor-pointer" onClick={stopRecording} title={t('stopRecording')}>
+          <Pause />
+        </Button>
+      )}
+
+      {status == 'stopped' && previewUrl && (
         <Button
           className="cursor-pointer"
-          onClick={startRecording}
-          disabled={status === 'recording'}
+          variant="destructive"
+          onClick={handleDiscard}
+          title={t('discardRecording')}
         >
-          {t('startRecording')}
+          <OctagonX />
         </Button>
-        <Button
-          className="cursor-pointer"
-          onClick={stopRecording}
-          disabled={status !== 'recording'}
-        >
-          {t('stopRecording')}
-        </Button>
-        {previewUrl && (
-          <Button className="cursor-pointer" variant="destructive" onClick={handleDiscard}>
-            {t('discardRecording')}
-          </Button>
-        )}
-      </div>
+      )}
 
-      {/* {previewUrl && <audio src={previewUrl} controls className="w-full mt-2" />} */}
+      {status != 'stopped' && (
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          <span className="font-medium text-gray-600 dark:text-gray-300">
+            {t(`status-${status}`)}
+          </span>
+        </p>
+      )}
+
+      {showAudioPreview !== false && previewUrl && (
+        <audio src={previewUrl} controls className="w-full" />
+      )}
     </div>
   )
 }

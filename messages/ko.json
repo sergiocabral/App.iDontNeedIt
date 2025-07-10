@@ -4,7 +4,7 @@
     "startRecording": "오디오 녹음",
     "stopRecording": "녹음 중지",
     "discardRecording": "녹음 삭제",
-    "status-idle": "녹음 대기 중",
+    "status-idle": "음성 메시지를 녹음하려면 여기를 클릭하세요",
     "status-recording": "녹음 중",
     "status-stopping": "중지 중",
     "status-stopped": "녹음됨",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "오류가 발생했습니다. 다시 시도해주세요.",
     "backToHome": "포기합니다. 하고 싶었지만 잔고가 안 도와줘요.",
     "languageFromBrowser": "브라우저에서 국적이 감지되었습니다",
-    "disclaimerPublicInfo": "여기에 게시된 모든 정보는 <em>공개</em>되며 <em>영구적</em>입니다. 제출하기 전에 신중히 생각하세요. 당신은 앞으로 <strong>지울 수 없는</strong> 흔적을 남기게 됩니다."
+    "disclaimerPublicInfo": "여기에 게시된 모든 정보는 <em>공개</em>되며 <em>영구적</em>입니다. 제출하기 전에 신중히 생각하세요. 당신은 앞으로 <strong>지울 수 없는</strong> 흔적을 남기게 됩니다.",
+    "disclaimerPayment": "결제는 <strong>이 사이트 외부</strong>의 <strong>Stripe</strong> 서비스를 통해 처리됩니다. 이는 <em>신뢰할 수 있고</em>, <em>전 세계적으로 유명한</em> 결제 플랫폼입니다. 우리는 결제에 대한 민감한 정보를 저장하지 않습니다. 위의 필드(이름, 메시지 등)에 입력된 데이터만 저장됩니다."
   }
 }

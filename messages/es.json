@@ -4,7 +4,7 @@
     "startRecording": "Grabar audio",
     "stopRecording": "Detener grabación",
     "discardRecording": "Descartar grabación",
-    "status-idle": "Esperando para grabar",
+    "status-idle": "Haz clic aquí para grabar tu mensaje de voz",
     "status-recording": "Grabando",
     "status-stopping": "Deteniendo",
     "status-stopped": "Grabado",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "Ocurrió un error. Por favor, inténtalo de nuevo.",
     "backToHome": "Me rindo. Quería, pero mi saldo no ayuda.",
     "languageFromBrowser": "Tu navegador indicó tu nacionalidad",
-    "disclaimerPublicInfo": "Toda la información publicada aquí será <em>pública</em> y <em>permanente</em>. Piénsalo bien antes de enviar. Estás dejando una marca <strong>imborrable</strong> para los tiempos futuros."
+    "disclaimerPublicInfo": "Toda la información publicada aquí será <em>pública</em> y <em>permanente</em>. Piénsalo bien antes de enviar. Estás dejando una marca <strong>imborrable</strong> para los tiempos futuros.",
+    "disclaimerPayment": "Los pagos se procesan <strong>fuera de este sitio</strong> mediante los servicios de <strong>Stripe</strong>, una plataforma de pagos <em>confiable</em> y <em>reconocida mundialmente</em>. No almacenamos ninguna información de pago sensible. Solo se guardan los datos proporcionados en los campos anteriores (nombre, mensaje, etc.)."
   }
 }

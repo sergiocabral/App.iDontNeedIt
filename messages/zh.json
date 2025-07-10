@@ -4,7 +4,7 @@
     "startRecording": "开始录音",
     "stopRecording": "停止录音",
     "discardRecording": "丢弃录音",
-    "status-idle": "等待录音",
+    "status-idle": "点击此处录制语音消息",
     "status-recording": "录音中",
     "status-stopping": "停止中",
     "status-stopped": "已录制",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "发生错误。请重试。",
     "backToHome": "我放弃了。我想试试，但我的余额不同意。",
     "languageFromBrowser": "您的浏览器指示了您的国籍",
-    "disclaimerPublicInfo": "此处发布的所有信息将是<em>公开</em>且<em>永久</em>的。提交前请三思。你正在为未来留下<strong>不可磨灭</strong>的印记。"
+    "disclaimerPublicInfo": "此处发布的所有信息将是<em>公开</em>且<em>永久</em>的。提交前请三思。你正在为未来留下<strong>不可磨灭</strong>的印记。",
+    "disclaimerPayment": "付款通过 <strong>Stripe</strong> 在 <strong>本网站之外</strong> 处理，这是一家<em>值得信赖</em>且<em>享誉全球</em>的支付平台。我们不会存储任何敏感的支付信息。仅保留在上方字段中填写的数据（姓名、留言等）。"
   }
 }

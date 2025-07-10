@@ -4,7 +4,7 @@
     "startRecording": "録音開始",
     "stopRecording": "録音停止",
     "discardRecording": "録音を破棄",
-    "status-idle": "録音を待機中",
+    "status-idle": "ここをクリックして音声メッセージを録音",
     "status-recording": "録音中",
     "status-stopping": "停止中",
     "status-stopped": "録音済み",
@@ -57,6 +57,7 @@
     "errorAndTryAgain": "エラーが発生しました。もう一度お試しください。",
     "backToHome": "諦めます。気持ちはあっても、残高がついてこない。",
     "languageFromBrowser": "お使いのブラウザがあなたの国籍を示しました",
-    "disclaimerPublicInfo": "ここに投稿された情報はすべて<em>公開</em>かつ<em>永続的</em>です。送信前によく考えてください。あなたは未来に<strong>消せない</strong>痕跡を残そうとしています。"
+    "disclaimerPublicInfo": "ここに投稿された情報はすべて<em>公開</em>かつ<em>永続的</em>です。送信前によく考えてください。あなたは未来に<strong>消せない</strong>痕跡を残そうとしています。",
+    "disclaimerPayment": "支払いは <strong>このサイトの外部</strong> にある <strong>Stripe</strong> のサービスを通じて処理されます。<em>信頼されている</em>、<em>世界的に有名な</em>決済プラットフォームです。お支払いに関する機密情報は当サイトで保存されません。上記の入力欄（名前、メッセージなど）に記載されたデータのみを保持します。"
   }
 }
