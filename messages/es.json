@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "Estado",
     "startRecording": "Grabar audio",
     "stopRecording": "Detener grabación",
     "discardRecording": "Descartar grabación",
-    "status-idle": "Haz clic aquí para grabar tu mensaje de voz",
-    "status-recording": "Grabando",
-    "status-stopping": "Deteniendo",
-    "status-stopped": "Grabado",
-    "status-acquiring_media": "Obteniendo audio",
-    "status-error": "Error"
+    "status-idle": "Haz clic aquí para soltar todo con voz",
+    "status-recording": "Grabando sin piedad",
+    "status-stopping": "Cortando el discurso del millonario",
+    "status-stopped": "Audio listo",
+    "status-acquiring_media": "Calentando el micro...",
+    "status-error": "Algo salió mal"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "Solo se permiten archivos de imagen"
+    "invalidFileType": "Solo aceptamos imágenes, mi rey"
   },
   "FileUploadComponent": {
-    "invalidFileType": "Solo se permiten archivos de imagen o audio",
+    "invalidFileType": "Solo se permite imagen o audio",
     "dropFileHere": "Suelta el archivo aquí...",
-    "dragAndDropOrClick": "Arrastra y suelta o haz clic para subir imagen o audio",
-    "imagePreview": "Vista previa de imagen",
-    "notSupportedAudio": "Tu navegador no admite audio."
+    "dragAndDropOrClick": "Arrastra o haz clic para subir imagen o audio",
+    "imagePreview": "Vista previa de tu carita",
+    "notSupportedAudio": "Tu navegador no reproduce audio. Qué pena."
   },
   "StripePayFormComponent": {
-    "payButton": "Derroca al último rey por solo {amount}",
-    "paymentSending": "¡Gracias! Estamos procesando tu pago...",
-    "paymentSuccess": "Pago recibido. ¡Gracias de nuevo!",
-    "paymentError": "No se pudo procesar tu pago. Si es necesario, recarga la página e inténtalo de nuevo."
+    "payButton": "Pasa {amount} y reclama el trono",
+    "paymentSending": "Aguanta, procesando tu dinerito...",
+    "paymentSuccess": "¡Pago recibido! ¡El trono es tuyo!",
+    "paymentError": "Error al procesar el pago. Recarga y prueba otra vez, millonario."
   },
   "LocaleLayout": {
-    "description": "Demuestra que eres el más rico del mundo"
+    "description": "Únete al ranking de los que tiran dinero sin pestañear"
   },
   "HomePage": {
-    "title": "Demuestra que eres el más rico del mundo",
-    "payButton": "Lanza {amount} a la basura",
-    "description": "Gasté {amount} solo para dejar mi huella",
-    "description2": "Desperdicié {amount} porque puedo",
-    "richestListTitle": "Los que realmente no lo necesitan",
-    "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
+    "title": "El ranking de los que de verdad no lo necesitan",
+    "payButton": "Tira {amount} a la basura con estilo",
+    "description": "Quemé {amount} solo para estar aquí",
+    "description2": "Derrochando {amount} porque puedo",
+    "richestListTitle": "Los mayores derrochadores de todos los tiempos",
+    "audioNotSupported": "Tu navegador no soporta audio"
   },
   "KingPage": {
-    "title": "En la cumbre de la fortuna el {date}",
-    "description": "Dejé ir {amount} al viento sin cuidado",
-    "backHome": "Volver al salón de la realeza",
-    "audioNotSupported": "Tu navegador no soporta la reproducción de audio."
+    "title": "En la cima del derroche el {date}",
+    "description": "Gasté {amount} sin pensarlo dos veces",
+    "backHome": "Volver a la lista de los locos con plata",
+    "audioNotSupported": "Tu navegador no soporta audio"
   },
   "PayPage": {
-    "title": "Por solo {amount}, el trono es tuyo. Al fin y al cabo, eso ni roza tu cuenta.",
-    "namePlaceholder": "Tu nombre o apodo (opcional)",
-    "messagePlaceholder": "Deja una frase provocadora en texto o audio (opcional)",
-    "generateNameButton": "Generar nombre",
-    "generateMessageButton": "Generar frase",
-    "avatarAlt": "Tu avatar",
-    "uploadAvatarButton": "Sube una imagen como tu avatar",
-    "generateAvatarButton": "Genera una imagen aleatoria como tu avatar",
-    "fileLimit": "El archivo tiene {actualMB}MB. El máximo permitido es {maxSizeMB}MB. Por favor, elija un archivo más pequeño.",
-    "errorAndTryAgain": "Ocurrió un error. Por favor, inténtalo de nuevo.",
-    "backToHome": "Me rindo. Quería, pero mi saldo no ayuda.",
-    "languageFromBrowser": "Tu navegador indicó tu nacionalidad",
-    "disclaimerPublicInfo": "Toda la información publicada aquí será <em>pública</em> y <em>permanente</em>. Piénsalo bien antes de enviar. Estás dejando una marca <strong>imborrable</strong> para los tiempos futuros.",
-    "disclaimerPayment": "Los pagos se procesan <strong>fuera de este sitio</strong> mediante los servicios de <strong>Stripe</strong>, una plataforma de pagos <em>confiable</em> y <em>reconocida mundialmente</em>. No almacenamos ninguna información de pago sensible. Solo se guardan los datos proporcionados en los campos anteriores (nombre, mensaje, etc.)."
+    "title": "Gasta solo {amount} y demuestra que ni te duele",
+    "namePlaceholder": "Nombre o apodo (opcional)",
+    "messagePlaceholder": "Deja una provocación en texto o audio (opcional)",
+    "generateNameButton": "Dame un nombre genial",
+    "generateMessageButton": "Invéntate una buena frase",
+    "avatarAlt": "Tu avatar de lujo",
+    "uploadAvatarButton": "Sube tu cara aquí",
+    "generateAvatarButton": "Sorpréndeme con una imagen random",
+    "fileLimit": "Este archivo pesa {actualMB}MB. Solo aceptamos hasta {maxSizeMB}MB. Tranquilo.",
+    "errorAndTryAgain": "Algo se rompió. Intenta otra vez.",
+    "backToHome": "Mejor no. Gasto después.",
+    "languageFromBrowser": "Tu navegador delató tu país",
+    "disclaimerPublicInfo": "Todo lo que subas aquí será <em>público</em> y <em>eterno</em>. Piénsalo bien. Es tu huella <strong>inmortal</strong> en el mundo.",
+    "disclaimerPayment": "El pago se hace <strong>fuera de este sitio</strong>, usando <strong>Stripe</strong>, una plataforma <em>confiable</em> y <em>conocida mundialmente</em>. No guardamos datos sensibles de pago. Solo lo que rellenaste arriba (nombre, frase, etc.) se queda aquí."
   }
 }

@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "Status",
     "startRecording": "Audio aufnehmen",
     "stopRecording": "Aufnahme stoppen",
     "discardRecording": "Aufnahme verwerfen",
-    "status-idle": "Klicken Sie hier, um Ihre Sprachnachricht aufzunehmen",
-    "status-recording": "Aufnahme läuft",
-    "status-stopping": "Wird gestoppt",
-    "status-stopped": "Aufgenommen",
-    "status-acquiring_media": "Audio wird erfasst",
-    "status-error": "Fehler"
+    "status-idle": "Klick hier und sag laut, was du denkst",
+    "status-recording": "Wird knallhart aufgenommen",
+    "status-stopping": "Reicht, der Reiche hat genug gesagt",
+    "status-stopped": "Audio ist fertig",
+    "status-acquiring_media": "Mikro wird heiß gemacht...",
+    "status-error": "Irgendwas ist schiefgelaufen"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "Nur Bilddateien sind erlaubt"
+    "invalidFileType": "Nur Bilder, mein König"
   },
   "FileUploadComponent": {
-    "invalidFileType": "Nur Bild- oder Audiodateien sind erlaubt",
-    "dropFileHere": "Datei hier ablegen...",
-    "dragAndDropOrClick": "Bild oder Audio per Drag & Drop oder Klick hochladen",
-    "imagePreview": "Bildvorschau",
-    "notSupportedAudio": "Ihr Browser unterstützt keine Audio-Wiedergabe."
+    "invalidFileType": "Nur Bilder oder Audio, bitte",
+    "dropFileHere": "Datei hier abwerfen...",
+    "dragAndDropOrClick": "Ziehen oder klicken für Bild oder Audio",
+    "imagePreview": "Vorschau von deinem edlen Gesicht",
+    "notSupportedAudio": "Dein Browser spielt leider kein Audio ab. Traurig."
   },
   "StripePayFormComponent": {
-    "payButton": "Stürze den letzten König für nur {amount}",
-    "paymentSending": "Danke! Wir verarbeiten Ihre Zahlung...",
-    "paymentSuccess": "Zahlung erhalten. Nochmals vielen Dank!",
-    "paymentError": "Ihre Zahlung konnte nicht verarbeitet werden. Falls erforderlich, laden Sie die Seite neu und versuchen Sie es erneut."
+    "payButton": "Gib {amount} her und hol dir den Thron",
+    "paymentSending": "Moment... dein edles Geld wird verarbeitet...",
+    "paymentSuccess": "Kohle angekommen. Der Thron gehört dir!",
+    "paymentError": "Zahlung fehlgeschlagen. Seite neu laden und nochmal, Millionär."
   },
   "LocaleLayout": {
-    "description": "Beweise, dass du der reichste Mensch der Welt bist"
+    "description": "Steig ein ins Ranking der Geldverschwender ohne Reue"
   },
   "HomePage": {
-    "title": "Beweise, dass du der reichste Mensch der Welt bist",
-    "payButton": "Wirf {amount} weg",
-    "description": "Ich habe {amount} ausgegeben, um ein Zeichen zu setzen",
-    "description2": "Ich habe {amount} verschwendet, weil ich es kann",
-    "richestListTitle": "Die, die es wirklich nicht brauchen",
-    "audioNotSupported": "Dein Browser unterstützt keine Audiowiedergabe."
+    "title": "Das Ranking derer, die es echt nicht nötig haben",
+    "payButton": "Wirf {amount} mit Stil zum Fenster raus",
+    "description": "{amount} verballert – nur um hier zu stehen",
+    "description2": "{amount} verbrannt, weil ich’s kann",
+    "richestListTitle": "Die größten Geldverbrenner aller Zeiten",
+    "audioNotSupported": "Dein Browser mag kein Audio"
   },
   "KingPage": {
-    "title": "Am Höhepunkt des Reichtums am {date}",
-    "description": "Ich habe {amount} achtlos weggeworfen",
-    "backHome": "Zurück in die Halle der Könige",
-    "audioNotSupported": "Ihr Browser unterstützt keine Audiowiedergabe."
+    "title": "Ganz oben auf dem Protz-Thron am {date}",
+    "description": "{amount} rausgehauen – ohne mit der Wimper zu zucken",
+    "backHome": "Zurück zur Liste der verrückten Reichen",
+    "audioNotSupported": "Dein Browser mag kein Audio"
   },
   "PayPage": {
-    "title": "Für nur {amount} gehört dir der Thron. Das kratzt dein Konto ja nicht einmal.",
-    "namePlaceholder": "Dein Name oder Spitzname (optional)",
-    "messagePlaceholder": "Hinterlasse eine provokante Aussage als Text oder Audio (optional)",
-    "generateNameButton": "Name generieren",
-    "generateMessageButton": "Nachricht generieren",
-    "avatarAlt": "Dein Avatar",
-    "uploadAvatarButton": "Lade ein Bild als Avatar hoch",
-    "generateAvatarButton": "Zufälliges Bild als Avatar generieren",
-    "fileLimit": "Die Datei ist {actualMB} MB groß. Maximal erlaubt sind {maxSizeMB} MB. Bitte wählen Sie eine kleinere Datei aus.",
-    "errorAndTryAgain": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
-    "backToHome": "Ich gebe auf. Ich wollte, aber mein Kontostand spielt nicht mit.",
-    "languageFromBrowser": "Ihr Browser hat Ihre Nationalität angegeben",
-    "disclaimerPublicInfo": "Alle hier veröffentlichten Informationen sind <em>öffentlich</em> und <em>dauerhaft</em>. Überlege gut, bevor du etwas absendest. Du hinterlässt eine <strong>unauslöschliche</strong> Spur für die Zukunft.",
-    "disclaimerPayment": "Zahlungen werden <strong>außerhalb dieser Website</strong> über den Dienst <strong>Stripe</strong> verarbeitet, eine <em>vertrauenswürdige</em> und <em>weltweit anerkannte</em> Zahlungsplattform. Wir speichern keine sensiblen Zahlungsinformationen. Nur die in den obigen Feldern eingegebenen Daten (Name, Nachricht usw.) werden in unserem System gespeichert."
+    "title": "Gib einfach {amount} aus und zeig, dass es dir egal ist",
+    "namePlaceholder": "Name oder Spitzname (optional)",
+    "messagePlaceholder": "Hau einen frechen Spruch raus – Text oder Audio (optional)",
+    "generateNameButton": "Gib mir einen Namen",
+    "generateMessageButton": "Erfind einen Spruch",
+    "avatarAlt": "Dein edler Avatar",
+    "uploadAvatarButton": "Lad dein Gesicht hoch",
+    "generateAvatarButton": "Überrasch mich mit ’nem Zufallsbild",
+    "fileLimit": "Die Datei ist {actualMB}MB groß. Maximal erlaubt sind {maxSizeMB}MB. Chill mal.",
+    "errorAndTryAgain": "Irgendwas ging kaputt. Versuch’s nochmal.",
+    "backToHome": "Lass gut sein. Später vielleicht.",
+    "languageFromBrowser": "Dein Browser hat deine Herkunft verraten",
+    "disclaimerPublicInfo": "Alles, was du hier postest, wird <em>öffentlich</em> und <em>für immer</em> sein. Denk gut nach. Das ist dein <strong>ewiger Abdruck</strong> in der Welt.",
+    "disclaimerPayment": "Die Zahlung läuft <strong>außerhalb dieser Seite</strong> über <strong>Stripe</strong>, eine <em>vertrauenswürdige</em> und <em>weltweit bekannte</em> Plattform. Wir speichern keine sensiblen Zahlungsdaten. Nur was du oben eingetragen hast (Name, Nachricht usw.) bleibt bei uns."
   }
 }

@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "Status",
     "startRecording": "Gravar áudio",
     "stopRecording": "Parar gravação",
     "discardRecording": "Descartar gravação",
-    "status-idle": "Clique aqui para gravar sua mensagem de voz",
-    "status-recording": "Gravando",
-    "status-stopping": "Parando",
-    "status-stopped": "Gravado",
-    "status-acquiring_media": "Obtendo áudio",
-    "status-error": "Erro"
+    "status-idle": "Clique aqui pra soltar o verbo em voz alta",
+    "status-recording": "Gravando sem dó",
+    "status-stopping": "Encerrando a fala do rico",
+    "status-stopped": "Áudio pronto",
+    "status-acquiring_media": "Aquecendo o microfone...",
+    "status-error": "Algo deu ruim"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "Apenas arquivos de imagem são permitidos"
+    "invalidFileType": "Só aceitamos imagens, meu rei"
   },
   "FileUploadComponent": {
-    "invalidFileType": "Apenas arquivos de imagem ou áudio são permitidos",
-    "dropFileHere": "Solte o arquivo aqui...",
-    "dragAndDropOrClick": "Arraste e solte ou clique para enviar imagem ou áudio",
-    "imagePreview": "Prévia da imagem",
-    "notSupportedAudio": "Seu navegador não suporta áudio."
+    "invalidFileType": "Só rola imagem ou áudio aqui",
+    "dropFileHere": "Joga o arquivo aqui...",
+    "dragAndDropOrClick": "Arrasta ou clica pra mandar imagem ou áudio",
+    "imagePreview": "Prévia da sua carinha",
+    "notSupportedAudio": "Seu navegador não toca áudio. Triste."
   },
   "StripePayFormComponent": {
-    "payButton": "Desbanque o último rei por apenas {amount}",
-    "paymentSending": "Obrigado! Estamos processando seu pagamento...",
-    "paymentSuccess": "Pagamento recebido. Mais uma vez, obrigado!",
-    "paymentError": "Não foi possível processar seu pagamento. Se necessário, recarregue a página e tente novamente."
+    "payButton": "Passe {amount} pra frente e tome o trono",
+    "paymentSending": "Segura aí, processando seu rico dinheirinho...",
+    "paymentSuccess": "Grana recebida. Agora o trono é seu!",
+    "paymentError": "Deu erro no pagamento. Recarrega e tenta de novo, bilionário."
   },
   "LocaleLayout": {
-    "description": "Prove que você é o mais rico do mundo"
+    "description": "Entre pro ranking dos que jogam dinheiro fora sem nem sentir"
   },
   "HomePage": {
-    "title": "Prove que você é o mais rico do mundo",
-    "payButton": "Jogue {amount} fora",
-    "description": "Gastei {amount} só para deixar minha marca",
-    "description2": "Desperdicei {amount} porque eu posso",
-    "richestListTitle": "Os que realmente não precisam",
-    "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
+    "title": "O ranking de quem realmente não precisa",
+    "payButton": "Jogue {amount} no lixo com estilo",
+    "description": "Queimei {amount} só pra aparecer aqui",
+    "description2": "Torrando {amount} porque posso, ué",
+    "richestListTitle": "Os maiores desperdiçadores de todos os tempos",
+    "audioNotSupported": "Seu navegador não curte áudio"
   },
   "KingPage": {
-    "title": "No auge da fortuna em {date}",
-    "description": "Larguei {amount} no vento sem dó",
-    "backHome": "Voltar para o hall da realeza",
-    "audioNotSupported": "Seu navegador não suporta reprodução de áudio."
+    "title": "No topo da ostentação em {date}",
+    "description": "Gastei {amount} sem nem pensar duas vezes",
+    "backHome": "Voltar pra lista dos lunáticos com grana",
+    "audioNotSupported": "Seu navegador não curte áudio"
   },
   "PayPage": {
-    "title": "Por apenas {amount}, o trono é seu. Afinal, isso nem arranha sua conta.",
-    "namePlaceholder": "Seu nome ou nickname (opcional)",
-    "messagePlaceholder": "Deixe uma frase provocadora em texto ou áudio (opcional)",
-    "generateNameButton": "Gerar nome",
-    "generateMessageButton": "Gerar frase",
-    "avatarAlt": "Seu avatar",
-    "uploadAvatarButton": "Carregar uma imagem como seu avatar",
-    "generateAvatarButton": "Gerar imagem aleatória como seu avatar",
-    "fileLimit": "O arquivo tem {actualMB}MB. O máximo permitido é {maxSizeMB}MB. Por favor, escolha um arquivo menor.",
-    "errorAndTryAgain": "Ocorreu um erro. Por favor, tente novamente.",
-    "backToHome": "Desisto. Queria, mas meu saldo não colabora.",
-    "languageFromBrowser": "Seu navegador indicou sua nacionalidade",
-    "disclaimerPublicInfo": "Toda informação publicada aqui será <em>pública</em> e <em>permanente</em>. Pense bem antes de enviar. Você está deixando uma marca <strong>indelével</strong> para os tempos futuros.",
-    "disclaimerPayment": "Os pagamentos são processados <strong>fora deste site</strong>, por meio dos serviços da <strong>Stripe</strong>, uma plataforma de pagamentos <em>confiável</em> e <em>reconhecida mundialmente</em>. Nenhuma informação sensível de pagamento é armazenada por nós. Apenas os dados preenchidos nos campos acima (nome, mensagem etc.) são mantidos em nossos sistemas."
+    "title": "Gaste só {amount} e mostre que isso não te afeta",
+    "namePlaceholder": "Nome ou apelido (opcional)",
+    "messagePlaceholder": "Solte uma provocação em texto ou áudio (opcional)",
+    "generateNameButton": "Me dá um nome aí",
+    "generateMessageButton": "Inventa uma frase boa",
+    "avatarAlt": "Seu avatar luxuoso",
+    "uploadAvatarButton": "Mande sua cara aqui",
+    "generateAvatarButton": "Me surpreenda com uma imagem aleatória",
+    "fileLimit": "Esse arquivo tem {actualMB}MB. Só aceitamos até {maxSizeMB}MB. Vai com calma.",
+    "errorAndTryAgain": "Algo quebrou. Tenta de novo.",
+    "backToHome": "Deixa pra lá. Gasto depois.",
+    "languageFromBrowser": "Seu navegador entregou sua origem",
+    "disclaimerPublicInfo": "Tudo que você mandar vai ser <em>público</em> e <em>pra sempre</em>. Pense bem. É sua marca <strong>imortal</strong> no mundo.",
+    "disclaimerPayment": "O pagamento rola <strong>fora deste site</strong>, pela <strong>Stripe</strong>, uma plataforma <em>confiável</em> e <em>famosa no mundo inteiro</em>. A gente não guarda dados sensíveis de pagamento. Só o que você preencheu acima (nome, frase etc.) fica salvo aqui."
   }
 }

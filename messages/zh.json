@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "状态",
     "startRecording": "开始录音",
     "stopRecording": "停止录音",
-    "discardRecording": "丢弃录音",
-    "status-idle": "点击此处录制语音消息",
-    "status-recording": "录音中",
-    "status-stopping": "停止中",
-    "status-stopped": "已录制",
-    "status-acquiring_media": "获取音频",
-    "status-error": "错误"
+    "discardRecording": "扔掉这段录音",
+    "status-idle": "点我，说出你的心声！",
+    "status-recording": "正在火力全开录音中～",
+    "status-stopping": "土豪发言结束中…",
+    "status-stopped": "录音完成，收工！",
+    "status-acquiring_media": "麦克风热身中…",
+    "status-error": "呃哦，录音崩啦"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "只允许上传图片文件"
+    "invalidFileType": "只收图像文件哦，亲"
   },
   "FileUploadComponent": {
-    "invalidFileType": "只允许上传图片或音频文件",
-    "dropFileHere": "将文件拖到此处...",
-    "dragAndDropOrClick": "拖放或点击上传图片或音频",
-    "imagePreview": "图片预览",
-    "notSupportedAudio": "您的浏览器不支持音频播放。"
+    "invalidFileType": "只能上传图片或音频哦",
+    "dropFileHere": "把文件扔到这儿～",
+    "dragAndDropOrClick": "拖拽或点击上传图片或音频",
+    "imagePreview": "看看你帅气的脸",
+    "notSupportedAudio": "你的浏览器不支持音频，桑心了"
   },
   "StripePayFormComponent": {
-    "payButton": "只需 {amount} 即可废黜上任国王",
-    "paymentSending": "谢谢！我们正在处理您的付款...",
-    "paymentSuccess": "付款已收到。再次感谢！",
-    "paymentError": "我们无法处理您的付款。如有必要，请重新加载页面并重试。"
+    "payButton": "扔出 {amount}，登上王座！",
+    "paymentSending": "稍等，正在处理你的金闪闪...",
+    "paymentSuccess": "钱到账啦！王座是你的～",
+    "paymentError": "付款失败，刷新再试试吧，土豪哥"
   },
   "LocaleLayout": {
-    "description": "证明你是世界上最富有的人"
+    "description": "加入我们这些花钱如流水的神人榜单！"
   },
   "HomePage": {
-    "title": "证明你是世界上最富有的人",
-    "payButton": "扔掉 {amount}",
-    "description": "我花了 {amount} 只是为了留下我的印记",
-    "description2": "我浪费了 {amount} 因为我可以",
-    "richestListTitle": "真正不需要它的人",
-    "audioNotSupported": "你的浏览器不支持音频播放。"
+    "title": "真正不差钱的排行榜",
+    "payButton": "潇洒地烧掉 {amount}",
+    "description": "我烧了 {amount} 只为上个榜！",
+    "description2": "我能花 {amount}，因为我任性！",
+    "richestListTitle": "史上最会烧钱的人",
+    "audioNotSupported": "你的浏览器不支持音频，太遗憾了"
   },
   "KingPage": {
-    "title": "{date}财富巅峰时",
-    "description": "我无所谓地扔掉了{amount}",
-    "backHome": "返回王室大厅",
-    "audioNotSupported": "您的浏览器不支持音频播放。"
+    "title": "{date} 的炫富之王",
+    "description": "花掉 {amount} 毫不犹豫",
+    "backHome": "返回那些烧钱疯子的列表",
+    "audioNotSupported": "你的浏览器不支持音频"
   },
   "PayPage": {
-    "title": "只需 {amount}，王座就是你的。毕竟这对你的账户来说不算什么。",
-    "namePlaceholder": "你的名字或昵称（可选）",
-    "messagePlaceholder": "以文本或音频形式留下挑衅性短语（可选）",
-    "generateNameButton": "生成名字",
-    "generateMessageButton": "生成句子",
-    "avatarAlt": "你的头像",
-    "uploadAvatarButton": "上传一张图片作为你的头像",
-    "generateAvatarButton": "随机生成一张头像图片",
-    "fileLimit": "文件大小为 {actualMB}MB。最大允许为 {maxSizeMB}MB。请选择较小的文件。",
-    "errorAndTryAgain": "发生错误。请重试。",
-    "backToHome": "我放弃了。我想试试，但我的余额不同意。",
-    "languageFromBrowser": "您的浏览器指示了您的国籍",
-    "disclaimerPublicInfo": "此处发布的所有信息将是<em>公开</em>且<em>永久</em>的。提交前请三思。你正在为未来留下<strong>不可磨灭</strong>的印记。",
-    "disclaimerPayment": "付款通过 <strong>Stripe</strong> 在 <strong>本网站之外</strong> 处理，这是一家<em>值得信赖</em>且<em>享誉全球</em>的支付平台。我们不会存储任何敏感的支付信息。仅保留在上方字段中填写的数据（姓名、留言等）。"
+    "title": "只花 {amount}，秀出你毫无压力的样子",
+    "namePlaceholder": "昵称或外号（可选）",
+    "messagePlaceholder": "说点啥或录段音，随意～（可选）",
+    "generateNameButton": "来个酷名",
+    "generateMessageButton": "整句狠话",
+    "avatarAlt": "你高贵的头像",
+    "uploadAvatarButton": "上传你的靓照",
+    "generateAvatarButton": "来张随机惊喜图",
+    "fileLimit": "这个文件有 {actualMB}MB，最多只收 {maxSizeMB}MB，悠着点～",
+    "errorAndTryAgain": "出了点岔子，再试一次吧",
+    "backToHome": "算啦，改天再烧",
+    "languageFromBrowser": "浏览器暴露了你的老巢",
+    "disclaimerPublicInfo": "你上传的一切都将变成<em>公开</em>且<em>永久</em>的存在。想清楚，这可是你在网络世界的<strong>永恒烙印</strong>。",
+    "disclaimerPayment": "付款是在 <strong>Stripe</strong> 的 <strong>官网外部</strong>完成的，那可是全球都信得过的平台！我们不存储你的付款信息，只有你填写的（名字、留言等）会被记录在这里。"
   }
 }

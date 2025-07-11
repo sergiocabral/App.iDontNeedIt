@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "ステータス",
-    "startRecording": "録音開始",
-    "stopRecording": "録音停止",
-    "discardRecording": "録音を破棄",
-    "status-idle": "ここをクリックして音声メッセージを録音",
-    "status-recording": "録音中",
-    "status-stopping": "停止中",
-    "status-stopped": "録音済み",
-    "status-acquiring_media": "音声を取得中",
-    "status-error": "エラー"
+    "startRecording": "録音スタート！",
+    "stopRecording": "録音ストップ！",
+    "discardRecording": "録音を捨てる",
+    "status-idle": "ここをクリックして思いっきり語ってみて",
+    "status-recording": "ガンガン録音中！",
+    "status-stopping": "セレブのスピーチ終了中…",
+    "status-stopped": "録音完了！",
+    "status-acquiring_media": "マイクをウォームアップ中…",
+    "status-error": "なんかエラー出たっぽい"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "画像ファイルのみ使用できます"
+    "invalidFileType": "画像だけっすよ、キング！"
   },
   "FileUploadComponent": {
-    "invalidFileType": "画像または音声ファイルのみ使用できます",
-    "dropFileHere": "ここにファイルをドロップ...",
-    "dragAndDropOrClick": "画像または音声をドラッグ＆ドロップまたはクリックしてアップロード",
-    "imagePreview": "画像プレビュー",
-    "notSupportedAudio": "お使いのブラウザは音声をサポートしていません。"
+    "invalidFileType": "画像か音声だけOKです",
+    "dropFileHere": "ここにファイルをポイっと",
+    "dragAndDropOrClick": "ドラッグ or クリックで画像/音声送ってね",
+    "imagePreview": "あなたのお顔プレビュー",
+    "notSupportedAudio": "このブラウザ、音声に非対応…泣ける"
   },
   "StripePayFormComponent": {
-    "payButton": "たった {amount} で前の王を退位させよう",
-    "paymentSending": "ありがとうございます。お支払いを処理しています...",
-    "paymentSuccess": "お支払いを受け取りました。改めて感謝します！",
-    "paymentError": "お支払いを処理できませんでした。必要に応じてページを再読み込みして、もう一度お試しください。"
+    "payButton": "{amount}を投げて王座をゲット！",
+    "paymentSending": "ちょい待ち、あなたの大金を処理中…",
+    "paymentSuccess": "入金完了！あなたが新たな王様！",
+    "paymentError": "支払いエラーっす。更新して再チャレンジ、富豪様。"
   },
   "LocaleLayout": {
-    "description": "自分が世界一の金持ちだと証明してみろ"
+    "description": "気づかぬうちにお金を捨てる勇者ランキングに入ろう"
   },
   "HomePage": {
-    "title": "自分が世界一の金持ちだと証明してみろ",
-    "payButton": "{amount} を無駄にする",
-    "description": "{amount} を使って存在感を示した",
-    "description2": "できるから {amount} を無駄にした",
-    "richestListTitle": "本当に必要としていない人たち",
-    "audioNotSupported": "お使いのブラウザは音声の再生に対応していません。"
+    "title": "本当に“いらない”人たちのランキング",
+    "payButton": "{amount}をオシャレに捨てる",
+    "description": "ここに載りたくて{amount}燃やした",
+    "description2": "{amount}使った理由？できるからだよ！",
+    "richestListTitle": "史上最強の無駄遣いキングたち",
+    "audioNotSupported": "このブラウザ、音声が苦手らしい"
   },
   "KingPage": {
-    "title": "{date}に財産の絶頂にいた",
-    "description": "何も気にせず{amount}を投げ捨てた",
-    "backHome": "王室のホールに戻る",
-    "audioNotSupported": "お使いのブラウザはオーディオの再生をサポートしていません。"
+    "title": "{date}の贅沢トップランカー",
+    "description": "迷わず{amount}ぶっ込んだぜ",
+    "backHome": "金持ち変人たちのリストに戻る",
+    "audioNotSupported": "このブラウザ、音声NGです"
   },
   "PayPage": {
-    "title": "{amount} だけで王座はあなたのもの。それくらいあなたの口座には痛くもないでしょう。",
-    "namePlaceholder": "名前またはニックネーム（任意）",
-    "messagePlaceholder": "挑発的なフレーズをテキストまたは音声で入力してください（任意）",
-    "generateNameButton": "名前を生成",
-    "generateMessageButton": "フレーズを生成",
-    "avatarAlt": "あなたのアバター",
-    "uploadAvatarButton": "画像をアップロードしてアバターにする",
-    "generateAvatarButton": "ランダム画像をアバターとして生成する",
-    "fileLimit": "ファイルサイズは {actualMB}MB です。最大許容サイズは {maxSizeMB}MB です。より小さいファイルを選択してください。",
-    "errorAndTryAgain": "エラーが発生しました。もう一度お試しください。",
-    "backToHome": "諦めます。気持ちはあっても、残高がついてこない。",
-    "languageFromBrowser": "お使いのブラウザがあなたの国籍を示しました",
-    "disclaimerPublicInfo": "ここに投稿された情報はすべて<em>公開</em>かつ<em>永続的</em>です。送信前によく考えてください。あなたは未来に<strong>消せない</strong>痕跡を残そうとしています。",
-    "disclaimerPayment": "支払いは <strong>このサイトの外部</strong> にある <strong>Stripe</strong> のサービスを通じて処理されます。<em>信頼されている</em>、<em>世界的に有名な</em>決済プラットフォームです。お支払いに関する機密情報は当サイトで保存されません。上記の入力欄（名前、メッセージなど）に記載されたデータのみを保持します。"
+    "title": "たった{amount}で余裕の証明をしよう",
+    "namePlaceholder": "名前かニックネーム（任意）",
+    "messagePlaceholder": "挑発コメント or 音声（任意）",
+    "generateNameButton": "いい感じの名前ちょうだい",
+    "generateMessageButton": "気の利いたフレーズ頼む",
+    "avatarAlt": "あなたのゴージャスなアバター",
+    "uploadAvatarButton": "自分の顔、アップしちゃって",
+    "generateAvatarButton": "おまかせで面白い画像ちょうだい",
+    "fileLimit": "このファイルは{actualMB}MBです。最大は{maxSizeMB}MBだよ。落ち着いて。",
+    "errorAndTryAgain": "なんか壊れた。もう一度いこう！",
+    "backToHome": "やめた。後でドカンと使うわ。",
+    "languageFromBrowser": "ブラウザから出身バレてるよ",
+    "disclaimerPublicInfo": "ここで送ったものは<em>公開</em>されて<em>永遠に</em>残ります。本当にいいの？世界に<strong>不滅の刻印</strong>を残すってことだよ。",
+    "disclaimerPayment": "支払いはこのサイトの<strong>外</strong>、<strong>Stripe</strong>という<em>信頼されてて</em><em>世界中で有名</em>なサービスを使ってます。クレカ情報などのセンシティブなデータは保存してません。上で入力した名前やメッセージなどだけ記録されます。"
   }
 }
