@@ -233,7 +233,7 @@ export default function PayPage() {
   return (
     <>
       <main className="min-h-screen flex items-center justify-center">
-        <div className="w-full max-w-md p-6 space-y-4 bg-background rounded-2xl mt-8">
+        <div className="w-full max-w-md p-6 space-y-4 bg-background rounded-2xl m-4 shadow-2xl">
           <h1 className="text-2xl font-bold text-center">
             {pageTitle.left}{' '}
             <span className="inline-block bg-green-600 text-background px-4 py-1 rounded">
@@ -302,6 +302,7 @@ export default function PayPage() {
               placeholder={t('namePlaceholder')}
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={100}
             />
             <Button
               type="button"
@@ -320,6 +321,7 @@ export default function PayPage() {
               placeholder={t('messagePlaceholder')}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              maxLength={500}
             />
             <Button
               type="button"
