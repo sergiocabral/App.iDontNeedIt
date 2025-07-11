@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "स्थिति",
-    "startRecording": "ऑडियो रिकॉर्ड करें",
-    "stopRecording": "रिकॉर्डिंग बंद करें",
-    "discardRecording": "रिकॉर्डिंग हटाएं",
-    "status-idle": "अपना वॉयस मैसेज रिकॉर्ड करने के लिए यहां क्लिक करें",
-    "status-recording": "रिकॉर्ड हो रहा है",
-    "status-stopping": "रोक रहा है",
-    "status-stopped": "रिकॉर्ड किया गया",
-    "status-acquiring_media": "ऑडियो प्राप्त कर रहे हैं",
-    "status-error": "त्रुटि"
+    "startRecording": "ऑडियो रिकॉर्ड करो",
+    "stopRecording": "रिकॉर्डिंग रोकें",
+    "discardRecording": "रिकॉर्डिंग फेंको",
+    "status-idle": "यहाँ टैप करो और अपनी आवाज़ में आग लगा दो",
+    "status-recording": "बिना रुके रिकॉर्डिंग चालू",
+    "status-stopping": "रईस की बात खत्म हो रही है",
+    "status-stopped": "ऑडियो तैयार है बॉस",
+    "status-acquiring_media": "माइक गरम हो रहा है...",
+    "status-error": "कुछ गड़बड़ हो गया"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "केवल छवि फ़ाइलों की अनुमति है"
+    "invalidFileType": "सिर्फ इमेज चलती है, राजा बाबू"
   },
   "FileUploadComponent": {
-    "invalidFileType": "केवल छवि या ऑडियो फ़ाइलों की अनुमति है",
-    "dropFileHere": "फ़ाइल यहाँ छोड़ें...",
-    "dragAndDropOrClick": "छवि या ऑडियो अपलोड करने के लिए खींचें और छोड़ें या क्लिक करें",
-    "imagePreview": "छवि पूर्वावलोकन",
-    "notSupportedAudio": "आपका ब्राउज़र ऑडियो का समर्थन नहीं करता।"
+    "invalidFileType": "यहाँ सिर्फ इमेज या ऑडियो ही चलेगा",
+    "dropFileHere": "फाइल यहाँ गिराओ...",
+    "dragAndDropOrClick": "खींचो या क्लिक करो, इमेज/ऑडियो भेजो",
+    "imagePreview": "तेरा चेहरा पहले से दिखेगा",
+    "notSupportedAudio": "तेरा ब्राउज़र ऑडियो नहीं बजाता. दुखद है।"
   },
   "StripePayFormComponent": {
-    "payButton": "सिर्फ {amount} में पिछले राजा को हटाएँ",
-    "paymentSending": "धन्यवाद! हम आपका भुगतान संसाधित कर रहे हैं...",
-    "paymentSuccess": "भुगतान प्राप्त हुआ। एक बार फिर धन्यवाद!",
-    "paymentError": "हम आपका भुगतान प्रोसेस नहीं कर सके। आवश्यकता होने पर पेज को रीलोड करें और दोबारा प्रयास करें।"
+    "payButton": "{amount} उड़ाओ और राजा बन जाओ",
+    "paymentSending": "रुको ज़रा, पैसा प्रोसेस हो रहा है...",
+    "paymentSuccess": "पैसा मिल गया! अब ताज तुम्हारा है!",
+    "paymentError": "भुगतान में दिक्कत आई। पेज रिफ्रेश करके फिर ट्राय कर, करोड़पति।"
   },
   "LocaleLayout": {
-    "description": "साबित करो कि तुम दुनिया के सबसे अमीर हो"
+    "description": "उन लोगों की लिस्ट में शामिल हो जो पैसे को हवा में उड़ाते हैं"
   },
   "HomePage": {
-    "title": "साबित करो कि तुम दुनिया के सबसे अमीर हो",
-    "payButton": "{amount} फेंक दो",
-    "description": "मैंने {amount} खर्च किए बस अपनी छाप छोड़ने के लिए",
-    "description2": "मैंने {amount} बर्बाद किए क्योंकि मैं कर सकता हूँ",
-    "richestListTitle": "जिन्हें सच में इसकी ज़रूरत नहीं",
-    "audioNotSupported": "आपका ब्राउज़र ऑडियो प्लेबैक को सपोर्ट नहीं करता।"
+    "title": "जो वाकई में कुछ भी फेंक सकते हैं — उनकी रैंकिंग",
+    "payButton": "{amount} को स्टाइल में डस्टबिन में डालो",
+    "description": "बस यहाँ दिखने के लिए {amount} उड़ा दिया",
+    "description2": "मैंने {amount} उड़ाया क्योंकि मैं कर सकता हूँ",
+    "richestListTitle": "इतिहास के सबसे बड़े पैसा उड़ाने वाले",
+    "audioNotSupported": "तेरा ब्राउज़र ऑडियो से चिढ़ता है"
   },
   "KingPage": {
-    "title": "{date} को संपत्ति की चरम सीमा पर था",
-    "description": "मैंने {amount} को बिना परवाह किए फेंक दिया",
-    "backHome": "शाही हॉल में वापस जाएं",
-    "audioNotSupported": "आपका ब्राउज़र ऑडियो प्लेबैक का समर्थन नहीं करता है।"
+    "title": "ओस्टेंटेशन के शिखर पर {date} को",
+    "description": "{amount} खर्च किया बिना पलक झपकाए",
+    "backHome": "वापस चलो पागल अमीरों की लिस्ट में",
+    "audioNotSupported": "तेरा ब्राउज़र ऑडियो नहीं चलाता"
   },
   "PayPage": {
-    "title": "सिर्फ {amount} में सिंहासन आपका है। आखिरकार, यह आपके खाते को छूता भी नहीं।",
-    "namePlaceholder": "आपका नाम या उपनाम (वैकल्पिक)",
-    "messagePlaceholder": "टेक्स्ट या ऑडियो में एक उत्तेजक वाक्य छोड़ें (वैकल्पिक)",
-    "generateNameButton": "नाम बनाएं",
-    "generateMessageButton": "वाक्य बनाएं",
-    "avatarAlt": "आपका अवतार",
-    "uploadAvatarButton": "अपनी छवि को अवतार के रूप में अपलोड करें",
-    "generateAvatarButton": "एक यादृच्छिक छवि को अपने अवतार के रूप में जनरेट करें",
-    "fileLimit": "फ़ाइल का आकार {actualMB}MB है। अधिकतम अनुमति प्राप्त आकार {maxSizeMB}MB है। कृपया एक छोटी फ़ाइल चुनें।",
-    "errorAndTryAgain": "एक त्रुटि हुई। कृपया पुनः प्रयास करें।",
-    "backToHome": "मैं हार मानता हूँ। चाहा तो था, लेकिन बैलेंस ने साथ नहीं दिया।",
-    "languageFromBrowser": "आपके ब्राउज़र ने आपकी राष्ट्रीयता बताई",
-    "disclaimerPublicInfo": "यहाँ प्रकाशित की गई सभी जानकारी <em>सार्वजनिक</em> और <em>स्थायी</em> होगी। भेजने से पहले अच्छी तरह सोचें। आप भविष्य के लिए <strong>अमिट</strong> छाप छोड़ रहे हैं।",
-    "disclaimerPayment": "भुगतान <strong>इस साइट के बाहर</strong> <strong>Stripe</strong> सेवाओं के माध्यम से संसाधित किया जाता है, जो एक <em>विश्वसनीय</em> और <em>विश्व स्तर पर प्रसिद्ध</em> भुगतान प्लेटफ़ॉर्म है। हम किसी भी संवेदनशील भुगतान जानकारी को संग्रहीत नहीं करते। केवल ऊपर दिए गए फ़ील्ड (नाम, संदेश आदि) में भरी गई जानकारी हमारे सिस्टम में रखी जाती है।"
+    "title": "सिर्फ {amount} उड़ाओ और दिखाओ कि फर्क नहीं पड़ता",
+    "namePlaceholder": "नाम या निकनेम (ऑप्शनल)",
+    "messagePlaceholder": "एक मजेदार मैसेज छोड़ दो, टेक्स्ट या ऑडियो में (ऑप्शनल)",
+    "generateNameButton": "कोई नाम बना दो यार",
+    "generateMessageButton": "कोई मजेदार लाइन बनाओ",
+    "avatarAlt": "तेरा रॉयल अवतार",
+    "uploadAvatarButton": "अपना चेहरा अपलोड करो",
+    "generateAvatarButton": "कोई रैंडम इमेज दिखाओ ना",
+    "fileLimit": "फाइल {actualMB}MB की है। लिमिट {maxSizeMB}MB तक है। आराम से भाई।",
+    "errorAndTryAgain": "कुछ टूटा है। फिर से कोशिश कर।",
+    "backToHome": "छोड़ो यार। बाद में उड़ाएंगे।",
+    "languageFromBrowser": "तेरे ब्राउज़र ने तेरा देश बता दिया है",
+    "disclaimerPublicInfo": "जो कुछ भी तू भेजेगा वो <em>पब्लिक</em> और <em>हमेशा के लिए</em> रहेगा। सोच समझकर भेज। ये तेरी <strong>अमर छाप</strong> है इस दुनिया में।",
+    "disclaimerPayment": "पेमेंट <strong>इस साइट से बाहर</strong> होता है, <strong>Stripe</strong> के ज़रिए — जो एक <em>भरोसेमंद</em> और <em>ग्लोबली फेमस</em> प्लेटफॉर्म है। हम कोई पेमेंट डेटा सेव नहीं करते। ऊपर जो भरा (नाम, मैसेज वगैरह), बस वही हमारे पास रहेगा।"
   }
 }

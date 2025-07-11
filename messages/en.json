@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "Status",
-    "startRecording": "Record Audio",
-    "stopRecording": "Stop Recording",
-    "discardRecording": "Discard Recording",
-    "status-idle": "Click here to record your voice message",
-    "status-recording": "Recording",
-    "status-stopping": "Stopping",
-    "status-stopped": "Recorded",
-    "status-acquiring_media": "Getting audio",
-    "status-error": "Error"
+    "startRecording": "Start talking",
+    "stopRecording": "Stop recording",
+    "discardRecording": "Trash this audio",
+    "status-idle": "Click here to drop your hot take out loud",
+    "status-recording": "Recording like a boss",
+    "status-stopping": "Wrapping up your rich wisdom",
+    "status-stopped": "Audio’s ready to shine",
+    "status-acquiring_media": "Warming up the mic...",
+    "status-error": "Something went wrong"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "Only image files are allowed"
+    "invalidFileType": "Only images, my friend"
   },
   "FileUploadComponent": {
-    "invalidFileType": "Only image or audio files are allowed",
-    "dropFileHere": "Drop file here...",
-    "dragAndDropOrClick": "Drag & drop or click to upload image or audio",
-    "imagePreview": "Image Preview",
-    "notSupportedAudio": "Your browser does not support audio."
+    "invalidFileType": "Only images or audio allowed here",
+    "dropFileHere": "Drop your file here...",
+    "dragAndDropOrClick": "Drag or click to upload image or audio",
+    "imagePreview": "Your fancy face preview",
+    "notSupportedAudio": "Your browser doesn’t do audio. Sad."
   },
   "StripePayFormComponent": {
-    "payButton": "Dethrone the last king for just {amount}",
-    "paymentSending": "Thank you! We are processing your payment...",
-    "paymentSuccess": "Payment received. Thank you again!",
-    "paymentError": "We couldn't process your payment. If necessary, reload the page and try again."
+    "payButton": "Throw in {amount} and take the throne",
+    "paymentSending": "Hold on... moving your precious money...",
+    "paymentSuccess": "Cash received. Throne’s yours now!",
+    "paymentError": "Payment failed. Reload and try again, baller."
   },
   "LocaleLayout": {
-    "description": "Prove you're the richest in the world"
+    "description": "Join the leaderboard of people who toss money like it’s nothing"
   },
   "HomePage": {
-    "title": "Prove you're the richest in the world",
-    "payButton": "Throw {amount} away",
-    "description": "Dropped {amount} just to leave my mark",
-    "description2": "Wasted {amount} because I can",
-    "richestListTitle": "The Ones Who Really Don’t Need It",
-    "audioNotSupported": "Your browser does not support audio playback."
+    "title": "The leaderboard of those who truly don’t need it",
+    "payButton": "Burn {amount} with flair",
+    "description": "Dropped {amount} just to show up here",
+    "description2": "Wasted {amount} just because I can",
+    "richestListTitle": "The biggest money-burners of all time",
+    "audioNotSupported": "Your browser doesn’t vibe with audio"
   },
   "KingPage": {
-    "title": "At the height of fortune on {date}",
-    "description": "I threw away {amount} without a care",
-    "backHome": "Return to the hall of royalty",
-    "audioNotSupported": "Your browser does not support audio playback."
+    "title": "On top of the flex game on {date}",
+    "description": "Threw away {amount} without blinking",
+    "backHome": "Back to the hall of rich weirdos",
+    "audioNotSupported": "Your browser doesn’t vibe with audio"
   },
   "PayPage": {
-    "title": "For just {amount}, the throne is yours. After all, that doesn't even scratch your account.",
+    "title": "Drop just {amount} like it’s nothing",
     "namePlaceholder": "Your name or nickname (optional)",
-    "messagePlaceholder": "Leave a provocative phrase in text or audio (optional)",
-    "generateNameButton": "Generate name",
-    "generateMessageButton": "Generate message",
-    "avatarAlt": "Your avatar",
-    "uploadAvatarButton": "Upload an image as your avatar",
-    "generateAvatarButton": "Generate a random image as your avatar",
-    "fileLimit": "File is {actualMB}MB. Maximum allowed is {maxSizeMB}MB. Please choose a smaller file.",
-    "errorAndTryAgain": "An error occurred. Please try again.",
-    "backToHome": "I give up. I wanted to, but my balance doesn’t agree.",
-    "languageFromBrowser": "Your browser indicated your nationality",
-    "disclaimerPublicInfo": "All information posted here will be <em>public</em> and <em>permanent</em>. Think carefully before submitting. You are leaving an <strong>indelible</strong> mark for the times to come.",
-    "disclaimerPayment": "Payments are processed <strong>outside this site</strong> via <strong>Stripe</strong>, a <em>trusted</em> and <em>world-renowned</em> payment platform. No sensitive payment information is stored by us. Only the data filled in the fields above (name, message, etc.) is kept in our system."
+    "messagePlaceholder": "Drop a spicy line in text or audio (optional)",
+    "generateNameButton": "Give me a name",
+    "generateMessageButton": "Cook up a line",
+    "avatarAlt": "Your fancy avatar",
+    "uploadAvatarButton": "Upload your face here",
+    "generateAvatarButton": "Surprise me with a random image",
+    "fileLimit": "File is {actualMB}MB. Max allowed is {maxSizeMB}MB. Chill out.",
+    "errorAndTryAgain": "Something broke. Try again.",
+    "backToHome": "Forget it. Maybe later.",
+    "languageFromBrowser": "Your browser snitched your location",
+    "disclaimerPublicInfo": "Everything you post will be <em>public</em> and <em>permanent</em>. Think twice. You’re leaving a <strong>forever mark</strong> on the world.",
+    "disclaimerPayment": "Payments happen <strong>outside this site</strong> using <strong>Stripe</strong>, a <em>trusted</em> and <em>globally known</em> payment platform. We don’t store any sensitive payment info. Only the details you entered above (name, message, etc.) are saved here."
   }
 }

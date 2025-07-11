@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "상태",
-    "startRecording": "오디오 녹음",
-    "stopRecording": "녹음 중지",
-    "discardRecording": "녹음 삭제",
-    "status-idle": "음성 메시지를 녹음하려면 여기를 클릭하세요",
-    "status-recording": "녹음 중",
-    "status-stopping": "중지 중",
-    "status-stopped": "녹음됨",
-    "status-acquiring_media": "오디오 가져오는 중",
-    "status-error": "오류"
+    "startRecording": "녹음 시작하기!",
+    "stopRecording": "녹음 멈추기!",
+    "discardRecording": "녹음 삭제하기",
+    "status-idle": "여길 눌러 시원하게 한마디 해봐요",
+    "status-recording": "거침없이 녹음 중!",
+    "status-stopping": "부자의 한마디 종료 중...",
+    "status-stopped": "녹음 완료!",
+    "status-acquiring_media": "마이크 예열 중...",
+    "status-error": "뭔가 잘못됐어요"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "이미지 파일만 허용됩니다"
+    "invalidFileType": "이미지만 받습니다, 왕자님!"
   },
   "FileUploadComponent": {
-    "invalidFileType": "이미지 또는 오디오 파일만 허용됩니다",
-    "dropFileHere": "파일을 여기에 드롭하세요...",
-    "dragAndDropOrClick": "이미지 또는 오디오를 드래그 앤 드롭하거나 클릭하여 업로드",
-    "imagePreview": "이미지 미리보기",
-    "notSupportedAudio": "브라우저에서 오디오를 지원하지 않습니다."
+    "invalidFileType": "이미지나 오디오만 가능해요",
+    "dropFileHere": "파일을 여기로 던져요...",
+    "dragAndDropOrClick": "끌어오거나 클릭해서 이미지/오디오 업로드",
+    "imagePreview": "당신의 멋진 얼굴 미리보기",
+    "notSupportedAudio": "이 브라우저는 오디오 재생을 못 해요. 아쉽..."
   },
   "StripePayFormComponent": {
-    "payButton": "{amount}만으로 전 왕을 몰아내세요",
-    "paymentSending": "감사합니다! 결제를 처리 중입니다...",
-    "paymentSuccess": "결제가 완료되었습니다. 다시 한 번 감사합니다!",
-    "paymentError": "결제를 처리할 수 없습니다. 필요하다면 페이지를 새로고침하고 다시 시도해 주세요."
+    "payButton": "{amount} 던지고 왕좌 차지하기",
+    "paymentSending": "잠깐만요, 당신의 귀중한 돈 처리 중...",
+    "paymentSuccess": "돈 받았어요! 이제 왕은 당신!",
+    "paymentError": "결제 오류 발생! 새로고침하고 다시 도전하세요, 재벌님"
   },
   "LocaleLayout": {
-    "description": "당신이 세상에서 제일 부자라는 걸 증명해봐"
+    "description": "무심코 돈을 태워버린 전설들 랭킹에 참여하세요"
   },
   "HomePage": {
-    "title": "당신이 세상에서 제일 부자라는 걸 증명해봐",
-    "payButton": "{amount}을 버려봐",
-    "description": "내 흔적을 남기기 위해 {amount}을 썼어",
-    "description2": "{amount}을 낭비한 건 그냥 내가 할 수 있으니까",
-    "richestListTitle": "진짜 필요 없는 사람들",
-    "audioNotSupported": "브라우저가 오디오 재생을 지원하지 않습니다."
+    "title": "진짜 필요 없는 사람들의 순위",
+    "payButton": "{amount}을 폼나게 버려보기",
+    "description": "여기 올라오려고 {amount}을 태워버렸지",
+    "description2": "{amount} 써봤자 뭐 어때. 난 가능하니까!",
+    "richestListTitle": "역대 최고의 돈 펑펑 쓰는 사람들",
+    "audioNotSupported": "이 브라우저는 오디오를 싫어하네요"
   },
   "KingPage": {
-    "title": "{date}에 재산의 정점에 있었다",
-    "description": "아무렇지 않게 {amount}를 버렸다",
-    "backHome": "왕실 홀로 돌아가기",
-    "audioNotSupported": "사용 중인 브라우저는 오디오 재생을 지원하지 않습니다."
+    "title": "{date}에 최고의 플렉스를 찍은 날",
+    "description": "망설임 없이 {amount} 써버림",
+    "backHome": "돈 많은 괴짜 리스트로 돌아가기",
+    "audioNotSupported": "이 브라우저는 오디오를 재생 못 해요"
   },
   "PayPage": {
-    "title": "{amount}만으로 왕좌는 당신의 것. 어차피 당신 통장엔 티도 안 나잖아.",
-    "namePlaceholder": "이름 또는 닉네임 (선택사항)",
-    "messagePlaceholder": "텍스트 또는 오디오로 도발적인 문구를 남겨주세요 (선택 사항)",
-    "generateNameButton": "이름 생성",
-    "generateMessageButton": "문장 생성",
-    "avatarAlt": "당신의 아바타",
-    "uploadAvatarButton": "이미지를 업로드하여 아바타로 사용",
-    "generateAvatarButton": "무작위 이미지로 아바타 생성",
-    "fileLimit": "파일 크기는 {actualMB}MB입니다. 최대 허용 크기는 {maxSizeMB}MB입니다. 더 작은 파일을 선택하세요.",
-    "errorAndTryAgain": "오류가 발생했습니다. 다시 시도해주세요.",
-    "backToHome": "포기합니다. 하고 싶었지만 잔고가 안 도와줘요.",
-    "languageFromBrowser": "브라우저에서 국적이 감지되었습니다",
-    "disclaimerPublicInfo": "여기에 게시된 모든 정보는 <em>공개</em>되며 <em>영구적</em>입니다. 제출하기 전에 신중히 생각하세요. 당신은 앞으로 <strong>지울 수 없는</strong> 흔적을 남기게 됩니다.",
-    "disclaimerPayment": "결제는 <strong>이 사이트 외부</strong>의 <strong>Stripe</strong> 서비스를 통해 처리됩니다. 이는 <em>신뢰할 수 있고</em>, <em>전 세계적으로 유명한</em> 결제 플랫폼입니다. 우리는 결제에 대한 민감한 정보를 저장하지 않습니다. 위의 필드(이름, 메시지 등)에 입력된 데이터만 저장됩니다."
+    "title": "{amount}만 쓰면 당신도 여유 넘치는 사람!",
+    "namePlaceholder": "이름이나 별명 (선택)",
+    "messagePlaceholder": "도발 멘트나 음성 한마디 (선택)",
+    "generateNameButton": "이름 하나 만들어줘",
+    "generateMessageButton": "센스 있는 문장 부탁해",
+    "avatarAlt": "당신의 럭셔리 아바타",
+    "uploadAvatarButton": "당신 얼굴 업로드 해줘요",
+    "generateAvatarButton": "랜덤 이미지로 깜짝 놀래줘",
+    "fileLimit": "파일 용량은 {actualMB}MB예요. 최대 {maxSizeMB}MB까지 가능. 천천히요~",
+    "errorAndTryAgain": "뭔가 오류! 다시 시도해봐요",
+    "backToHome": "아냐, 다음에 지를게",
+    "languageFromBrowser": "당신의 브라우저가 출신지를 다 말해버렸네요",
+    "disclaimerPublicInfo": "여기에 올린 모든 건 <em>공개</em>되고 <em>영원히</em> 남습니다. 진지하게 생각하세요. 이건 세상에 남는 당신의 <strong>불멸의 흔적</strong>입니다.",
+    "disclaimerPayment": "결제는 <strong>이 사이트 밖</strong>에서, <strong>Stripe</strong>라는 <em>믿을 수 있고</em> <em>전 세계적으로 유명한</em> 플랫폼을 통해 진행돼요. 결제 정보는 저장하지 않아요. 위에 입력한 정보(이름, 메시지 등)만 저장됩니다."
   }
 }

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useReactMediaRecorder } from 'react-media-recorder'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
-import { AudioLines, OctagonX, Pause } from 'lucide-react'
+import { AudioLines, Pause, Trash2 } from 'lucide-react'
 
 export interface AudioRecorderProps {
   showAudioPreview?: boolean
@@ -72,34 +72,57 @@ export default function AudioRecorder({
   return (
     <div className="flex flex-row items-center gap-2 h-12">
       {status !== 'recording' && status !== 'stopped' && (
-        <Button className="cursor-pointer" onClick={startRecording} title={t('startRecording')}>
+        <Button
+          className="cursor-pointer bg-green-900 hover:bg-green-700"
+          onClick={startRecording}
+          title={t('startRecording')}
+        >
           <AudioLines />
         </Button>
       )}
 
       {status == 'recording' && (
-        <Button className="cursor-pointer" onClick={stopRecording} title={t('stopRecording')}>
+        <Button
+          className="cursor-pointer bg-orange-500 hover:bg-orange-400 animate-pulse"
+          onClick={stopRecording}
+          title={t('stopRecording')}
+        >
           <Pause />
         </Button>
       )}
 
       {status == 'stopped' && previewUrl && (
         <Button
-          className="cursor-pointer"
+          className="cursor-pointer bg-red-900 hover:bg-red-700"
           variant="destructive"
           onClick={handleDiscard}
           title={t('discardRecording')}
         >
-          <OctagonX />
+          <Trash2 />
         </Button>
       )}
 
       {status != 'stopped' && (
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          <span className="font-medium text-gray-600 dark:text-gray-300">
-            {t(`status-${status}`)}
-          </span>
-        </p>
+        <div className="w-full overflow-hidden mr-11">
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-nowrap text-ellipsis overflow-hidden w-full">
+            <span className="font-medium text-gray-600 dark:text-gray-300">
+              {t(`status-${status}`)}
+            </span>
+          </p>
+          {status == 'recording' && (
+            <div className="relative w-full overflow-hidden">
+              <div className="w-full flex justify-between scale-x-100 origin-left gap-[1px] items-end h-4 pb-1 mt-2">
+                {[...Array(40)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-[3px] bg-orange-400 animate-wave"
+                    style={{ animationDelay: `${i * 0.05}s`, height: '100%' }}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       )}
 
       {showAudioPreview !== false && previewUrl && (

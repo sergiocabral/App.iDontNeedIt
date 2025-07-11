@@ -1,63 +1,62 @@
 {
   "AudioRecorderComponent": {
-    "status": "Statut",
-    "startRecording": "Enregistrer l'audio",
-    "stopRecording": "Arrêter l'enregistrement",
-    "discardRecording": "Annuler l'enregistrement",
-    "status-idle": "Cliquez ici pour enregistrer votre message vocal",
-    "status-recording": "Enregistrement",
-    "status-stopping": "Arrêt en cours",
-    "status-stopped": "Enregistré",
-    "status-acquiring_media": "Obtention de l'audio",
-    "status-error": "Erreur"
+    "startRecording": "Lancer l’enregistrement",
+    "stopRecording": "Arrêter l’enregistrement",
+    "discardRecording": "Jeter l’audio",
+    "status-idle": "Clique ici pour lâcher ta voix",
+    "status-recording": "Enregistrement en mode bling-bling",
+    "status-stopping": "Fin du discours du riche",
+    "status-stopped": "Audio prêt à briller",
+    "status-acquiring_media": "On chauffe le micro...",
+    "status-error": "Oups, ça a planté"
   },
   "AvatarUploadComponent": {
-    "invalidFileType": "Seuls les fichiers image sont autorisés"
+    "invalidFileType": "Images seulement, patron"
   },
   "FileUploadComponent": {
-    "invalidFileType": "Seuls les fichiers image ou audio sont autorisés",
-    "dropFileHere": "Déposez le fichier ici...",
-    "dragAndDropOrClick": "Glissez-déposez ou cliquez pour téléverser une image ou un audio",
-    "imagePreview": "Aperçu de l'image",
-    "notSupportedAudio": "Votre navigateur ne prend pas en charge l'audio."
+    "invalidFileType": "Ici c’est image ou audio, rien d’autre",
+    "dropFileHere": "Dépose ton fichier ici...",
+    "dragAndDropOrClick": "Glisse ou clique pour balancer ton image ou audio",
+    "imagePreview": "Aperçu de ta jolie frimousse",
+    "notSupportedAudio": "Ton navigateur n’aime pas l’audio. Dommage."
   },
   "StripePayFormComponent": {
-    "payButton": "Défie le dernier roi pour seulement {amount}",
-    "paymentSending": "Merci ! Nous traitons votre paiement...",
-    "paymentSuccess": "Paiement reçu. Merci encore !",
-    "paymentError": "Nous n'avons pas pu traiter votre paiement. Si nécessaire, rechargez la page et réessayez."
+    "payButton": "Balance {amount} et prends le trône",
+    "paymentSending": "Attends, on traite ton cash royal...",
+    "paymentSuccess": "C’est payé ! Bienvenue sur le trône !",
+    "paymentError": "Erreur de paiement. Recharge et retente, millionnaire."
   },
   "LocaleLayout": {
-    "description": "Prouve que tu es le plus riche du monde"
+    "description": "Entre dans le classement des rois du gaspillage"
   },
   "HomePage": {
-    "title": "Prouve que tu es le plus riche du monde",
-    "payButton": "Jette {amount}",
-    "description": "J'ai dépensé {amount} juste pour marquer le coup",
-    "description2": "J'ai gaspillé {amount} parce que je peux",
-    "richestListTitle": "Ceux qui n’en ont vraiment pas besoin",
-    "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
+    "title": "Le classement de ceux qui n’en ont vraiment pas besoin",
+    "payButton": "Balance {amount} à la poubelle, avec style",
+    "description": "J’ai cramé {amount} juste pour briller ici",
+    "description2": "J’ai balancé {amount} parce que je peux, voilà",
+    "richestListTitle": "Les plus gros gaspilleurs de l’histoire",
+    "audioNotSupported": "Ton navigateur n’aime pas les sons"
   },
   "KingPage": {
-    "title": "Au sommet de la fortune le {date}",
-    "description": "J’ai jeté {amount} au vent sans souci",
-    "backHome": "Retourner dans le hall de la royauté",
-    "audioNotSupported": "Votre navigateur ne supporte pas la lecture audio."
+    "title": "Au sommet du bling le {date}",
+    "description": "J’ai claqué {amount} sans même y penser",
+    "backHome": "Retour à la liste des fous pleins aux as",
+    "audioNotSupported": "Ton navigateur ne veut pas jouer l’audio"
   },
   "PayPage": {
-    "title": "Pour seulement {amount}, le trône est à vous. Après tout, cela ne touche même pas à votre compte.",
-    "namePlaceholder": "Votre nom ou surnom (optionnel)",
-    "messagePlaceholder": "Laissez une phrase provocante en texte ou en audio (optionnel)",
-    "generateNameButton": "Générer un nom",
-    "generateMessageButton": "Générer une phrase",
-    "avatarAlt": "Votre avatar",
-    "uploadAvatarButton": "Téléversez une image comme avatar",
-    "generateAvatarButton": "Générez une image aléatoire comme avatar",
-    "fileLimit": "Le fichier fait {actualMB} Mo. La taille maximale autorisée est de {maxSizeMB} Mo. Veuillez choisir un fichier plus petit.",
-    "errorAndTryAgain": "Une erreur s'est produite. Veuillez réessayer.",
-    "backToHome": "J’abandonne. Je voulais, mais mon solde ne suit pas.",
-    "languageFromBrowser": "Votre navigateur a indiqué votre nationalité",
-    "disclaimerPublicInfo": "Toute information publiée ici sera <em>publique</em> et <em>permanente</em>. Réfléchissez bien avant de soumettre. Vous laissez une marque <strong>indélébile</strong> pour les temps à venir.",
-    "disclaimerPayment": "Les paiements sont traités <strong>en dehors de ce site</strong> via les services de <strong>Stripe</strong>, une plateforme de paiement <em>fiable</em> et <em>reconnue dans le monde entier</em>. Aucune information sensible de paiement n'est stockée par nous. Seules les données renseignées dans les champs ci-dessus (nom, message, etc.) sont conservées."
+    "title": "Dépense juste {amount} et montre que t’en as à revendre",
+    "namePlaceholder": "Nom ou pseudo (facultatif)",
+    "messagePlaceholder": "Balance une punchline en texte ou audio (facultatif)",
+    "generateNameButton": "Donne-moi un blaze",
+    "generateMessageButton": "Inspire-moi une phrase choc",
+    "avatarAlt": "Ton avatar bling-bling",
+    "uploadAvatarButton": "Upload ton visage ici",
+    "generateAvatarButton": "Balance-moi une image au pif",
+    "fileLimit": "Ton fichier fait {actualMB}MB. Max autorisé : {maxSizeMB}MB. Calmos.",
+    "errorAndTryAgain": "Un bug est passé. Essaie encore.",
+    "backToHome": "Tant pis. On verra plus tard.",
+    "languageFromBrowser": "Ton navigateur a balancé ta langue",
+    "disclaimerPublicInfo": "Tout ce que tu balances ici sera <em>public</em> et <em>à jamais</em>. Réfléchis bien. C’est ta trace <strong>éternelle</strong> sur le monde.",
+    "disclaimerPayment": "Le paiement se fait <strong>en dehors du site</strong>, via <strong>Stripe</strong>, une plateforme <em>fiable</em> et <em>mondialement connue</em>. On ne garde aucune donnée de paiement sensible. Seuls les champs que tu remplis (nom, message, etc.) restent chez nous."
   }
 }
