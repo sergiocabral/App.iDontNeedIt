@@ -19,6 +19,8 @@ import { StripePayForm } from '@/components/app/StripePayForm'
 import { AmountType } from '@/lib/repositories/kingRepository'
 import { getFlagImageUrl, splitByMarker } from '@/lib/utilsApp'
 import Image from 'next/image'
+import { MercadoPagoPayForm } from '@/components/app/MercadoPagoPayForm'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 
 const AudioRecorder = dynamic(
   () => import('@/components/app/AudioRecorder').then((mod) => mod.default),
@@ -29,6 +31,8 @@ export default function PayPage() {
   const def = getDefinitions()
   const t = useTranslations('PayPage')
   const router = useRouter()
+
+  const [paymentServices] = useState(['Mercado Pago', 'Stripe'])
 
   const { locale } = useParams<{ locale: string }>()
   const userLocale = navigator.language
@@ -356,7 +360,29 @@ export default function PayPage() {
           </div>
 
           {nextAmount && (
-            <StripePayForm canPay={handlePayClick} isLoading={loading}></StripePayForm>
+            <TabGroup>
+              <TabList className="flex space-x-1 bg-gray-800 p-1 rounded">
+                {paymentServices.map((paymentService) => (
+                  <Tab
+                    key={paymentService}
+                    className={({ selected }) =>
+                      `w-full py-2.5 text-sm font-medium leading-5 text-white rounded ${selected ? 'bg-blue-500' : 'bg-gray-600 hover:bg-gray-500'}`
+                    }
+                  >
+                    {paymentService}
+                  </Tab>
+                ))}
+              </TabList>
+
+              <TabPanels className="mt-4">
+                <TabPanel>
+                  <StripePayForm canPay={handlePayClick} isLoading={loading} />
+                </TabPanel>
+                <TabPanel>
+                  <MercadoPagoPayForm canPay={handlePayClick} isLoading={loading} />
+                </TabPanel>
+              </TabPanels>
+            </TabGroup>
           )}
 
           <Button
