@@ -20,11 +20,12 @@
     "imagePreview": "Vorschau von deinem edlen Gesicht",
     "notSupportedAudio": "Dein Browser spielt leider kein Audio ab. Traurig."
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "Gib {amount} her und hol dir den Thron",
     "paymentSending": "Moment... dein edles Geld wird verarbeitet...",
     "paymentSuccess": "Kohle angekommen. Der Thron gehört dir!",
-    "paymentError": "Zahlung fehlgeschlagen. Seite neu laden und nochmal, Millionär."
+    "paymentError": "Zahlung fehlgeschlagen. Seite neu laden und nochmal, Millionär.",
+    "paymentLoading": "Zahlungssystem über {service} wird vorbereitet... gleich soweit!"
   },
   "LocaleLayout": {
     "description": "Steig ein ins Ranking der Geldverschwender ohne Reue"

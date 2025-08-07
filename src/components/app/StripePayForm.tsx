@@ -19,6 +19,7 @@ export function StripePayForm({
   canPay: () => Promise<false | (() => Promise<void>)>
   isLoading?: boolean
 }) {
+  const t = useTranslations('PayFormComponent')
   const [clientSecret, setClientSecret] = useState<string>()
 
   useEffect(() => {
@@ -29,7 +30,9 @@ export function StripePayForm({
       .then((d) => setClientSecret(d.clientSecret))
   }, [])
 
-  if (!clientSecret) return null
+  if (!clientSecret) {
+    return <div className="text-center p-8">{t('paymentLoading', { service: 'Stripe' })}</div>
+  }
 
   return (
     <Elements stripe={stripePromise} options={{ clientSecret }}>
@@ -48,7 +51,7 @@ function Checkout({
   const stripe = useStripe()
   const elements = useElements()
   const [loading, setLoading] = useState(false)
-  const t = useTranslations('StripePayFormComponent')
+  const t = useTranslations('PayFormComponent')
   const router = useRouter()
   const { showToast } = useToast()
 

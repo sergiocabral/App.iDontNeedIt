@@ -20,11 +20,12 @@
     "imagePreview": "당신의 멋진 얼굴 미리보기",
     "notSupportedAudio": "이 브라우저는 오디오 재생을 못 해요. 아쉽..."
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "{amount} 던지고 왕좌 차지하기",
     "paymentSending": "잠깐만요, 당신의 귀중한 돈 처리 중...",
     "paymentSuccess": "돈 받았어요! 이제 왕은 당신!",
-    "paymentError": "결제 오류 발생! 새로고침하고 다시 도전하세요, 재벌님"
+    "paymentError": "결제 오류 발생! 새로고침하고 다시 도전하세요, 재벌님",
+    "paymentLoading": "{service} 결제 시스템을 준비하는 중이에요... 거의 다 됐어요!"
   },
   "LocaleLayout": {
     "description": "무심코 돈을 태워버린 전설들 랭킹에 참여하세요"

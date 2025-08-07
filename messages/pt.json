@@ -20,11 +20,12 @@
     "imagePreview": "Prévia da sua carinha",
     "notSupportedAudio": "Seu navegador não toca áudio. Triste."
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "Passe {amount} pra frente e tome o trono",
     "paymentSending": "Segura aí, processando seu rico dinheirinho...",
     "paymentSuccess": "Grana recebida. Agora o trono é seu!",
-    "paymentError": "Deu erro no pagamento. Recarrega e tenta de novo, bilionário."
+    "paymentError": "Deu erro no pagamento. Recarrega e tenta de novo, bilionário.",
+    "paymentLoading": "Preparando o sistema de pagamento via {service}... quase lá!"
   },
   "LocaleLayout": {
     "description": "Entre pro ranking dos que jogam dinheiro fora sem nem sentir"

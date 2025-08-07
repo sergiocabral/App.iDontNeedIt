@@ -20,11 +20,12 @@
     "imagePreview": "あなたのお顔プレビュー",
     "notSupportedAudio": "このブラウザ、音声に非対応…泣ける"
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "{amount}を投げて王座をゲット！",
     "paymentSending": "ちょい待ち、あなたの大金を処理中…",
     "paymentSuccess": "入金完了！あなたが新たな王様！",
-    "paymentError": "支払いエラーっす。更新して再チャレンジ、富豪様。"
+    "paymentError": "支払いエラーっす。更新して再チャレンジ、富豪様。",
+    "paymentLoading": "ただいま {service} の支払いシステムを準備中… もう少しだけ！"
   },
   "LocaleLayout": {
     "description": "気づかぬうちにお金を捨てる勇者ランキングに入ろう"

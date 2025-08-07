@@ -376,10 +376,10 @@ export default function PayPage() {
 
               <TabPanels className="mt-4">
                 <TabPanel>
-                  <StripePayForm canPay={handlePayClick} isLoading={loading} />
+                  <MercadoPagoPayForm canPay={handlePayClick} isLoading={loading} />
                 </TabPanel>
                 <TabPanel>
-                  <MercadoPagoPayForm canPay={handlePayClick} isLoading={loading} />
+                  <StripePayForm canPay={handlePayClick} isLoading={loading} />
                 </TabPanel>
               </TabPanels>
             </TabGroup>

@@ -20,11 +20,12 @@
     "imagePreview": "Aperçu de ta jolie frimousse",
     "notSupportedAudio": "Ton navigateur n’aime pas l’audio. Dommage."
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "Balance {amount} et prends le trône",
     "paymentSending": "Attends, on traite ton cash royal...",
     "paymentSuccess": "C’est payé ! Bienvenue sur le trône !",
-    "paymentError": "Erreur de paiement. Recharge et retente, millionnaire."
+    "paymentError": "Erreur de paiement. Recharge et retente, millionnaire.",
+    "paymentLoading": "Préparation du système de paiement via {service}... on y est presque !"
   },
   "LocaleLayout": {
     "description": "Entre dans le classement des rois du gaspillage"

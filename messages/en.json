@@ -20,11 +20,12 @@
     "imagePreview": "Your fancy face preview",
     "notSupportedAudio": "Your browser doesn’t do audio. Sad."
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "Throw in {amount} and take the throne",
     "paymentSending": "Hold on... moving your precious money...",
     "paymentSuccess": "Cash received. Throne’s yours now!",
-    "paymentError": "Payment failed. Reload and try again, baller."
+    "paymentError": "Payment failed. Reload and try again, baller.",
+    "paymentLoading": "Getting the {service} payment system ready... almost there!"
   },
   "LocaleLayout": {
     "description": "Join the leaderboard of people who toss money like it’s nothing"

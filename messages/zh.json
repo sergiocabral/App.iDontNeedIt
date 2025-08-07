@@ -20,11 +20,12 @@
     "imagePreview": "看看你帅气的脸",
     "notSupportedAudio": "你的浏览器不支持音频，桑心了"
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "扔出 {amount}，登上王座！",
     "paymentSending": "稍等，正在处理你的金闪闪...",
     "paymentSuccess": "钱到账啦！王座是你的～",
-    "paymentError": "付款失败，刷新再试试吧，土豪哥"
+    "paymentError": "付款失败，刷新再试试吧，土豪哥",
+    "paymentLoading": "正在准备 {service} 支付系统……马上就好！"
   },
   "LocaleLayout": {
     "description": "加入我们这些花钱如流水的神人榜单！"

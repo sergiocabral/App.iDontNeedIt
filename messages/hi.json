@@ -20,11 +20,12 @@
     "imagePreview": "तेरा चेहरा पहले से दिखेगा",
     "notSupportedAudio": "तेरा ब्राउज़र ऑडियो नहीं बजाता. दुखद है।"
   },
-  "StripePayFormComponent": {
+  "PayFormComponent": {
     "payButton": "{amount} उड़ाओ और राजा बन जाओ",
     "paymentSending": "रुको ज़रा, पैसा प्रोसेस हो रहा है...",
     "paymentSuccess": "पैसा मिल गया! अब ताज तुम्हारा है!",
-    "paymentError": "भुगतान में दिक्कत आई। पेज रिफ्रेश करके फिर ट्राय कर, करोड़पति।"
+    "paymentError": "भुगतान में दिक्कत आई। पेज रिफ्रेश करके फिर ट्राय कर, करोड़पति।",
+    "paymentLoading": "{service} भुगतान सिस्टम तैयार हो रहा है... बस थोड़ा और!"
   },
   "LocaleLayout": {
     "description": "उन लोगों की लिस्ट में शामिल हो जो पैसे को हवा में उड़ाते हैं"
