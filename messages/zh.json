@@ -57,6 +57,6 @@
     "backToHome": "算啦，改天再烧",
     "languageFromBrowser": "浏览器暴露了你的老巢",
     "disclaimerPublicInfo": "你上传的一切都将变成<em>公开</em>且<em>永久</em>的存在。想清楚，这可是你在网络世界的<strong>永恒烙印</strong>。",
-    "disclaimerPayment": "付款是在 <strong>Stripe</strong> 的 <strong>官网外部</strong>完成的，那可是全球都信得过的平台！我们不存储你的付款信息，只有你填写的（名字、留言等）会被记录在这里。"
+    "disclaimerPayment": "付款在本网站 <strong>外部进行</strong>，通过您在下方选择的服务 — 一个平台 <em>值得信赖</em>、<em>在支付领域知名</em>。我们不会保存任何敏感支付数据。这里只保存您上方填写的信息（姓名、短语等）。"
   }
 }

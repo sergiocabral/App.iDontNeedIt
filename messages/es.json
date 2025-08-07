@@ -57,6 +57,6 @@
     "backToHome": "Mejor no. Gasto después.",
     "languageFromBrowser": "Tu navegador delató tu país",
     "disclaimerPublicInfo": "Todo lo que subas aquí será <em>público</em> y <em>eterno</em>. Piénsalo bien. Es tu huella <strong>inmortal</strong> en el mundo.",
-    "disclaimerPayment": "El pago se hace <strong>fuera de este sitio</strong>, usando <strong>Stripe</strong>, una plataforma <em>confiable</em> y <em>conocida mundialmente</em>. No guardamos datos sensibles de pago. Solo lo que rellenaste arriba (nombre, frase, etc.) se queda aquí."
+    "disclaimerPayment": "El pago se realiza <strong>fuera de este sitio</strong>, mediante el servicio que elijas abajo — una plataforma de pagos <em>fiable</em> y <em>reconocida en el sector</em>. No almacenamos ningún dato sensible de pago. Solo se guarda la información que ingresaste arriba (nombre, mensaje, etc.)."
   }
 }

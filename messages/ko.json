@@ -57,6 +57,6 @@
     "backToHome": "아냐, 다음에 지를게",
     "languageFromBrowser": "당신의 브라우저가 출신지를 다 말해버렸네요",
     "disclaimerPublicInfo": "여기에 올린 모든 건 <em>공개</em>되고 <em>영원히</em> 남습니다. 진지하게 생각하세요. 이건 세상에 남는 당신의 <strong>불멸의 흔적</strong>입니다.",
-    "disclaimerPayment": "결제는 <strong>이 사이트 밖</strong>에서, <strong>Stripe</strong>라는 <em>믿을 수 있고</em> <em>전 세계적으로 유명한</em> 플랫폼을 통해 진행돼요. 결제 정보는 저장하지 않아요. 위에 입력한 정보(이름, 메시지 등)만 저장됩니다."
+    "disclaimerPayment": "결제는 이 사이트 외부에서, 아래에서 선택한 서비스를 통해 이루어집니다 — <em>신뢰할 수 있는</em>, <em>결제 분야에서 잘 알려진</em> 플랫폼입니다. 민감한 결제 정보는 저장하지 않습니다. 여기에는 위에서 입력한 이름, 문구 등만 저장됩니다."
   }
 }

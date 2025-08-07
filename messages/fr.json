@@ -57,6 +57,6 @@
     "backToHome": "Tant pis. On verra plus tard.",
     "languageFromBrowser": "Ton navigateur a balancé ta langue",
     "disclaimerPublicInfo": "Tout ce que tu balances ici sera <em>public</em> et <em>à jamais</em>. Réfléchis bien. C’est ta trace <strong>éternelle</strong> sur le monde.",
-    "disclaimerPayment": "Le paiement se fait <strong>en dehors du site</strong>, via <strong>Stripe</strong>, une plateforme <em>fiable</em> et <em>mondialement connue</em>. On ne garde aucune donnée de paiement sensible. Seuls les champs que tu remplis (nom, message, etc.) restent chez nous."
+    "disclaimerPayment": "Le paiement est effectué <strong>en dehors de ce site</strong>, via le service que vous choisissez ci‑dessous — une plateforme de paiement <em>fiable</em> et <em>réputée dans le secteur</em>. Nous ne conservons aucune donnée sensible de paiement. Seules les informations que vous avez saisies ci‑dessus (nom, message, etc.) sont enregistrées ici."
   }
 }

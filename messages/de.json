@@ -57,6 +57,6 @@
     "backToHome": "Lass gut sein. Später vielleicht.",
     "languageFromBrowser": "Dein Browser hat deine Herkunft verraten",
     "disclaimerPublicInfo": "Alles, was du hier postest, wird <em>öffentlich</em> und <em>für immer</em> sein. Denk gut nach. Das ist dein <strong>ewiger Abdruck</strong> in der Welt.",
-    "disclaimerPayment": "Die Zahlung läuft <strong>außerhalb dieser Seite</strong> über <strong>Stripe</strong>, eine <em>vertrauenswürdige</em> und <em>weltweit bekannte</em> Plattform. Wir speichern keine sensiblen Zahlungsdaten. Nur was du oben eingetragen hast (Name, Nachricht usw.) bleibt bei uns."
+    "disclaimerPayment": "Die Zahlung erfolgt <strong>außerhalb dieser Seite</strong> über den Dienst, den du unten auswählst — eine <em>zuverlässige</em>, <em>branchenbekannte Zahlungsplattform</em>. Wir speichern keine sensiblen Zahlungsdaten. Nur die Angaben, die du oben gemacht hast (Name, Nachricht usw.), werden hier gespeichert."
   }
 }

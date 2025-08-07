@@ -57,6 +57,6 @@
     "backToHome": "Forget it. Maybe later.",
     "languageFromBrowser": "Your browser snitched your location",
     "disclaimerPublicInfo": "Everything you post will be <em>public</em> and <em>permanent</em>. Think twice. You’re leaving a <strong>forever mark</strong> on the world.",
-    "disclaimerPayment": "Payments happen <strong>outside this site</strong> using <strong>Stripe</strong>, a <em>trusted</em> and <em>globally known</em> payment platform. We don’t store any sensitive payment info. Only the details you entered above (name, message, etc.) are saved here."
+    "disclaimerPayment": "Payment is processed <strong>outside this site</strong>, via the service you choose below — a <em>reliable</em>, <em>well‑known payment platform</em>. We don’t store any sensitive payment data. Only the info you entered above (name, message etc.) is saved here."
   }
 }

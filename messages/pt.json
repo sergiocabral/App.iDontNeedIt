@@ -57,6 +57,6 @@
     "backToHome": "Deixa pra lá. Gasto depois.",
     "languageFromBrowser": "Seu navegador entregou sua origem",
     "disclaimerPublicInfo": "Tudo que você mandar vai ser <em>público</em> e <em>pra sempre</em>. Pense bem. É sua marca <strong>imortal</strong> no mundo.",
-    "disclaimerPayment": "O pagamento rola <strong>fora deste site</strong>, pela <strong>Stripe</strong>, uma plataforma <em>confiável</em> e <em>famosa no mundo inteiro</em>. A gente não guarda dados sensíveis de pagamento. Só o que você preencheu acima (nome, frase etc.) fica salvo aqui."
+    "disclaimerPayment": "O pagamento acontece <strong>fora deste site</strong>, por meio do serviço que você escolher abaixo — uma plataforma <em>confiável</em> e <em>renomada no ramo de pagamentos</em>. A gente não armazena nenhum dado sensível de pagamento. Só as informações que você preencheu acima (nome, frase etc.) ficam salvas aqui."
   }
 }
