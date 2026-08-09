@@ -26,6 +26,18 @@
     "paymentSuccess": "Cash received. Throne’s yours now!",
     "paymentError": "Payment failed. Reload and try again, baller."
   },
+  "PixPayFormComponent": {
+    "payButton": "Throw in {amount} via Pix and take the throne",
+    "generating": "Summoning your royal QR code...",
+    "scanTitle": "Scan the QR code or copy-paste the Pix code",
+    "copyButton": "Copy Pix code",
+    "copied": "Copied! Now go pay like royalty.",
+    "waitingPayment": "Waiting for your precious money... ({time})",
+    "paymentSuccess": "Pix received. Throne’s yours now!",
+    "paymentError": "Pix failed. Try again, baller.",
+    "expired": "QR code expired. Your money got shy. Generate another one.",
+    "cancelButton": "Give up on this Pix"
+  },
   "LocaleLayout": {
     "description": "Join the leaderboard of people who toss money like it’s nothing"
   },
@@ -57,6 +69,8 @@
     "backToHome": "Forget it. Maybe later.",
     "languageFromBrowser": "Your browser snitched your location",
     "disclaimerPublicInfo": "Everything you post will be <em>public</em> and <em>permanent</em>. Think twice. You’re leaving a <strong>forever mark</strong> on the world.",
-    "disclaimerPayment": "Payments happen <strong>outside this site</strong> using <strong>Stripe</strong>, a <em>trusted</em> and <em>globally known</em> payment platform. We don’t store any sensitive payment info. Only the details you entered above (name, message, etc.) are saved here."
+    "disclaimerPayment": "Payments happen <strong>outside this site</strong> using <strong>Mercado Pago (Pix)</strong> or <strong>Stripe</strong>, <em>trusted</em> and <em>globally known</em> payment platforms. We don’t store any sensitive payment info. Only the details you entered above (name, message, etc.) are saved here.",
+    "tabPix": "Pix",
+    "tabCard": "Card"
   }
 }

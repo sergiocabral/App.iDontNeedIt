@@ -26,6 +26,18 @@
     "paymentSuccess": "Grana recebida. Agora o trono é seu!",
     "paymentError": "Deu erro no pagamento. Recarrega e tenta de novo, bilionário."
   },
+  "PixPayFormComponent": {
+    "payButton": "Manda {amount} no Pix e toma o trono",
+    "generating": "Invocando seu QR code real...",
+    "scanTitle": "Escaneia o QR code ou copia e cola o código Pix",
+    "copyButton": "Copiar código Pix",
+    "copied": "Copiado! Agora vai lá pagar como a realeza.",
+    "waitingPayment": "Esperando seu rico dinheirinho... ({time})",
+    "paymentSuccess": "Pix recebido. Agora o trono é seu!",
+    "paymentError": "Deu erro no Pix. Tenta de novo, bilionário.",
+    "expired": "O QR code expirou. Seu dinheiro amarelou. Gera outro aí.",
+    "cancelButton": "Desistir desse Pix"
+  },
   "LocaleLayout": {
     "description": "Entre pro ranking dos que jogam dinheiro fora sem nem sentir"
   },
@@ -57,6 +69,8 @@
     "backToHome": "Deixa pra lá. Gasto depois.",
     "languageFromBrowser": "Seu navegador entregou sua origem",
     "disclaimerPublicInfo": "Tudo que você mandar vai ser <em>público</em> e <em>pra sempre</em>. Pense bem. É sua marca <strong>imortal</strong> no mundo.",
-    "disclaimerPayment": "O pagamento rola <strong>fora deste site</strong>, pela <strong>Stripe</strong>, uma plataforma <em>confiável</em> e <em>famosa no mundo inteiro</em>. A gente não guarda dados sensíveis de pagamento. Só o que você preencheu acima (nome, frase etc.) fica salvo aqui."
+    "disclaimerPayment": "O pagamento rola <strong>fora deste site</strong>, pelo <strong>Mercado Pago (Pix)</strong> ou pela <strong>Stripe</strong>, plataformas <em>confiáveis</em> e <em>famosas no mundo inteiro</em>. A gente não guarda dados sensíveis de pagamento. Só o que você preencheu acima (nome, frase etc.) fica salvo aqui.",
+    "tabPix": "Pix",
+    "tabCard": "Cartão"
   }
 }

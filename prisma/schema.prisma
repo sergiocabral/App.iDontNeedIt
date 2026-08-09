@@ -50,9 +50,10 @@ model King {
 }
 
 model Payment {
-  id              String   @id @default(cuid())
-  stripeIntentId  String   @unique
-  amount          Float
-  currency        String
-  createdAt       DateTime @default(now())
+  id                   String   @id @default(cuid())
+  stripeIntentId       String?  @unique
+  mercadoPagoPaymentId String?  @unique
+  amount               Float
+  currency             String
+  createdAt            DateTime @default(now())
 }

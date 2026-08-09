@@ -16,6 +16,7 @@ import { useTranslations } from 'next-intl'
 import { fetchUrlAsFile } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
 import { StripePayForm } from '@/components/app/StripePayForm'
+import { PixPayForm } from '@/components/app/PixPayForm'
 import { AmountType } from '@/lib/repositories/kingRepository'
 import { getFlagImageUrl, splitByMarker } from '@/lib/utilsApp'
 import Image from 'next/image'
@@ -58,6 +59,9 @@ export default function PayPage() {
   const [avatarUrl, setAvatarUrl] = useState('')
 
   const [loading, setLoading] = useState(false)
+
+  const [payMethod, setPayMethod] = useState<'pix' | 'card'>('pix')
+  const [stripeMounted, setStripeMounted] = useState(false)
 
   const { showToast } = useToast()
 
@@ -356,7 +360,43 @@ export default function PayPage() {
           </div>
 
           {nextAmount && (
-            <StripePayForm canPay={handlePayClick} isLoading={loading}></StripePayForm>
+            <>
+              <div className="flex gap-2">
+                <Button
+                  type="button"
+                  variant={payMethod === 'pix' ? 'default' : 'secondary'}
+                  className="flex-1 cursor-pointer"
+                  onClick={() => setPayMethod('pix')}
+                >
+                  {t('tabPix')}
+                </Button>
+                <Button
+                  type="button"
+                  variant={payMethod === 'card' ? 'default' : 'secondary'}
+                  className="flex-1 cursor-pointer"
+                  onClick={() => {
+                    setPayMethod('card')
+                    setStripeMounted(true)
+                  }}
+                >
+                  {t('tabCard')}
+                </Button>
+              </div>
+
+              <div className={payMethod === 'pix' ? '' : 'hidden'}>
+                <PixPayForm
+                  canPay={handlePayClick}
+                  isLoading={loading}
+                  onFail={() => setLoading(false)}
+                />
+              </div>
+
+              {stripeMounted && (
+                <div className={payMethod === 'card' ? '' : 'hidden'}>
+                  <StripePayForm canPay={handlePayClick} isLoading={loading} />
+                </div>
+              )}
+            </>
           )}
 
           <Button

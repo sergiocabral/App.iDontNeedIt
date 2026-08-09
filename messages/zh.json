@@ -26,6 +26,18 @@
     "paymentSuccess": "钱到账啦！王座是你的～",
     "paymentError": "付款失败，刷新再试试吧，土豪哥"
   },
+  "PixPayFormComponent": {
+    "payButton": "用 Pix 扔出 {amount}，登上王座！",
+    "generating": "正在召唤你的王者 QR 码...",
+    "scanTitle": "扫描 QR 码，或复制粘贴 Pix 代码",
+    "copyButton": "复制 Pix 代码",
+    "copied": "已复制！去像王室一样付款吧～",
+    "waitingPayment": "等待你的金闪闪到账中... ({time})",
+    "paymentSuccess": "Pix 到账啦！王座是你的～",
+    "paymentError": "Pix 失败了，再试一次吧，土豪哥",
+    "expired": "QR 码过期了，你的钱害羞了。再生成一个吧～",
+    "cancelButton": "放弃这个 Pix"
+  },
   "LocaleLayout": {
     "description": "加入我们这些花钱如流水的神人榜单！"
   },
@@ -57,6 +69,8 @@
     "backToHome": "算啦，改天再烧",
     "languageFromBrowser": "浏览器暴露了你的老巢",
     "disclaimerPublicInfo": "你上传的一切都将变成<em>公开</em>且<em>永久</em>的存在。想清楚，这可是你在网络世界的<strong>永恒烙印</strong>。",
-    "disclaimerPayment": "付款是在 <strong>Stripe</strong> 的 <strong>官网外部</strong>完成的，那可是全球都信得过的平台！我们不存储你的付款信息，只有你填写的（名字、留言等）会被记录在这里。"
+    "disclaimerPayment": "付款在<strong>本站之外</strong>完成，通过 <strong>Mercado Pago（Pix）</strong>或 <strong>Stripe</strong>，都是<em>全球知名</em>、<em>值得信赖</em>的平台！我们不存储你的付款信息，只有你填写的（名字、留言等）会被记录在这里。",
+    "tabPix": "Pix",
+    "tabCard": "银行卡"
   }
 }

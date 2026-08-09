@@ -1,7 +1,8 @@
 import { prisma } from '@/lib/prisma'
 
 type CreatePaymentInput = {
-  stripeIntentId: string
+  stripeIntentId?: string
+  mercadoPagoPaymentId?: string
   amount: number
   currency: string
 }
@@ -14,6 +15,12 @@ export const PaymentRepository = {
   async getByIntentId(stripeIntentId: string) {
     return prisma.payment.findUnique({
       where: { stripeIntentId },
+    })
+  },
+
+  async getByMercadoPagoId(mercadoPagoPaymentId: string) {
+    return prisma.payment.findUnique({
+      where: { mercadoPagoPaymentId },
     })
   },
 
