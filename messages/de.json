@@ -38,6 +38,16 @@
     "expired": "Der QR-Code ist abgelaufen. Dein Geld hat gekniffen. Erzeug einen neuen.",
     "cancelButton": "Diesen Pix aufgeben"
   },
+  "TipSelectorComponent": {
+    "title": "Lust, noch mehr zu protzen? 👑",
+    "sliderLabel": "oder zieh den Regler zum Angeben:",
+    "totalLabel": "Gesamt: {amount}",
+    "breakdown": "Minimum {base} + {tip} pures Protzen",
+    "tier1": "Eine bescheidene Geste",
+    "tier2": "Es regnet Geld",
+    "tier3": "Königlicher Besuch erkannt",
+    "tier4": "RUFT DEN SICHERHEITSDIENST"
+  },
   "LocaleLayout": {
     "description": "Steig ein ins Ranking der Geldverschwender ohne Reue"
   },

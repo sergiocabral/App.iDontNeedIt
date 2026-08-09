@@ -1,15 +1,18 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
 import { KingRepository } from '@/lib/repositories/kingRepository'
 import { mpFetch } from '@/lib/mercadopago'
 import { getDefinitions } from '@/lib/definitions'
+import { formatAmount, sanitizeTip } from '@/lib/utilsApp'
 import * as Sentry from '@sentry/nextjs'
 
 const PIX_EXPIRATION_MINUTES = 30
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const def = getDefinitions()
+  const body = await req.json().catch(() => ({}))
   const amount = await KingRepository.getNextAmount()
+  const totalAmount = amount.amount + sanitizeTip(body.tip)
 
   // Mercado Pago rejeita o sufixo 'Z' do toISOString(); exige offset explícito.
   const expiresAt = new Date(Date.now() + PIX_EXPIRATION_MINUTES * 60 * 1000)
@@ -21,7 +24,7 @@ export async function POST() {
     headers: { 'X-Idempotency-Key': randomUUID() },
     body: JSON.stringify({
       // A API espera decimal em reais, não centavos.
-      transaction_amount: Math.round(amount.amount) / 100,
+      transaction_amount: Math.round(totalAmount) / 100,
       description: def('appName') || "I Don't Need It",
       payment_method_id: 'pix',
       // Obrigatório; não pode ser o e-mail do dono da conta (payer == collector é rejeitado).
@@ -51,6 +54,6 @@ export async function POST() {
     qrCode: transactionData.qr_code,
     qrCodeBase64: transactionData.qr_code_base64,
     expiresAt: data.date_of_expiration || expiresAt,
-    formatted: amount.formatted,
+    formatted: formatAmount({ amount: totalAmount, currency: amount.currency }),
   })
 }

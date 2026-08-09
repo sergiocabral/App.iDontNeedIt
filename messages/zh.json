@@ -38,6 +38,16 @@
     "expired": "QR 码过期了，你的钱害羞了。再生成一个吧～",
     "cancelButton": "放弃这个 Pix"
   },
+  "TipSelectorComponent": {
+    "title": "想更土豪一点吗？👑",
+    "sliderLabel": "或者拖动滑块来炫富：",
+    "totalLabel": "总计：{amount}",
+    "breakdown": "最低 {base} + {tip} 纯炫富",
+    "tier1": "小小意思",
+    "tier2": "钱如雨下",
+    "tier3": "检测到皇室成员",
+    "tier4": "快叫保安"
+  },
   "LocaleLayout": {
     "description": "加入我们这些花钱如流水的神人榜单！"
   },

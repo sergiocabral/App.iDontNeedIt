@@ -38,6 +38,16 @@
     "expired": "QRコードの期限切れ。お金がビビったみたい。もう一回生成して。",
     "cancelButton": "このPixは諦める"
   },
+  "TipSelectorComponent": {
+    "title": "もっと散財したい？👑",
+    "sliderLabel": "またはスライダーで見せびらかす：",
+    "totalLabel": "合計：{amount}",
+    "breakdown": "最低 {base} + {tip} の純粋な散財",
+    "tier1": "ささやかな貢ぎ物",
+    "tier2": "お金の雨が降ってる",
+    "tier3": "王族を検知",
+    "tier4": "警備員を呼べ！"
+  },
   "LocaleLayout": {
     "description": "気づかぬうちにお金を捨てる勇者ランキングに入ろう"
   },

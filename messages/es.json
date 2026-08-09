@@ -38,6 +38,16 @@
     "expired": "El código QR expiró. A tu dinero le dio vergüenza. Genera otro.",
     "cancelButton": "Rendirse con este Pix"
   },
+  "TipSelectorComponent": {
+    "title": "¿Quieres derrochar más? 👑",
+    "sliderLabel": "o arrastra para presumir:",
+    "totalLabel": "Total: {amount}",
+    "breakdown": "mínimo {base} + {tip} de puro derroche",
+    "tier1": "Un capricho modesto",
+    "tier2": "Está lloviendo dinero",
+    "tier3": "Realeza detectada",
+    "tier4": "¡LLAMEN A SEGURIDAD!"
+  },
   "LocaleLayout": {
     "description": "Únete al ranking de los que tiran dinero sin pestañear"
   },
