@@ -7,6 +7,7 @@ import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
 import * as Sentry from '@sentry/nextjs'
 import { AmountType } from '@/lib/repositories/kingRepository'
+import { formatAmount } from '@/lib/utilsApp'
 import { useRouter } from 'next/navigation'
 import { useToast } from '../ui/toaster'
 
@@ -15,25 +16,32 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
 export function StripePayForm({
   canPay,
   isLoading,
+  tip = 0,
 }: {
   canPay: () => Promise<false | (() => Promise<void>)>
   isLoading?: boolean
+  tip?: number
 }) {
   const [clientSecret, setClientSecret] = useState<string>()
 
   useEffect(() => {
     fetch('/api/stripe/intent', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tip }),
     })
       .then((r) => r.json())
       .then((d) => setClientSecret(d.clientSecret))
+    // O intent nasce com a gorjeta do momento do mount; mudanças posteriores
+    // são sincronizadas via PUT antes do confirm (não remontar o Elements).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!clientSecret) return null
 
   return (
     <Elements stripe={stripePromise} options={{ clientSecret }}>
-      <Checkout canPay={canPay} isLoading={isLoading} />
+      <Checkout canPay={canPay} isLoading={isLoading} tip={tip} clientSecret={clientSecret} />
     </Elements>
   )
 }
@@ -41,9 +49,13 @@ export function StripePayForm({
 function Checkout({
   canPay,
   isLoading,
+  tip,
+  clientSecret,
 }: {
   canPay: () => Promise<false | (() => Promise<void>)>
   isLoading?: boolean
+  tip: number
+  clientSecret: string
 }) {
   const stripe = useStripe()
   const elements = useElements()
@@ -73,6 +85,19 @@ function Checkout({
       const canPayHandle = await canPay()
       if (canPayHandle !== false) {
         showToast(t('paymentSending'), 'info')
+
+        // Sincroniza o valor do intent (mínimo + gorjeta atual) antes de confirmar.
+        const syncRes = await fetch('/api/stripe/intent', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ clientSecret, tip }),
+        })
+        if (!syncRes.ok) {
+          setLoading(false)
+          showToast(t('paymentError'), 'error')
+          return
+        }
+
         const result = await stripe.confirmPayment({
           elements,
           confirmParams: { return_url: window.location.origin },
@@ -114,7 +139,12 @@ function Checkout({
           disabled={loading || isLoading}
           onClick={handleSubmit}
         >
-          {t('payButton', { amount: nextAmount.formatted })}
+          {t('payButton', {
+            amount: formatAmount({
+              amount: nextAmount.amount + tip,
+              currency: nextAmount.currency,
+            }),
+          })}
         </Button>
       )}
     </>

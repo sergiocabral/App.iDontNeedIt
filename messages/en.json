@@ -38,6 +38,16 @@
     "expired": "QR code expired. Your money got shy. Generate another one.",
     "cancelButton": "Give up on this Pix"
   },
+  "TipSelectorComponent": {
+    "title": "Feeling like flexing harder? 👑",
+    "sliderLabel": "or drag to show off:",
+    "totalLabel": "Total: {amount}",
+    "breakdown": "minimum {base} + {tip} of pure flexing",
+    "tier1": "A modest little treat",
+    "tier2": "It's raining money",
+    "tier3": "Royalty detected",
+    "tier4": "CALL SECURITY"
+  },
   "LocaleLayout": {
     "description": "Join the leaderboard of people who toss money like it’s nothing"
   },

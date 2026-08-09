@@ -6,6 +6,7 @@ import { Textarea } from '../ui/textarea'
 import { useTranslations } from 'next-intl'
 import * as Sentry from '@sentry/nextjs'
 import { AmountType } from '@/lib/repositories/kingRepository'
+import { formatAmount } from '@/lib/utilsApp'
 import { useToast } from '../ui/toaster'
 import { CopyIcon } from 'lucide-react'
 
@@ -19,10 +20,12 @@ type PixData = {
 export function PixPayForm({
   canPay,
   isLoading,
+  tip = 0,
   onFail,
 }: {
   canPay: () => Promise<false | (() => Promise<void>)>
   isLoading?: boolean
+  tip?: number
   onFail?: () => void
 }) {
   const t = useTranslations('PixPayFormComponent')
@@ -114,7 +117,11 @@ export function PixPayForm({
       }
       saveRef.current = canPayHandle
 
-      const res = await fetch('/api/mercadopago/pix', { method: 'POST' })
+      const res = await fetch('/api/mercadopago/pix', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tip }),
+      })
       if (!res.ok) throw new Error('Failed to create Pix payment')
       const data = await res.json()
       if (!data.qrCode || !data.qrCodeBase64) throw new Error('Pix response missing QR data')
@@ -186,7 +193,14 @@ export function PixPayForm({
         disabled={creating || isLoading}
         onClick={handleStart}
       >
-        {creating ? t('generating') : t('payButton', { amount: nextAmount.formatted })}
+        {creating
+          ? t('generating')
+          : t('payButton', {
+              amount: formatAmount({
+                amount: nextAmount.amount + tip,
+                currency: nextAmount.currency,
+              }),
+            })}
       </Button>
     )
   )

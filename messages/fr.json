@@ -38,6 +38,16 @@
     "expired": "Le QR code a expiré. Ton argent a pris peur. Génères-en un autre.",
     "cancelButton": "Abandonner ce Pix"
   },
+  "TipSelectorComponent": {
+    "title": "Envie de flamber encore plus ? 👑",
+    "sliderLabel": "ou glisse pour frimer :",
+    "totalLabel": "Total : {amount}",
+    "breakdown": "minimum {base} + {tip} de pure frime",
+    "tier1": "Un petit plaisir modeste",
+    "tier2": "Il pleut de l'argent",
+    "tier3": "Royauté détectée",
+    "tier4": "APPELEZ LA SÉCURITÉ"
+  },
   "LocaleLayout": {
     "description": "Entre dans le classement des rois du gaspillage"
   },

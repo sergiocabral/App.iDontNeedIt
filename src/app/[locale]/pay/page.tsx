@@ -17,6 +17,7 @@ import { fetchUrlAsFile } from '@/lib/utils'
 import { useToast } from '@/components/ui/toaster'
 import { StripePayForm } from '@/components/app/StripePayForm'
 import { PixPayForm } from '@/components/app/PixPayForm'
+import { TipSelector } from '@/components/app/TipSelector'
 import { AmountType } from '@/lib/repositories/kingRepository'
 import { getFlagImageUrl, splitByMarker } from '@/lib/utilsApp'
 import Image from 'next/image'
@@ -59,6 +60,8 @@ export default function PayPage() {
   const [avatarUrl, setAvatarUrl] = useState('')
 
   const [loading, setLoading] = useState(false)
+
+  const [tip, setTip] = useState(0)
 
   const [payMethod, setPayMethod] = useState<'pix' | 'card'>('pix')
   const [stripeMounted, setStripeMounted] = useState(false)
@@ -212,7 +215,7 @@ export default function PayPage() {
             imageUrl: finalImageUrl,
             audioUrl: finalAudioUrl,
             locale: userLocale || locale,
-            amount: nextAmount.amount,
+            amount: nextAmount.amount + tip,
             currency: nextAmount.currency,
           }),
         })
@@ -361,6 +364,13 @@ export default function PayPage() {
 
           {nextAmount && (
             <>
+              <TipSelector
+                baseAmount={nextAmount}
+                tip={tip}
+                onTipChange={setTip}
+                disabled={loading}
+              />
+
               <div className="flex gap-2">
                 <Button
                   type="button"
@@ -387,13 +397,14 @@ export default function PayPage() {
                 <PixPayForm
                   canPay={handlePayClick}
                   isLoading={loading}
+                  tip={tip}
                   onFail={() => setLoading(false)}
                 />
               </div>
 
               {stripeMounted && (
                 <div className={payMethod === 'card' ? '' : 'hidden'}>
-                  <StripePayForm canPay={handlePayClick} isLoading={loading} />
+                  <StripePayForm canPay={handlePayClick} isLoading={loading} tip={tip} />
                 </div>
               )}
             </>

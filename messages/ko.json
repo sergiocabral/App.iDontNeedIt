@@ -38,6 +38,16 @@
     "expired": "QR 코드가 만료됐어요. 돈이 부끄러워했나 봐요. 새로 만들어요.",
     "cancelButton": "이 Pix는 포기하기"
   },
+  "TipSelectorComponent": {
+    "title": "더 플렉스하고 싶어? 👑",
+    "sliderLabel": "아니면 슬라이더로 과시하기:",
+    "totalLabel": "총액: {amount}",
+    "breakdown": "최소 {base} + {tip} 순수 플렉스",
+    "tier1": "소박한 성의",
+    "tier2": "돈이 비처럼 내린다",
+    "tier3": "왕족 감지됨",
+    "tier4": "경비원 불러!"
+  },
   "LocaleLayout": {
     "description": "무심코 돈을 태워버린 전설들 랭킹에 참여하세요"
   },

@@ -38,6 +38,16 @@
     "expired": "O QR code expirou. Seu dinheiro amarelou. Gera outro aí.",
     "cancelButton": "Desistir desse Pix"
   },
+  "TipSelectorComponent": {
+    "title": "Quer esbanjar mais? 👑",
+    "sliderLabel": "ou arrasta pra ostentar:",
+    "totalLabel": "Total: {amount}",
+    "breakdown": "mínimo {base} + {tip} de pura ostentação",
+    "tier1": "Um agrado modesto",
+    "tier2": "Tá chovendo dinheiro",
+    "tier3": "Realeza detectada",
+    "tier4": "CHAMA O SEGURANÇA"
+  },
   "LocaleLayout": {
     "description": "Entre pro ranking dos que jogam dinheiro fora sem nem sentir"
   },
