@@ -3,6 +3,7 @@ import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   images: {
     domains: ['flagcdn.com'],
     dangerouslyAllowSVG: true,

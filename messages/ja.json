@@ -26,6 +26,18 @@
     "paymentSuccess": "入金完了！あなたが新たな王様！",
     "paymentError": "支払いエラーっす。更新して再チャレンジ、富豪様。"
   },
+  "PixPayFormComponent": {
+    "payButton": "Pixで{amount}を投げて王座をゲット！",
+    "generating": "王家のQRコードを召喚中...",
+    "scanTitle": "QRコードをスキャンするか、Pixコードをコピペしてね",
+    "copyButton": "Pixコードをコピー",
+    "copied": "コピー完了！王族らしく払ってきて。",
+    "waitingPayment": "あなたの大金を待機中... ({time})",
+    "paymentSuccess": "Pix入金完了！あなたが新たな王様！",
+    "paymentError": "Pixがコケた。再チャレンジ、富豪様。",
+    "expired": "QRコードの期限切れ。お金がビビったみたい。もう一回生成して。",
+    "cancelButton": "このPixは諦める"
+  },
   "LocaleLayout": {
     "description": "気づかぬうちにお金を捨てる勇者ランキングに入ろう"
   },
@@ -57,6 +69,8 @@
     "backToHome": "やめた。後でドカンと使うわ。",
     "languageFromBrowser": "ブラウザから出身バレてるよ",
     "disclaimerPublicInfo": "ここで送ったものは<em>公開</em>されて<em>永遠に</em>残ります。本当にいいの？世界に<strong>不滅の刻印</strong>を残すってことだよ。",
-    "disclaimerPayment": "支払いはこのサイトの<strong>外</strong>、<strong>Stripe</strong>という<em>信頼されてて</em><em>世界中で有名</em>なサービスを使ってます。クレカ情報などのセンシティブなデータは保存してません。上で入力した名前やメッセージなどだけ記録されます。"
+    "disclaimerPayment": "支払いはこのサイトの<strong>外</strong>、<strong>Mercado Pago（Pix）</strong>か<strong>Stripe</strong>という<em>信頼されてて</em><em>世界中で有名</em>なサービスを使ってます。クレカ情報などのセンシティブなデータは保存してません。上で入力した名前やメッセージなどだけ記録されます。",
+    "tabPix": "Pix",
+    "tabCard": "カード"
   }
 }

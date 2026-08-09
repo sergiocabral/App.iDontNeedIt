@@ -26,6 +26,18 @@
     "paymentSuccess": "돈 받았어요! 이제 왕은 당신!",
     "paymentError": "결제 오류 발생! 새로고침하고 다시 도전하세요, 재벌님"
   },
+  "PixPayFormComponent": {
+    "payButton": "Pix로 {amount} 던지고 왕좌 차지하기",
+    "generating": "당신의 로열 QR 코드 소환 중...",
+    "scanTitle": "QR 코드를 스캔하거나 Pix 코드를 복사·붙여넣기 하세요",
+    "copyButton": "Pix 코드 복사",
+    "copied": "복사 완료! 이제 왕족답게 결제하러 가세요.",
+    "waitingPayment": "당신의 귀중한 돈 기다리는 중... ({time})",
+    "paymentSuccess": "Pix 입금 완료! 이제 왕은 당신!",
+    "paymentError": "Pix 실패! 다시 도전하세요, 재벌님",
+    "expired": "QR 코드가 만료됐어요. 돈이 부끄러워했나 봐요. 새로 만들어요.",
+    "cancelButton": "이 Pix는 포기하기"
+  },
   "LocaleLayout": {
     "description": "무심코 돈을 태워버린 전설들 랭킹에 참여하세요"
   },
@@ -57,6 +69,8 @@
     "backToHome": "아냐, 다음에 지를게",
     "languageFromBrowser": "당신의 브라우저가 출신지를 다 말해버렸네요",
     "disclaimerPublicInfo": "여기에 올린 모든 건 <em>공개</em>되고 <em>영원히</em> 남습니다. 진지하게 생각하세요. 이건 세상에 남는 당신의 <strong>불멸의 흔적</strong>입니다.",
-    "disclaimerPayment": "결제는 <strong>이 사이트 밖</strong>에서, <strong>Stripe</strong>라는 <em>믿을 수 있고</em> <em>전 세계적으로 유명한</em> 플랫폼을 통해 진행돼요. 결제 정보는 저장하지 않아요. 위에 입력한 정보(이름, 메시지 등)만 저장됩니다."
+    "disclaimerPayment": "결제는 <strong>이 사이트 밖</strong>에서, <strong>Mercado Pago(Pix)</strong>나 <strong>Stripe</strong>라는 <em>믿을 수 있고</em> <em>전 세계적으로 유명한</em> 플랫폼을 통해 진행돼요. 결제 정보는 저장하지 않아요. 위에 입력한 정보(이름, 메시지 등)만 저장됩니다.",
+    "tabPix": "Pix",
+    "tabCard": "카드"
   }
 }

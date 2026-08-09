@@ -26,6 +26,18 @@
     "paymentSuccess": "Kohle angekommen. Der Thron gehört dir!",
     "paymentError": "Zahlung fehlgeschlagen. Seite neu laden und nochmal, Millionär."
   },
+  "PixPayFormComponent": {
+    "payButton": "Wirf {amount} per Pix rein und hol dir den Thron",
+    "generating": "Dein königlicher QR-Code wird beschworen...",
+    "scanTitle": "Scanne den QR-Code oder kopiere den Pix-Code",
+    "copyButton": "Pix-Code kopieren",
+    "copied": "Kopiert! Jetzt geh zahlen wie ein König.",
+    "waitingPayment": "Wir warten auf dein edles Geld... ({time})",
+    "paymentSuccess": "Pix angekommen. Der Thron gehört dir!",
+    "paymentError": "Pix fehlgeschlagen. Nochmal versuchen, Millionär.",
+    "expired": "Der QR-Code ist abgelaufen. Dein Geld hat gekniffen. Erzeug einen neuen.",
+    "cancelButton": "Diesen Pix aufgeben"
+  },
   "LocaleLayout": {
     "description": "Steig ein ins Ranking der Geldverschwender ohne Reue"
   },
@@ -57,6 +69,8 @@
     "backToHome": "Lass gut sein. Später vielleicht.",
     "languageFromBrowser": "Dein Browser hat deine Herkunft verraten",
     "disclaimerPublicInfo": "Alles, was du hier postest, wird <em>öffentlich</em> und <em>für immer</em> sein. Denk gut nach. Das ist dein <strong>ewiger Abdruck</strong> in der Welt.",
-    "disclaimerPayment": "Die Zahlung läuft <strong>außerhalb dieser Seite</strong> über <strong>Stripe</strong>, eine <em>vertrauenswürdige</em> und <em>weltweit bekannte</em> Plattform. Wir speichern keine sensiblen Zahlungsdaten. Nur was du oben eingetragen hast (Name, Nachricht usw.) bleibt bei uns."
+    "disclaimerPayment": "Die Zahlung läuft <strong>außerhalb dieser Seite</strong> über <strong>Mercado Pago (Pix)</strong> oder <strong>Stripe</strong>, <em>vertrauenswürdige</em> und <em>weltweit bekannte</em> Plattformen. Wir speichern keine sensiblen Zahlungsdaten. Nur was du oben eingetragen hast (Name, Nachricht usw.) bleibt bei uns.",
+    "tabPix": "Pix",
+    "tabCard": "Karte"
   }
 }
