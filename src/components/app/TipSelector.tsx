@@ -16,11 +16,13 @@ function formatChip(amount: number, currency: string): string {
   }).format(amount / 100)
 }
 
-function getTier(tip: number, base: number): { emoji: string; key: string } {
-  const ratio = tip / base
-  if (ratio < 1) return { emoji: '😏', key: 'tier1' }
-  if (ratio < 3) return { emoji: '🤑', key: 'tier2' }
-  if (ratio < 10) return { emoji: '👑', key: 'tier3' }
+// A escada agora anda de R$1 em R$1: não serve mais de referência pra gorjeta.
+const SLIDER_MAX = 50_000 // R$ 500,00
+
+function getTier(tip: number): { emoji: string; key: string } {
+  if (tip < 1000) return { emoji: '😏', key: 'tier1' }
+  if (tip < 5000) return { emoji: '🤑', key: 'tier2' }
+  if (tip < 20000) return { emoji: '👑', key: 'tier3' }
   return { emoji: '🔥', key: 'tier4' }
 }
 
@@ -37,8 +39,8 @@ export function TipSelector({
 }) {
   const t = useTranslations('TipSelectorComponent')
 
-  const sliderMax = Math.max(baseAmount.amount * 10, 10000)
-  const tier = getTier(tip, baseAmount.amount)
+  const sliderMax = SLIDER_MAX
+  const tier = getTier(tip)
   const currency = baseAmount.currency
 
   return (

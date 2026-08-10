@@ -215,8 +215,7 @@ export default function PayPage() {
             imageUrl: finalImageUrl,
             audioUrl: finalAudioUrl,
             locale: userLocale || locale,
-            amount: nextAmount.amount + tip,
-            currency: nextAmount.currency,
+            tip,
           }),
         })
 
