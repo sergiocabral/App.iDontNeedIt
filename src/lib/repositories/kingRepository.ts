@@ -17,6 +17,7 @@ type CreateKingInput = {
   imageBgColor: string
   audioUrl?: string
   locale: string
+  baseAmount: number
   amount: number
   currency: string
 }
@@ -24,12 +25,6 @@ type CreateKingInput = {
 export const KingRepository = {
   async create(data: CreateKingInput) {
     return prisma.king.create({ data })
-  },
-
-  async getLatest() {
-    return prisma.king.findFirst({
-      orderBy: { amount: 'desc' },
-    })
   },
 
   async getById(id: string) {
@@ -44,14 +39,14 @@ export const KingRepository = {
 
   async getNextAmount(): Promise<AmountType> {
     const result = await prisma.king.aggregate({
-      _max: { amount: true },
+      _max: { baseAmount: true },
     })
 
-    const maxAmount = result._max.amount ?? 0
+    const maxBaseAmount = result._max.baseAmount ?? 0
     const paymentInitial = parseFloat(def('paymentInitial')) || 100
     const paymentIncrement = parseFloat(def('paymentIncrement')) || 100
     const value = {
-      amount: Number(maxAmount === 0 ? paymentInitial : maxAmount + paymentIncrement),
+      amount: Number(maxBaseAmount === 0 ? paymentInitial : maxBaseAmount + paymentIncrement),
       currency: def('paymentCurrency') || 'brl',
     }
     return {

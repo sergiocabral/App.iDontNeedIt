@@ -41,9 +41,9 @@ export default async function HomePage() {
     )
   }
 
-  const [topKing, ...previousKings] = kings.sort(
-    (a, b) => b.amount - a.amount || b.createdAt.getTime() - a.createdAt.getTime()
-  )
+  // listAll() já vem createdAt desc; o ">" estrito preserva o mais recente em caso de empate no total.
+  const topKing = kings.reduce((top, king) => (king.amount > top.amount ? king : top), kings[0])
+  const previousKings = kings.filter((king) => king.id !== topKing.id)
 
   const pageTitle = splitByMarker(t('description', { amount: '|' }), '|')
   const kingTitle = splitByMarker(t('description2', { amount: '|' }), '|')
