@@ -6,6 +6,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getDefinitions } from '@/lib/definitions'
 
+// Mesma razão da home: sem isso, a página fica estaticamente cacheada por rei
+// e pode servir dados desatualizados após o build.
+export const dynamic = 'force-dynamic'
+
 export default async function KingPage({
   params,
 }: {

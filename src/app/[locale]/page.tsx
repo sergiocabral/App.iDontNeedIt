@@ -5,6 +5,10 @@ import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// Sem isso, o Next.js pré-renderiza esta página como HTML estático no build
+// e o ranking fica congelado no retrato de quando o container foi implantado.
+export const dynamic = 'force-dynamic'
+
 export default async function HomePage() {
   const t = await getTranslations('HomePage')
   const def = getDefinitions()
